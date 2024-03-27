@@ -1,8 +1,13 @@
-import { Link } from '@remix-run/react';
+import { useLoaderData } from '@remix-run/react';
+import { json } from '@remix-run/node';
+
+import { getNews, getMerch, getRegoPrices, getCarnivals } from '~/client/home';
+
+import HomeScreen from '~/screens/home';
 
 export const meta = () => [
 	{
-		title: 'Remix DnB Stack',
+		title: 'EEFC | Home',
 	},
 	{
 		charset: 'utf-8',
@@ -13,30 +18,24 @@ export const meta = () => [
 	},
 ];
 
-const Index = () => (
-	<div className="flex h-screen w-screen flex-col items-center justify-start pt-20 text-center">
-		<h1 className="pb-10 text-7xl">Remix DnB Stack</h1>
-		<h2>This Stack contains a starter template for developing Remix Apps in vercel.</h2>
-		<h2 className="pb-10 pt-10">
-			In the the following routes you will find an example of a loader. This stack works great with both your own api's
-			or a separate 3rd api.
-		</h2>
-		<Link className="underline" to="/edgestream">
-			Vercel Edge Route with Streaming
-		</Link>
-		<Link className="underline" to="/edge">
-			Vercel Edge Route
-		</Link>
-		<Link className="underline" to="/node">
-			NodeJS Route
-		</Link>
-		<Link className="underline" to="/nodestream">
-			NodeJS Streaming Route
-		</Link>
-		<h2 className="pt-10" data-cy="test">
-			The prettier config is opinionated and the structure of the project as well, feel free to change those.
-		</h2>
-	</div>
-);
+export const loader = async () => {
+	const news = await getNews();
+	const merch = await getMerch();
+	const regoPrices = await getRegoPrices();
+	const carnivals = await getCarnivals();
 
+	return json({ news, merch, regoPrices, carnivals });
+};
+
+const Index = () => {
+	const { news, merch, regoPrices, carnivals } = useLoaderData<typeof loader>();
+
+	console.log('merch', merch);
+
+	return (
+		<main>
+			<HomeScreen news={news} merch={merch} regoPrices={regoPrices} carnivals={carnivals} />
+		</main>
+	);
+};
 export default Index;

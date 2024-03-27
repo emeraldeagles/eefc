@@ -1,4 +1,10 @@
-body {
+/* body {
 	background-color: #323232;
 	color: #fff;
+} */
+
+/* box sizing reset */
+* {
+	box-sizing: border-box;
 }
+
