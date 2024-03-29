@@ -92,21 +92,18 @@ export const resourcesData: Resources[] = [
 		description: 'Information about the season',
 		image: 'season.jpg',
 		link: 'https://www.google.com',
-
 	},
 	{
 		title: 'Player Information',
 		description: 'Information about players',
 		image: 'players.jpg',
 		link: 'https://www.google.com',
-
 	},
 	{
 		title: 'Coach Information',
 		description: 'Information about coaches',
 		image: 'coaches.jpg',
 		link: 'https://www.google.com',
-
 	},
 ];
 
@@ -310,7 +307,6 @@ export const merchData: Merch[] = [
 		image: 'merch.jpg',
 		price: '$40',
 		badge: 'LIMITED STOCK',
-
 	},
 	{
 		title: 'EEFC Cap',
@@ -318,7 +314,6 @@ export const merchData: Merch[] = [
 		image: 'merch.jpg',
 		price: '$25',
 		badge: 'KIDS',
-
 	},
 ];
 

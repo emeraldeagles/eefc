@@ -1,6 +1,6 @@
 import { carnivalsData, merchData, newsData, regoPricesData } from '~/data/content';
 
-import type { Carnivals, Merch, News, RegoPrices} from '~/interfaces/content';
+import type { Carnivals, Merch, News, RegoPrices } from '~/interfaces/content';
 
 export const getNews = (): Promise<News[]> =>
 	new Promise((resolve, reject) => {
@@ -20,7 +20,7 @@ export const getRegoPrices = (): Promise<RegoPrices[]> =>
 		// reject(new Error('Something went wrong'));
 	});
 
-    export const getCarnivals = (): Promise<Carnivals[]> =>
+export const getCarnivals = (): Promise<Carnivals[]> =>
 	new Promise((resolve, reject) => {
 		resolve(carnivalsData);
 		// reject(new Error('Something went wrong'));

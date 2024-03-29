@@ -8,7 +8,7 @@ export const getResources = (): Promise<Resources[]> =>
 		reject(new Error('Something went wrong'));
 	});
 
-	export const getClubInfo = (): Promise<ClubInfo[]> =>
+export const getClubInfo = (): Promise<ClubInfo[]> =>
 	new Promise((resolve, reject) => {
 		resolve(clubInfoData);
 		reject(new Error('Something went wrong'));
