@@ -78,6 +78,7 @@ export type Committee = {
 	title: string;
 	description: string;
 	image: string;
+	email: string;
 };
 
 export type LifeMembers = {

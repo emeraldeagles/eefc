@@ -7,7 +7,7 @@ export default function Tiles({ category, content }: TileProps) {
 	console.log('Tiles', category, content);
 
 	return (
-		<div className="my-12">
+		<div className="m-20">
 			<h2 className="flex items-center pt-8 text-2xl font-bold">
 				{category}
 				<span>

@@ -19,19 +19,48 @@ import type {
 
 export const coachInfoData: CoachInfo[] = [
 	{
-		title: 'c1',
-		description:
-			"I'm Maximilian and I've worked as a freelance web developer for years. Let me help you become a developer as well!",
-		image: 'Maximilian Schwarzmüller',
+		title: 'Jason Sandeman',
+		description: 'U8/9 Head Coach',
+		image: '../../public/images/jason.png',
 	},
 	{
-		title: 'c2',
-		description:
-			'I am Julie and as a senior developer in a big tech company, I can help you get your first job or progress in your current one.',
-		image: 'Julie Jones',
+		title: 'Patrick Tetteh',
+		description: 'U12-16 Coach',
+		image: '../../public/images/pat.png',
+	},
+	{
+		title: 'Noah Silberg',
+		description: 'Coaching Co-ordinator',
+		image: '../../public/images/noah.png',
+	},
+	{
+		title: 'Peter Sanson',
+		description: 'U12-16 Head Coach',
+		image: '../../public/images/peter.png',
+	},
+	{
+		title: 'Mace Powell',
+		description: 'U6/7 Coach',
+		image: '../../public/images/mace.png',
+	},
+	{
+		title: 'Marc Vandommelle',
+		description: 'U10/11 Head Coach',
+		image: '../../public/images/marc.png',
+	},
+	{
+		title: 'Janelle Booth',
+		description: 'U12-16 Coach',
+		image: '../../public/images/janelle  .png',
+	},
+	{
+		title: 'Chrissy Curran',
+		description: 'U6/7 Coach',
+		image: '../../public/images/chrissy.png',
 	},
 ];
 
+// Is this supposed to be categoriesData?
 export const playerInfoData: PlayerInfo[] = [
 	{
 		title: 'Club Information',
@@ -80,33 +109,6 @@ export const playerInfoData: PlayerInfo[] = [
 	},
 ];
 
-export const resourcesData: Resources[] = [
-	{
-		title: 'Resources',
-		description: 'Resources for players and coaches',
-		image: 'resources.jpg',
-		link: 'https://www.google.com',
-	},
-	{
-		title: 'Season Information',
-		description: 'Information about the season',
-		image: 'season.jpg',
-		link: 'https://www.google.com',
-	},
-	{
-		title: 'Player Information',
-		description: 'Information about players',
-		image: 'players.jpg',
-		link: 'https://www.google.com',
-	},
-	{
-		title: 'Coach Information',
-		description: 'Information about coaches',
-		image: 'coaches.jpg',
-		link: 'https://www.google.com',
-	},
-];
-
 export const historyData: History[] = [
 	{
 		title: 'History',
@@ -132,39 +134,82 @@ export const historyData: History[] = [
 
 export const committeeData: Committee[] = [
 	{
-		title: 'Committee',
-		description: 'Information about the committee',
-		image: 'committee.jpg',
+		title: 'Darrin Milner',
+		description: 'President & Academy Co-ordinator',
+		image: 'darrin.jpg',
+		email: 'president@emeraldeagles.com'
 	},
 	{
-		title: 'Committee',
-		description: 'Information about the committee',
-		image: 'committee.jpg',
+		title: 'Maureen King',
+		description: 'Vice President',
+		image: 'maureen.jpg',
+		email: 'enquiries@emeraldeagles.com'
 	},
 	{
-		title: 'Committee',
-		description: 'Information about the committee',
-		image: 'committee.jpg',
+		title: 'Eleasha Ramiah',
+		description: 'Secretary',
+		image: 'eleasha.jpg',
+		email: 'secretary@emeraldeagles.com'
 	},
 	{
-		title: 'Committee',
-		description: 'Information about the committee',
-		image: 'committee.jpg',
+		title: 'Katie Sandeman',
+		description: 'Treasurer',
+		image: 'katie.jpg',
+		email: 'treasurer@emeraldeagles.com'
 	},
 	{
-		title: 'Committee',
-		description: 'Information about the committee',
-		image: 'committee.jpg',
+		title: 'Jessica Chay',
+		description: 'Sponsorships & Grants',
+		image: 'jess.jpg',
+		email: 'sponsors@emeraldeagles.com'
 	},
 	{
-		title: 'Committee',
-		description: 'Information about the committee',
-		image: 'committee.jpg',
+		title: 'Jason Sandeman',
+		description: 'Registrar',
+		image: 'jason.jpg',
+		email: 'registrations@emeraldeagles.com'
 	},
 	{
-		title: 'Committee',
-		description: 'Information about the committee',
-		image: 'committee.jpg',
+		title: 'Tom Conway',
+		description: 'Seniors Co-ordinator',
+		image: 'tom.jpg',
+		email: "enquiries@emeraldeagles.com"
+	},
+	{
+		title: 'Noah Silberg',
+		description: 'Coaching Co-ordinator',
+		image: 'noah.jpg',
+		email: "enquiries@emeraldeagles.com"
+	},
+	{
+		title: 'Chrissy Curran',
+		description: 'Social Media Co-ordinator',
+		image: 'chrissy.jpg',
+		email: "enquiries@emeraldeagles.com"
+	},
+	{
+		title: 'Vacant',
+		description: 'Canteen Co-ordinator',
+		image: 'vacant.jpg',
+		email: "enquiries@emeraldeagles.com"
+	},
+	{
+		title: 'Vacant',
+		description: 'Carnival Co-ordinator',
+		image: 'vacant.jpg',
+		email: "enquiries@emeraldeagles.com"
+	},
+	{
+		title: 'Vacant',
+		description: 'Events Co-ordinator',
+		image: 'vacant.jpg',
+		email: "enquiries@emeraldeagles.com"
+	},
+	{
+		title: 'Vacant',
+		description: 'Groundskeeper',
+		image: 'vacant.jpg',
+		email: "enquiries@emeraldeagles.com"
 	},
 ];
 
@@ -191,34 +236,39 @@ export const sponsorsData: Sponsors[] = [
 		title: 'Sponsors',
 		description: 'Information about sponsors',
 		image: 'sponsors.jpg',
+		link: 'https://www.google.com',
 	},
 	{
 		title: 'Sponsors',
 		description: 'Information about sponsors',
 		image: 'sponsors.jpg',
+		link: 'https://www.google.com',
 	},
 	{
 		title: 'Sponsors',
 		description: 'Information about sponsors',
 		image: 'sponsors.jpg',
+		link: 'https://www.google.com',
 	},
 	{
 		title: 'Sponsors',
 		description: 'Information about sponsors',
 		image: 'sponsors.jpg',
+		link: 'https://www.google.com',
 	},
 	{
 		title: 'Sponsors',
 		description: 'Information about sponsors',
 		image: 'sponsors.jpg',
+		link: 'https://www.google.com',
 	},
 ];
 
 export const importantDatesData: ImportantDates[] = [
 	{
 		date: '2021-01-01',
-		title: 'New Year',
-		description: 'Happy New Year!',
+		title: 'EEFC Fun Day',
+		description: 'A fun day to get together with the surrounding towns and play some soccer.',
 		event: 'New Year',
 		image: 'newYear.jpg',
 	},
@@ -423,5 +473,32 @@ export const clubInfoData: ClubInfo[] = [
 		title: 'Contact',
 		description: 'Get in touch with the club',
 		image: 'club.jpg',
+	},
+];
+
+export const resourcesData: Resources[] = [
+	{
+		title: 'Privacy Policy',
+		description: 'EEFC Pricacy Policy',
+		image: 'resources.jpg',
+		link: 'https://www.google.com',
+	},
+	{
+		title: 'Season Information',
+		description: 'Information about the season',
+		image: 'season.jpg',
+		link: 'https://www.google.com',
+	},
+	{
+		title: 'Player Information',
+		description: 'Information about players',
+		image: 'players.jpg',
+		link: 'https://www.google.com',
+	},
+	{
+		title: 'Coach Information',
+		description: 'Information about coaches',
+		image: 'coaches.jpg',
+		link: 'https://www.google.com',
 	},
 ];
