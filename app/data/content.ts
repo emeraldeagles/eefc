@@ -137,79 +137,79 @@ export const committeeData: Committee[] = [
 		title: 'Darrin Milner',
 		description: 'President & Academy Co-ordinator',
 		image: 'darrin.jpg',
-		email: 'president@emeraldeagles.com'
+		email: 'president@emeraldeagles.com',
 	},
 	{
 		title: 'Maureen King',
 		description: 'Vice President',
 		image: 'maureen.jpg',
-		email: 'enquiries@emeraldeagles.com'
+		email: 'enquiries@emeraldeagles.com',
 	},
 	{
 		title: 'Eleasha Ramiah',
 		description: 'Secretary',
 		image: 'eleasha.jpg',
-		email: 'secretary@emeraldeagles.com'
+		email: 'secretary@emeraldeagles.com',
 	},
 	{
 		title: 'Katie Sandeman',
 		description: 'Treasurer',
 		image: 'katie.jpg',
-		email: 'treasurer@emeraldeagles.com'
+		email: 'treasurer@emeraldeagles.com',
 	},
 	{
 		title: 'Jessica Chay',
 		description: 'Sponsorships & Grants',
 		image: 'jess.jpg',
-		email: 'sponsors@emeraldeagles.com'
+		email: 'sponsors@emeraldeagles.com',
 	},
 	{
 		title: 'Jason Sandeman',
 		description: 'Registrar',
 		image: 'jason.jpg',
-		email: 'registrations@emeraldeagles.com'
+		email: 'registrations@emeraldeagles.com',
 	},
 	{
 		title: 'Tom Conway',
 		description: 'Seniors Co-ordinator',
 		image: 'tom.jpg',
-		email: "enquiries@emeraldeagles.com"
+		email: 'enquiries@emeraldeagles.com',
 	},
 	{
 		title: 'Noah Silberg',
 		description: 'Coaching Co-ordinator',
 		image: 'noah.jpg',
-		email: "enquiries@emeraldeagles.com"
+		email: 'enquiries@emeraldeagles.com',
 	},
 	{
 		title: 'Chrissy Curran',
 		description: 'Social Media Co-ordinator',
 		image: 'chrissy.jpg',
-		email: "enquiries@emeraldeagles.com"
+		email: 'enquiries@emeraldeagles.com',
 	},
 	{
 		title: 'Vacant',
 		description: 'Canteen Co-ordinator',
 		image: 'vacant.jpg',
-		email: "enquiries@emeraldeagles.com"
+		email: 'enquiries@emeraldeagles.com',
 	},
 	{
 		title: 'Vacant',
 		description: 'Carnival Co-ordinator',
 		image: 'vacant.jpg',
-		email: "enquiries@emeraldeagles.com"
+		email: 'enquiries@emeraldeagles.com',
 	},
 	{
 		title: 'Vacant',
 		description: 'Events Co-ordinator',
 		image: 'vacant.jpg',
-		email: "enquiries@emeraldeagles.com"
+		email: 'enquiries@emeraldeagles.com',
 	},
 	{
 		title: 'Vacant',
 		description: 'Groundskeeper',
 		image: 'vacant.jpg',
-		email: "enquiries@emeraldeagles.com"
+		email: 'enquiries@emeraldeagles.com',
 	},
 ];
 
