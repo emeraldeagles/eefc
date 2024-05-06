@@ -19,6 +19,12 @@ export type IconProps = {
 export type TileProps = {
 	category: string;
 	content: Content[];
+	isLoading?: boolean;
+};
+
+export type ArticleProps = {
+	category: string;
+	content: Content[];
 };
 
 export type CardProps = {
@@ -27,12 +33,12 @@ export type CardProps = {
 };
 
 export type BasicCardProps = {
-	title: string;
 	description: string;
-	image: string;
+	images: string[];
 	link?: string;
 	date?: string;
-	event?: string;
+	id?: string;
+	category?: string;
 };
 
 export type InfoCardProps = {

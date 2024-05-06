@@ -13,13 +13,14 @@ export type Content =
 	| Sponsors
 	| ImportantDates
 	| Events
-	| Merch
+	| MerchProps
 	| RegoPrices;
 
 export type News = {
-	title: string;
+	id: string;
+	date: string;
 	description: string;
-	image: string;
+	images: string[];
 	link: string;
 };
 
@@ -36,11 +37,11 @@ export type Rego = {
 };
 
 export type Carnivals = {
+	id: string;
 	date: string;
-	title: string;
 	description: string;
-	event: string;
-	image: string;
+	images: string[];
+	link: string;
 };
 
 export type Resources = {
@@ -48,6 +49,7 @@ export type Resources = {
 	description: string;
 	image: string;
 	link: string;
+	category: string;
 };
 
 export type SeasonInfo = {
@@ -63,6 +65,13 @@ export type PlayerInfo = {
 };
 
 export type CoachInfo = {
+	title: string;
+	description: string;
+	perks: string[];
+	image: string;
+};
+
+export type Coaches = {
 	title: string;
 	description: string;
 	image: string;
@@ -91,22 +100,27 @@ export type Sponsors = {
 	title: string;
 	description: string;
 	image: string;
+	link: string;
+	type: string;
 };
 
 export type ImportantDates = {
 	date: string;
 	title: string;
 	description: string;
-	event: string;
+	eventInfo: string;
 	image: string;
+	clubLogo: string;
+	location: string;
+	mapLink: string;
 };
 
 export type Events = {
-	title: string;
+	id: string;
 	date: string;
 	description: string;
-	event: string;
-	image: string;
+	images: string[];
+	link: string;
 };
 
 export type RegoPrices = {
@@ -115,12 +129,20 @@ export type RegoPrices = {
 	image: string;
 	price: string;
 	open: boolean;
+	info: string[];
 };
 
-export type Merch = {
+export type MerchProps = {
 	title: string;
 	description: string;
 	image: string;
 	price: string;
 	badge: string;
+	badgeColour: 'default' | 'destructive' | 'outline' | 'secondary' | null | undefined;
+};
+
+export type ClubSitesProps = {
+	title: string;
+	image: string;
+	link: string;
 };

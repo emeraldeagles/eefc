@@ -1,4 +1,13 @@
-import type { Carnivals, ClubInfo, Content, Events, Merch, News, RegoPrices, Resources } from '~/interfaces/content';
+import type {
+	Carnivals,
+	ClubInfo,
+	Content,
+	Events,
+	MerchProps,
+	News,
+	RegoPrices,
+	Resources,
+} from '~/interfaces/content';
 import React from 'react';
 import { CARD_CATEGORY } from '~/constants/constants';
 import InfoCard from '../components/Cards/InfoCard';
@@ -16,7 +25,7 @@ export const isClubInfo = (content: Content): content is ClubInfo => {
 	return 'title' in content;
 };
 
-export const isMerch = (content: Content): content is Merch => {
+export const isMerch = (content: Content): content is MerchProps => {
 	return 'badge' in content;
 };
 
@@ -38,28 +47,37 @@ export const isResources = (content: Content): content is Resources => {
 
 export const getCardByCategory = ({ content, category }: CardProps) => {
 	if (category === CARD_CATEGORY.NEWS && isNews(content)) {
-		const { title, description, image, link } = content;
-		return <BasicCard title={title} description={description} image={image} link={link} />;
+		const { id, description, images, link } = content;
+		return <BasicCard id={id} description={description} images={images} link={link} category={category} />;
 	}
 	if (category === CARD_CATEGORY.CLUB_INFO && isClubInfo(content)) {
 		const { title, description, image } = content;
 		return <InfoCard title={title} description={description} image={image} />;
 	}
 	if (category === CARD_CATEGORY.MERCH && isMerch(content)) {
-		const { title, description, price, badge, image } = content;
-		return <MerchCard title={title} description={description} price={price} badge={badge} image={image} />;
+		const { title, description, price, badge, badgeColour, image } = content;
+		return (
+			<MerchCard
+				title={title}
+				description={description}
+				price={price}
+				badge={badge}
+				badgeColour={badgeColour}
+				image={image}
+			/>
+		);
 	}
 	if (category === CARD_CATEGORY.EVENTS && isEvents(content)) {
-		const { title, date, description, event, image } = content;
-		return <BasicCard title={title} date={date} description={description} event={event} image={image} />;
+		const { id, date, description, images } = content;
+		return <BasicCard id={id} category={category} date={date} description={description} images={images} />;
 	}
 	if (category === CARD_CATEGORY.REGO && isRegoPrices(content)) {
-		const { title, description, image, price, open } = content;
-		return <PricingCard title={title} description={description} image={image} price={price} open={open} />;
+		const { title, description, image, price, open, info } = content;
+		return <PricingCard title={title} description={description} image={image} price={price} open={open} info={info} />;
 	}
 	if (category === CARD_CATEGORY.CARNIVALS && isCarnivals(content)) {
-		const { title, date, description, event, image } = content;
-		return <BasicCard title={title} date={date} description={description} event={event} image={image} />;
+		const { id, date, description, images } = content;
+		return <BasicCard id={id} category={category} date={date} description={description} images={images} />;
 	}
 	if (category === CARD_CATEGORY.RESOURCES && isResources(content)) {
 		const { title, description, image, link } = content;

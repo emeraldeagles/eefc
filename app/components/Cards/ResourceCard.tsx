@@ -4,7 +4,8 @@ import type { ResourceCardProps } from '~/interfaces/common';
 
 export default function ResourceCard({ title, description, image, link }: ResourceCardProps) {
 	return (
-		<div className="mx-auto max-w-md overflow-hidden rounded-lg bg-[#bd1e59] p-6 text-white">
+		// <div className="mx-auto max-w-md overflow-hidden rounded-lg bg-[#bd1e59] p-6 text-white">
+		<div className="mx-auto max-w-md overflow-hidden rounded-lg bg-white p-6 text-black">
 			<div className="mb-4 flex items-center justify-between">
 				<Badge variant="secondary">Open Air Boxes</Badge>
 				<Badge>Selling Fast</Badge>

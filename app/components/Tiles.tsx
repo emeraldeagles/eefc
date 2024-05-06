@@ -1,23 +1,18 @@
 import type { TileProps } from '~/interfaces/common';
-import { Icon } from './Icon';
-import { ChevronIcon } from './IconPaths/Chevron';
-import { getCardByCategory, getGridColClasses } from '~/lib/utils';
+import { getCardByCategory, getGridColClasses } from '~/utils/UIhelpers';
+import SkeletonCard from './SkeletonCard';
+import SectionTitle from './SectionTitle';
 
-export default function Tiles({ category, content }: TileProps) {
-	console.log('Tiles', category, content);
+export default function Tiles({ category, content, isLoading }: TileProps) {
+	console.log('Carnivals Tiles ==>', category, content, isLoading);
 
 	return (
 		<div className="m-20">
-			<h2 className="flex items-center pt-8 text-2xl font-bold">
-				{category}
-				<span>
-					<Icon iconPath={<ChevronIcon />} />
-				</span>
-			</h2>
+			<SectionTitle category={category} />
 			<div className={`my-4 grid ${getGridColClasses(category)} gap-6`}>
-				{content.map((content, index) => (
-					<div key={index}>{getCardByCategory({ content, category })}</div>
-				))}
+				{isLoading
+					? Array.from({ length: 4 }).map((_, index) => <SkeletonCard key={index} />)
+					: content.map((item, index) => <div key={index}>{getCardByCategory({ content: item, category })}</div>)}
 			</div>
 		</div>
 	);

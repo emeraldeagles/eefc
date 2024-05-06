@@ -1,6 +1,6 @@
-import { regoData, seasonInfoData, playerInfoData, coachInfoData } from '~/data/content';
+import { regoData, seasonInfoData, playerInfoData, coachInfoData, coachesData } from '~/data/content';
 
-import type { CoachInfo, PlayerInfo, Rego, SeasonInfo } from '~/interfaces/content';
+import type { CoachInfo, Coaches, PlayerInfo, Rego, SeasonInfo } from '~/interfaces/content';
 
 export const getRego = (): Promise<Rego[]> =>
 	new Promise((resolve, reject) => {
@@ -23,5 +23,11 @@ export const getPlayerInfo = (): Promise<PlayerInfo[]> =>
 export const getCoachInfo = (): Promise<CoachInfo[]> =>
 	new Promise((resolve, reject) => {
 		resolve(coachInfoData);
+		// reject(new Error('Something went wrong'));
+	});
+
+	export const getCoaches = (): Promise<Coaches[]> =>
+	new Promise((resolve, reject) => {
+		resolve(coachesData);
 		// reject(new Error('Something went wrong'));
 	});

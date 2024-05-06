@@ -1,28 +1,28 @@
 import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
-import type { MerchCardProps } from '~/interfaces/common';
+import type { MerchProps } from '~/interfaces/content';
 
-export default function MerchCard({ title, description, price, image, badge }: MerchCardProps) {
-	console.log(title, price);
+export default function MerchCard({ title, description, price, image, badge, badgeColour }: MerchProps) {
+	console.log('MerchCard', title, price, badgeColour);
 
 	return (
 		<Card className="mx-auto max-w-lg">
 			<CardHeader className="flex content-end">
-				<Badge className="max-w-max">KIDS</Badge>
+				<Badge variant={badgeColour} className="max-w-max">
+					{badge}
+				</Badge>
 			</CardHeader>
 			<CardContent>
 				<img
 					alt="2024 Infant Home Jersey"
-					className="w-full"
+					className="w-full rounded-lg"
 					height="200"
 					src="https://placehold.co/940x788"
-					style={
-						{
-							// aspectRatio: '200/200',
-							// objectFit: 'cover',
-						}
-					}
+					style={{
+						aspectRatio: '200/200',
+						objectFit: 'cover',
+					}}
 					width="200"
 				/>
 				<h3 className="mt-4 text-lg font-semibold">{title}</h3>

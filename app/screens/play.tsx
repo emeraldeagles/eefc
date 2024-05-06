@@ -17,7 +17,7 @@ const ClubScreen: FC<PlayScreenProps> = ({
 	coachInfo,
 }: PlayScreenProps): ReactElement => {
 	return (
-		<div className="flex flex-col gap-4">
+		<div className="flex flex-col gap-4 m-20">
 			<Section category={SECTION_CATEGORY.REGO} />
 			<Section category={SECTION_CATEGORY.SEASON_INFO} left />
 			<Section category={SECTION_CATEGORY.PLAYER_INFO} />

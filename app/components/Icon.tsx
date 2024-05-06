@@ -9,7 +9,7 @@ export const Icon: React.FC<IconProps> = ({
 	buttonShape = 'btn-circle',
 	iconClass,
 	iconColor = 'text-primary',
-	iconSize = 24,
+	iconSize = 30,
 	fill = 'currentColor',
 	strokeWidth = 3,
 	isLink,

@@ -1,6 +1,21 @@
-export default function Footer() {
+import type { ClubSitesProps, Sponsors } from '~/interfaces/content';
+import ClubSites from '../components/ClubSites';
+import FooterInfo from './FooterInfo';
+import MajorSponsors from '../components/MajorSponsors';
+
+export type FooterProps = {
+	sponsors: Sponsors[];
+	clubSites: ClubSitesProps[];
+};
+
+const Footer = ({ sponsors, clubSites }: FooterProps) => {
 	return (
-		//  navbar
-		<nav className="bg-gray-800 p-20 text-white">Footer</nav>
+		<>
+			<MajorSponsors sponsors={sponsors} />
+			<FooterInfo />
+			<ClubSites clubSites={clubSites} />
+		</>
 	);
-}
+};
+
+export default Footer;
