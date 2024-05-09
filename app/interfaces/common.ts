@@ -11,7 +11,7 @@ export type IconProps = {
 	iconColor?: string;
 	iconSize?: number;
 	fill?: string;
-	strokeWidth?: string;
+	strokeWidth?: number;
 	isLink?: boolean;
 	isButton?: boolean;
 };
@@ -68,4 +68,5 @@ export type ResourceCardProps = {
 	description: string;
 	image: string;
 	link: string;
+	category: string;
 };

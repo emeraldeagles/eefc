@@ -1,4 +1,6 @@
 import type { ReactElement, FC } from 'react';
+import Draw from '~/components/Draw';
+import Ladder from '~/components/Ladder';
 import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY } from '~/constants/constants';
 import type { Carnivals, MerchProps, News, RegoPrices } from '~/interfaces/content';
@@ -18,11 +20,11 @@ const HomeScreen: FC<HomeScreenProps> = ({ news, merch, regoPrices, carnivals }:
 	return (
 		<>
 			<Tiles category={CARD_CATEGORY.NEWS} content={news} isLoading={!news.length} />
+			<Ladder />
+			<Draw />
 			<Tiles category={CARD_CATEGORY.MERCH} content={merch} isLoading={!merch.length} />
 			<Tiles category={CARD_CATEGORY.REGO} content={regoPrices} isLoading={!regoPrices.length} />
 			<Tiles category={CARD_CATEGORY.CARNIVALS} content={carnivals} isLoading={!carnivals.length} />
-			{/* <Ladder /> */}
-			{/* <Draw /> */}
 		</>
 	);
 };

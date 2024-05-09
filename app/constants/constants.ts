@@ -3,7 +3,7 @@ export const CARD_CATEGORY = {
 	CLUB_INFO: 'Info',
 	MERCH: 'Teamwear',
 	EVENTS: 'Events',
-	REGO: 'Registration',
+	REGO: 'Registration Prices',
 	CARNIVALS: 'Carnivals',
 	RESOURCES: 'Resources',
 	HISTORY: 'History',
@@ -18,8 +18,9 @@ export const CARD_CATEGORY = {
 };
 
 export const SECTION_CATEGORY = {
-	REGO: 'Registration',
+	REGO_INFO: 'Registration Info',
 	SEASON_INFO: 'Season Info',
 	PLAYER_INFO: 'Player Info',
 	COACH_INFO: 'Coach Info',
+	FAIRPLAY_INFO: 'FairPlay Info',
 };

@@ -2,9 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui
 // import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 // import type { PricingCardProps } from '~/interfaces/common';
-import { RegoPrices } from '~/interfaces/content';
+import type { RegoPrices } from '~/interfaces/content';
+import { Link } from '@remix-run/react';
 
-export default function PricingCard({ title, description, open, price, image, info }: RegoPrices) {
+export default function PricingCard({ title, description, open, price, image, info, link }: RegoPrices) {
 	console.log('Registration Pricing', title, description, open, price, image, info);
 	return (
 		<>
@@ -19,9 +20,11 @@ export default function PricingCard({ title, description, open, price, image, in
 							{price}
 							<span className="text-lg">/season</span>
 						</div>
-						<Button className="mt-6 w-full bg-[#6366f1]" disabled={open}>
-							Register
-						</Button>
+						<Link to={link} target="_blank" rel="no_referrer">
+							<Button className="mt-6 w-full bg-[#6366f1]" disabled={open}>
+								Register Now
+							</Button>
+						</Link>
 						<ul className="mt-6 space-y-2">
 							{info.map(i => {
 								return <li key={i}>✓ {i}</li>;
@@ -40,7 +43,11 @@ export default function PricingCard({ title, description, open, price, image, in
 							{price}
 							<span className="text-lg">/season</span>
 						</div>
-						<Button className="mt-6 w-full">Register</Button>
+						<Link to={link} target="_blank" rel="no_referrer">
+							<Button className="mt-6 w-full bg-[#6366f1]" disabled={open}>
+								Register Now
+							</Button>
+						</Link>
 						<ul className="mt-6 space-y-2">
 							{info.map(i => {
 								return <li key={i}>✓ {i}</li>;

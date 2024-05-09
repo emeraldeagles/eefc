@@ -28,7 +28,7 @@ export default function Article({ category, content }: Props): JSX.Element {
 	cardContent.shift();
 
 	return (
-		<div className="m-20">
+		<div>
 			<SectionTitle category={'Post'} />
 			<Card className="rounded-lg">
 				<CardHeader className="flex flex-row items-center gap-4 border-b">

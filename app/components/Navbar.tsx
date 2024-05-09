@@ -27,8 +27,8 @@ export default function Navbar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<header className="absolute inset-x-0 top-0 z-50 bg-white px-20">
-			<nav className="flex max-w-7xl mx-auto items-center justify-between p-6 lg:px-8" aria-label="Global">
+		<header className="sticky inset-x-0 top-0 z-50 rounded-b-lg bg-white">
+			<nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
 				<div className="flex lg:flex-1">
 					<Link to="/" className="-my-4 p-1.5">
 						<span className="sr-only">Emerald Eagles Football Club</span>

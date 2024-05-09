@@ -7,7 +7,7 @@ export default function Tiles({ category, content, isLoading }: TileProps) {
 	console.log('Carnivals Tiles ==>', category, content, isLoading);
 
 	return (
-		<div className="m-20">
+		<div>
 			<SectionTitle category={category} />
 			<div className={`my-4 grid ${getGridColClasses(category)} gap-6`}>
 				{isLoading

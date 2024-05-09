@@ -1,7 +1,8 @@
 export type Content =
 	| News
 	| ClubInfo
-	| Rego
+	| RegoInfo
+	| FairPlayInfo
 	| Carnivals
 	| Resources
 	| SeasonInfo
@@ -30,12 +31,6 @@ export type ClubInfo = {
 	image: string;
 };
 
-export type Rego = {
-	title: string;
-	description: string;
-	image: string;
-};
-
 export type Carnivals = {
 	id: string;
 	date: string;
@@ -52,29 +47,51 @@ export type Resources = {
 	category: string;
 };
 
+export type RegoInfo = {
+	title: string;
+	description: string;
+	image: string;
+	link: string;
+	info: string[];
+};
+
+export type FairPlayInfo = {
+	title: string;
+	description: string;
+	image: string;
+	link: string;
+	info: string[];
+};
+
 export type SeasonInfo = {
 	title: string;
 	description: string;
 	image: string;
+	link: string;
+	info: string[];
 };
 
 export type PlayerInfo = {
 	title: string;
 	description: string;
 	image: string;
+	link: string;
+	info: string[];
 };
 
 export type CoachInfo = {
 	title: string;
 	description: string;
-	perks: string[];
 	image: string;
+	link: string;
+	info: string[];
 };
 
 export type Coaches = {
 	title: string;
 	description: string;
 	image: string;
+	team: string;
 };
 
 export type History = {
@@ -129,6 +146,7 @@ export type RegoPrices = {
 	image: string;
 	price: string;
 	open: boolean;
+	link: string;
 	info: string[];
 };
 

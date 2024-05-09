@@ -12,8 +12,8 @@ const Footer = ({ sponsors, clubSites }: FooterProps) => {
 	return (
 		<>
 			<MajorSponsors sponsors={sponsors} />
-			<FooterInfo />
 			<ClubSites clubSites={clubSites} />
+			<FooterInfo />
 		</>
 	);
 };

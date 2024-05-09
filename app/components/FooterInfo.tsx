@@ -4,7 +4,7 @@ import { Link } from '@remix-run/react';
 
 export default function FooterInfo() {
 	return (
-		<footer className="bg-white">
+		<footer className="mt-8 rounded-t-lg bg-white">
 			<div className="mx-auto grid max-w-7xl gap-4 px-4 py-8 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
 					<div className="lg:w-0 lg:flex-1">

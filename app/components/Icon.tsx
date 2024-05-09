@@ -44,7 +44,7 @@ export const Icon: React.FC<IconProps> = ({
 					strokeWidth={strokeWidth}
 					strokeLinecap="round"
 					strokeLinejoin="round"
-					className={`${iconColor}`}>
+					className={`${iconColor} ${iconClass}`}>
 					<>{iconPath}</>
 				</svg>
 			)}

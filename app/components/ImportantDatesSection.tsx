@@ -3,6 +3,7 @@ import ImportantDatesList from './ImportantDatesList';
 import type { ImportantDates } from '~/interfaces/content';
 import SectionTitle from './SectionTitle';
 import EventCalendar from './EventCalendar';
+import CalendarDownload from './CalendarDownload';
 
 export const formatDate = (date: Date): string => {
 	return `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
@@ -42,7 +43,7 @@ export default function ImportantDatesSection({ importantDates }: Props) {
 	// const selectedEvent = importantDates.find(event => formatDate(new Date(event.date)) === selectedDate);
 
 	return (
-		<div className="m-20 flex flex-col">
+		<div className="flex flex-col">
 			<SectionTitle category="Important Dates" />
 			<div className="flex gap-4">
 				<div className="w-1/2">
@@ -60,6 +61,7 @@ export default function ImportantDatesSection({ importantDates }: Props) {
 					/>
 				</div>
 			</div>
+			<CalendarDownload />
 		</div>
 	);
 }

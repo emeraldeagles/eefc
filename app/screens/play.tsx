@@ -1,27 +1,35 @@
 import type { ReactElement, FC } from 'react';
 import Section from '~/components/Section';
-import { SECTION_CATEGORY } from '~/constants/constants';
-import type { CoachInfo, PlayerInfo, Rego, SeasonInfo } from '~/interfaces/content';
+import Tiles from '~/components/Tiles';
+import { CARD_CATEGORY, SECTION_CATEGORY } from '~/constants/constants';
+import type { CoachInfo, PlayerInfo, RegoInfo, RegoPrices, SeasonInfo } from '~/interfaces/content';
 
 export interface PlayScreenProps {
-	rego: Rego[];
-	seasonInfo: SeasonInfo[];
-	playerInfo: PlayerInfo[];
-	coachInfo: CoachInfo[];
+	regoInfo: RegoInfo;
+	regoPrices: RegoPrices[];
+	seasonInfo: SeasonInfo;
+	playerInfo: PlayerInfo;
+	coachInfo: CoachInfo;
+	fairPlayInfo: SeasonInfo;
 }
 
 const ClubScreen: FC<PlayScreenProps> = ({
-	rego,
+	regoInfo,
+	regoPrices,
 	seasonInfo,
 	playerInfo,
+	fairPlayInfo,
 	coachInfo,
 }: PlayScreenProps): ReactElement => {
 	return (
-		<div className="flex flex-col gap-4 m-20">
-			<Section category={SECTION_CATEGORY.REGO} />
-			<Section category={SECTION_CATEGORY.SEASON_INFO} left />
-			<Section category={SECTION_CATEGORY.PLAYER_INFO} />
-			<Section category={SECTION_CATEGORY.COACH_INFO} left />
+		<div className="flex flex-col gap-4">
+			<Tiles category={CARD_CATEGORY.REGO} content={regoPrices} />
+			<Section category={SECTION_CATEGORY.REGO_INFO} content={regoInfo} />
+			<Section category={SECTION_CATEGORY.FAIRPLAY_INFO} content={fairPlayInfo} leftToRight />
+			<Section category={SECTION_CATEGORY.SEASON_INFO} content={seasonInfo} />
+			<Section category={SECTION_CATEGORY.PLAYER_INFO} content={playerInfo} leftToRight />
+			{/* this will be in club section now */}
+			{/* <Section category={SECTION_CATEGORY.COACH_INFO content={coachInfo}  /> */}
 		</div>
 	);
 };

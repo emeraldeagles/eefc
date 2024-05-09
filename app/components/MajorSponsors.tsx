@@ -8,7 +8,7 @@ type MajorSponsorsProps = {
 const MajorSponsors: React.FC<MajorSponsorsProps> = ({ sponsors }) => {
 	console.log('sponsors => ', sponsors);
 	return (
-		<section className="bg-white py-12">
+		<section className="mb-8 mt-16 rounded-lg bg-white py-12">
 			<h2 className="mb-8 text-center text-2xl font-semibold">MAJOR SPONSORS</h2>
 			<div className="mb-8 flex items-center justify-center space-x-12">
 				{/* {sponsors.filter((i) => i.type === "major").map} */}

@@ -33,12 +33,10 @@ export default function App() {
 				<Meta />
 				<Links />
 			</head>
-			<body className="bg-gray-100">
+			<body className="mx-auto w-full max-w-7xl bg-gray-100 px-12">
 				<Header />
-				<div className="bg-gray-100">
-					<div className="container mx-auto px-4">
-						<Outlet />
-					</div>
+				<div className="">
+					<Outlet />
 				</div>
 				<ScrollRestoration />
 				<script dangerouslySetInnerHTML={{ __html: `window.ENV = ${JSON.stringify(ENV)}` }} />

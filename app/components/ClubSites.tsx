@@ -3,7 +3,7 @@ import type { ClubSitesProps } from '~/interfaces/content';
 
 const ClubSites: React.FC<ClubSitesProps> = ({ clubSites }) => {
 	return (
-		<section className="bg-[#111827] py-8 text-white">
+		<section className="my-8 rounded-lg bg-[#50545c] py-8 text-white">
 			<div className="container mx-auto px-4">
 				<h2 className="mb-6 text-xl font-semibold">Club Sites</h2>
 				<div className="grid grid-cols-6 gap-4">
