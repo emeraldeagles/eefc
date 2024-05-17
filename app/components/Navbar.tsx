@@ -46,13 +46,16 @@ export default function Navbar() {
 				</div>
 				<div className="hidden lg:flex lg:gap-x-12">
 					{navigationLinks.map(item => (
-						<Link key={item.name} to={item.link} className="text-base font-medium text-gray-500 hover:text-gray-900">
+						<Link
+							key={item.name}
+							to={item.link}
+							className="text-base font-medium text-gray-500 underline-offset-4 hover:text-primary hover:underline">
 							{item.name}
 						</Link>
 					))}
 				</div>
 				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-					<Button asChild variant="secondary">
+					<Button asChild variant="outline">
 						<Link to="/play">Join the Club</Link>
 					</Button>
 				</div>

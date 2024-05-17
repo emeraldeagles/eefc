@@ -1,21 +1,28 @@
 import {
 	resourcesData,
-	historyData,
 	committeeData,
 	lifeMembersData,
 	sponsorsData,
 	clubInfoData,
 	clubSitesData,
+	coachInfoData,
+	coachesData,
+	volunteerInfoData,
+	committeeInfoData,
+	historyInfoData,
+	lifeMembersInfoData,
+	sponsorsInfoData,
 } from '~/data/content';
 
 import type {
-	History,
 	Committee,
 	LifeMembers,
 	Resources,
 	Sponsors,
 	ClubInfo,
 	ClubSitesProps,
+	Coaches,
+	SectionCardInfo,
 } from '~/interfaces/content';
 
 export const getResources = (): Promise<Resources[]> =>
@@ -30,9 +37,9 @@ export const getClubInfo = (): Promise<ClubInfo[]> =>
 		// reject(new Error('Something went wrong'));
 	});
 
-export const getHistory = (): Promise<History[]> =>
+export const getHistory = (): Promise<SectionCardInfo> =>
 	new Promise((resolve, reject) => {
-		resolve(historyData);
+		resolve(historyInfoData);
 		// reject(new Error('Something went wrong'));
 	});
 
@@ -42,9 +49,21 @@ export const getCommittee = (): Promise<Committee[]> =>
 		// reject(new Error('Something went wrong'));
 	});
 
+export const getCommitteeInfo = (): Promise<SectionCardInfo> =>
+	new Promise((resolve, reject) => {
+		resolve(committeeInfoData);
+		// reject(new Error('Something went wrong'));
+	});
+
 export const getLifeMembers = (): Promise<LifeMembers[]> =>
 	new Promise((resolve, reject) => {
 		resolve(lifeMembersData);
+		// reject(new Error('Something went wrong'));
+	});
+
+export const getLifeMembersInfo = (): Promise<SectionCardInfo> =>
+	new Promise((resolve, reject) => {
+		resolve(lifeMembersInfoData);
 		// reject(new Error('Something went wrong'));
 	});
 
@@ -54,8 +73,32 @@ export const getSponsors = (): Promise<Sponsors[]> =>
 		// reject(new Error('Something went wrong'));
 	});
 
+export const getSponsorsInfo = (): Promise<SectionCardInfo> =>
+	new Promise((resolve, reject) => {
+		resolve(sponsorsInfoData);
+		// reject(new Error('Something went wrong'));
+	});
+
 export const getClubSites = (): Promise<ClubSitesProps[]> =>
 	new Promise((resolve, reject) => {
 		resolve(clubSitesData);
+		// reject(new Error('Something went wrong'));
+	});
+
+export const getCoachInfo = (): Promise<SectionCardInfo> =>
+	new Promise((resolve, reject) => {
+		resolve(coachInfoData);
+		// reject(new Error('Something went wrong'));
+	});
+
+export const getCoaches = (): Promise<Coaches[]> =>
+	new Promise((resolve, reject) => {
+		resolve(coachesData);
+		// reject(new Error('Something went wrong'));
+	});
+
+export const getVolunteerInfo = (): Promise<SectionCardInfo> =>
+	new Promise((resolve, reject) => {
+		resolve(volunteerInfoData);
 		// reject(new Error('Something went wrong'));
 	});

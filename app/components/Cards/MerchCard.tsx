@@ -1,4 +1,4 @@
-import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
+import { Card, CardContent, CardFooter } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 import type { MerchProps } from '~/interfaces/content';
@@ -8,17 +8,12 @@ export default function MerchCard({ title, description, price, image, badge, bad
 
 	return (
 		<Card className="mx-auto max-w-lg">
-			<CardHeader className="flex content-end">
-				<Badge variant={badgeColour} className="max-w-max">
-					{badge}
-				</Badge>
-			</CardHeader>
-			<CardContent>
+			<CardContent className="pt-6">
 				<img
 					alt="2024 Infant Home Jersey"
-					className="w-full rounded-lg"
+					className={`w-full rounded-lg bg-${badgeColour}`}
 					height="200"
-					src="https://placehold.co/940x788"
+					src={image}
 					style={{
 						aspectRatio: '200/200',
 						objectFit: 'cover',
@@ -27,11 +22,14 @@ export default function MerchCard({ title, description, price, image, badge, bad
 				/>
 				<h3 className="mt-4 text-lg font-semibold">{title}</h3>
 				<p className="text-xl font-bold">{price}</p>
+				{badge ? (
+					<Badge variant="outline" className={`max-w-max text-${badgeColour} border-${badgeColour}`}>
+						{badge}
+					</Badge>
+				) : null}
 			</CardContent>
-			<CardFooter className="flex justify-center pt-4">
-				<Button variant="outline" className="w-full border-2 border-lime-500">
-					Buy Now
-				</Button>
+			<CardFooter className="flex justify-center">
+				<Button className="w-full border-2">Buy Now</Button>
 			</CardFooter>
 		</Card>
 	);

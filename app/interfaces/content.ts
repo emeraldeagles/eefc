@@ -1,13 +1,9 @@
 export type Content =
 	| News
 	| ClubInfo
-	| RegoInfo
-	| FairPlayInfo
+	| SectionCardInfo
 	| Carnivals
 	| Resources
-	| SeasonInfo
-	| PlayerInfo
-	| CoachInfo
 	| History
 	| Committee
 	| LifeMembers
@@ -29,6 +25,7 @@ export type ClubInfo = {
 	title: string;
 	description: string;
 	image: string;
+	link: string;
 };
 
 export type Carnivals = {
@@ -47,39 +44,7 @@ export type Resources = {
 	category: string;
 };
 
-export type RegoInfo = {
-	title: string;
-	description: string;
-	image: string;
-	link: string;
-	info: string[];
-};
-
-export type FairPlayInfo = {
-	title: string;
-	description: string;
-	image: string;
-	link: string;
-	info: string[];
-};
-
-export type SeasonInfo = {
-	title: string;
-	description: string;
-	image: string;
-	link: string;
-	info: string[];
-};
-
-export type PlayerInfo = {
-	title: string;
-	description: string;
-	image: string;
-	link: string;
-	info: string[];
-};
-
-export type CoachInfo = {
+export type SectionCardInfo = {
 	title: string;
 	description: string;
 	image: string;
@@ -92,6 +57,7 @@ export type Coaches = {
 	description: string;
 	image: string;
 	team: string;
+	ageGroup: string;
 };
 
 export type History = {
@@ -109,8 +75,7 @@ export type Committee = {
 
 export type LifeMembers = {
 	title: string;
-	description: string;
-	image: string;
+	year: string;
 };
 
 export type Sponsors = {
@@ -156,7 +121,7 @@ export type MerchProps = {
 	image: string;
 	price: string;
 	badge: string;
-	badgeColour: 'default' | 'destructive' | 'outline' | 'secondary' | null | undefined;
+	badgeColour: 'primary' | 'accent' | 'secondary' | 'destructive';
 };
 
 export type ClubSitesProps = {

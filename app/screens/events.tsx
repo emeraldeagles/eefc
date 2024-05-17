@@ -14,8 +14,8 @@ const EventsScreen: FC<EventScreenProps> = ({ carnivals, events, importantDates 
 	return (
 		<>
 			<ImportantDatesSection importantDates={importantDates} />
-			<Tiles category={CARD_CATEGORY.EVENTS} content={events} />
-			<Tiles category={CARD_CATEGORY.CARNIVALS} content={carnivals} />
+			{/* <Tiles category={CARD_CATEGORY.EVENTS} content={events} /> */}
+			{/* <Tiles category={CARD_CATEGORY.CARNIVALS} content={carnivals} /> */}
 		</>
 	);
 };

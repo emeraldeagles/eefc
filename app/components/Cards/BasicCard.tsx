@@ -32,27 +32,29 @@ export default function BasicCard({ id, description, images, link, date, categor
 				'glow-effect': glowPosition.hasOwnProperty('--glow-x') && glowPosition.hasOwnProperty('--glow-y'),
 			})}
 			style={glowPosition}>
-			<Card className="rounded-lg border-[#e5e7eb]">
-				<CardHeader className="p-0">
-					<img className="h-48 w-full rounded-t-lg object-cover" src={images[0]} alt={description} />
-				</CardHeader>
-				<CardContent className="p-4">
-					<div
-						className="overflow-hidden text-ellipsis text-sm leading-tight"
-						style={{
-							display: '-webkit-box',
-							WebkitLineClamp: '2',
-							WebkitBoxOrient: 'vertical',
-						}}>
-						{description}
-					</div>
-				</CardContent>
-				<CardFooter className="flex justify-center pt-4">
-					<Button variant="outline" className="w-full border-2 border-lime-500">
-						<Link to={`/${category}/${id}`}>Read more</Link>
-					</Button>
-				</CardFooter>
-			</Card>
+			<Link to={`/${category}/${id}`}>
+				<Card className="rounded-lg border-[#e5e7eb]">
+					<CardHeader className="p-0">
+						<img className="h-48 w-full rounded-t-lg object-cover" src={images[0]} alt={description} />
+					</CardHeader>
+					<CardContent className="p-4">
+						<div
+							className="overflow-hidden text-ellipsis text-sm leading-tight"
+							style={{
+								display: '-webkit-box',
+								WebkitLineClamp: '2',
+								WebkitBoxOrient: 'vertical',
+							}}>
+							{description}
+						</div>
+					</CardContent>
+					<CardFooter className="flex justify-center pt-4">
+						<Button variant="outline" className="w-full border-2">
+							Read more
+						</Button>
+					</CardFooter>
+				</Card>
+			</Link>
 		</div>
 	);
 }

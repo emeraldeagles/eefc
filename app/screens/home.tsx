@@ -20,11 +20,11 @@ const HomeScreen: FC<HomeScreenProps> = ({ news, merch, regoPrices, carnivals }:
 	return (
 		<>
 			<Tiles category={CARD_CATEGORY.NEWS} content={news} isLoading={!news.length} />
+			<Tiles category={CARD_CATEGORY.MERCH} content={merch} isLoading={!merch.length} />
 			<Ladder />
 			<Draw />
-			<Tiles category={CARD_CATEGORY.MERCH} content={merch} isLoading={!merch.length} />
 			<Tiles category={CARD_CATEGORY.REGO} content={regoPrices} isLoading={!regoPrices.length} />
-			<Tiles category={CARD_CATEGORY.CARNIVALS} content={carnivals} isLoading={!carnivals.length} />
+			{/* <Tiles category={CARD_CATEGORY.CARNIVALS} content={carnivals} isLoading={!carnivals.length} /> */}
 		</>
 	);
 };

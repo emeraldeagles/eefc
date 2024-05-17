@@ -1,7 +1,8 @@
 import type { ClubSitesProps, Sponsors } from '~/interfaces/content';
 import ClubSites from '../components/ClubSites';
 import FooterInfo from './FooterInfo';
-import MajorSponsors from '../components/MajorSponsors';
+import { useLocation } from '@remix-run/react';
+import PlatinumSponsors from './PlatinumSponsors';
 
 export type FooterProps = {
 	sponsors: Sponsors[];
@@ -9,10 +10,16 @@ export type FooterProps = {
 };
 
 const Footer = ({ sponsors, clubSites }: FooterProps) => {
+	const location = useLocation();
+	const isClubSponsorsRoute = location.pathname === '/club/sponsors';
+	console.log('isClubSponsorsRoute', isClubSponsorsRoute);
+
 	return (
 		<>
-			<MajorSponsors sponsors={sponsors} />
-			<ClubSites clubSites={clubSites} />
+			{!isClubSponsorsRoute ? <PlatinumSponsors sponsors={sponsors} /> : null}
+			<div className={isClubSponsorsRoute ? 'pt-16' : ''}>
+				<ClubSites clubSites={clubSites} />
+			</div>
 			<FooterInfo />
 		</>
 	);

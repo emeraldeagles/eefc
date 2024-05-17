@@ -2,15 +2,15 @@ import type { ReactElement, FC } from 'react';
 import Section from '~/components/Section';
 import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY, SECTION_CATEGORY } from '~/constants/constants';
-import type { CoachInfo, PlayerInfo, RegoInfo, RegoPrices, SeasonInfo } from '~/interfaces/content';
+import type { RegoPrices, SectionCardInfo } from '~/interfaces/content';
 
 export interface PlayScreenProps {
-	regoInfo: RegoInfo;
+	regoInfo: SectionCardInfo;
 	regoPrices: RegoPrices[];
-	seasonInfo: SeasonInfo;
-	playerInfo: PlayerInfo;
-	coachInfo: CoachInfo;
-	fairPlayInfo: SeasonInfo;
+	seasonInfo: SectionCardInfo;
+	playerInfo: SectionCardInfo;
+	coachInfo: SectionCardInfo;
+	fairPlayInfo: SectionCardInfo;
 }
 
 const ClubScreen: FC<PlayScreenProps> = ({

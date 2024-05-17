@@ -1,90 +1,29 @@
+import { Link } from '@remix-run/react';
 import React from 'react';
 import type { ClubSitesProps } from '~/interfaces/content';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
-const ClubSites: React.FC<ClubSitesProps> = ({ clubSites }) => {
+type Props = {
+	clubSites: ClubSitesProps[];
+};
+
+const ClubSites = ({ clubSites }: Props) => {
 	return (
-		<section className="my-8 rounded-lg bg-[#50545c] py-8 text-white">
+		<section className="my-8 rounded-lg bg-[#50545c] px-6 py-12 text-white">
 			<div className="container mx-auto px-4">
-				<h2 className="mb-6 text-xl font-semibold">Club Sites</h2>
-				<div className="grid grid-cols-6 gap-4">
-					<div className="flex flex-col items-center">
-						<img
-							alt="Atlanta"
-							height="50"
-							src="/images/eefclogo.png"
-							style={{
-								aspectRatio: '50/50',
-								objectFit: 'cover',
-							}}
-							width="50"
-						/>
-						<span className="mt-2 text-sm">Atlanta</span>
-					</div>
-					<div className="flex flex-col items-center">
-						<img
-							alt="Austin"
-							height="50"
-							src="/images/eefclogo.png"
-							style={{
-								aspectRatio: '50/50',
-								objectFit: 'cover',
-							}}
-							width="50"
-						/>
-						<span className="mt-2 text-sm">Austin</span>
-					</div>
-					<div className="flex flex-col items-center">
-						<img
-							alt="Charlotte"
-							height="50"
-							src="/images/eefclogo.png"
-							style={{
-								aspectRatio: '50/50',
-								objectFit: 'cover',
-							}}
-							width="50"
-						/>
-						<span className="mt-2 text-sm">Charlotte</span>
-					</div>
-					<div className="flex flex-col items-center">
-						<img
-							alt="Chicago"
-							height="50"
-							src="/images/eefclogo.png"
-							style={{
-								aspectRatio: '50/50',
-								objectFit: 'cover',
-							}}
-							width="50"
-						/>
-						<span className="mt-2 text-sm">Chicago</span>
-					</div>
-					<div className="flex flex-col items-center">
-						<img
-							alt="Cincinnati"
-							height="50"
-							src="/images/eefclogo.png"
-							style={{
-								aspectRatio: '50/50',
-								objectFit: 'cover',
-							}}
-							width="50"
-						/>
-						<span className="mt-2 text-sm">Cincinnati</span>
-					</div>
-					<div className="flex flex-col items-center">
-						<img
-							alt="Colorado"
-							height="50"
-							src="/images/eefclogo.png"
-							style={{
-								aspectRatio: '50/50',
-								objectFit: 'cover',
-							}}
-							width="50"
-						/>
-						<span className="mt-2 text-sm">Colorado</span>
-					</div>
+				<h2 className="mb-8 text-center text-2xl font-semibold">CQ CLUBS</h2>
+				<div className="grid grid-cols-6 gap-12">
+					{clubSites.map((site, index) => (
+						<Link key={index} to={site.link} target="_blank" rel="no_referrer">
+							<div className="flex flex-col items-center">
+								<Avatar>
+									<AvatarImage src={site.image} />
+									<AvatarFallback>CN</AvatarFallback>
+								</Avatar>
+								<span className="mt-2 text-xs">{site.title}</span>
+							</div>
+						</Link>
+					))}
 				</div>
 			</div>
 		</section>

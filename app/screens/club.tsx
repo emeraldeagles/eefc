@@ -1,29 +1,21 @@
 import type { ReactElement, FC } from 'react';
+import Contact from '~/components/Contact';
 import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY } from '~/constants/constants';
-import type { ClubInfo, Committee, LifeMembers, Resources, Sponsors, History } from '~/interfaces/content';
+import type { ClubInfo, Resources } from '~/interfaces/content';
 
 export interface ClubScreenProps {
 	resources: Resources[];
 	clubInfo: ClubInfo[];
-	history?: History[];
-	committee?: Committee[];
-	lifeMembers?: LifeMembers[];
-	sponsors?: Sponsors[];
 }
 
-const ClubScreen: FC<ClubScreenProps> = ({
-	resources,
-	clubInfo,
-	history,
-	committee,
-	lifeMembers,
-	sponsors,
-}: ClubScreenProps): ReactElement => {
+const ClubScreen: FC<ClubScreenProps> = ({ resources, clubInfo }: ClubScreenProps): ReactElement => {
 	return (
 		<div>
 			<Tiles category={CARD_CATEGORY.CLUB_INFO} content={clubInfo} />
 			<Tiles category={CARD_CATEGORY.RESOURCES} content={resources} />
+			{/* <Map />  */}
+			<Contact />
 		</div>
 	);
 };

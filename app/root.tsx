@@ -3,14 +3,15 @@ import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, json, useL
 
 import styles from './tailwind.css';
 import globalStyles from './styles/globals.css';
+import fontStyles from './styles/fonts.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { getClubSites, getSponsors } from './client/club';
-import { getEnv } from './env.server';
 
 export const links: LinksFunction = () => [
 	{ rel: 'stylesheet', href: styles },
 	{ rel: 'stylesheet', href: globalStyles },
+	{ rel: 'stylesheet', href: fontStyles },
 ];
 
 export const loader = async () => {
@@ -18,14 +19,13 @@ export const loader = async () => {
 	console.log('sponsors loader => ', sponsors);
 	const clubSites = await getClubSites();
 
-	return json({ sponsors, clubSites, ENV: getEnv() });
+	return json({ sponsors, clubSites });
 };
 
 export default function App() {
-	const { sponsors, clubSites, ENV } = useLoaderData<typeof loader>();
+	const { sponsors, clubSites } = useLoaderData<typeof loader>();
 	console.log('sponsors => ', sponsors);
 	console.log('clubSites => ', clubSites);
-	console.log('ENV variables => ', ENV);
 
 	return (
 		<html lang="en">
@@ -35,11 +35,8 @@ export default function App() {
 			</head>
 			<body className="mx-auto w-full max-w-7xl bg-gray-100 px-12">
 				<Header />
-				<div className="">
-					<Outlet />
-				</div>
+				<Outlet />
 				<ScrollRestoration />
-				<script dangerouslySetInnerHTML={{ __html: `window.ENV = ${JSON.stringify(ENV)}` }} />
 				<Scripts />
 				<LiveReload />
 				<Footer sponsors={sponsors} clubSites={clubSites} />

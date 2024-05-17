@@ -1,27 +1,86 @@
-import { Link, useLocation } from '@remix-run/react';
+import React, { useEffect, useState, useRef } from 'react';
+import { useLocation } from '@remix-run/react';
 import Navbar from './Navbar';
-import { Button } from './ui/button';
 import Breadcrumbs from './Breadcrumbs';
-import { getHeaderImage } from '~/utils/UIhelpers';
+import type { VideoSrcConfig } from '~/utils/headerConfig';
+import { getHeaderConfig, getNetworkAwareVideoSource } from '~/utils/headerConfig';
 
 const Header = () => {
 	const location = useLocation();
 	const mainRoutes = ['/', '/events', '/club', '/play'];
 	const isBreadcrumbVisible = !mainRoutes.includes(location.pathname);
 
+	const [videoSource, setVideoSource] = useState<string | null>(null);
+	const [isLoading, setIsLoading] = useState(true);
+	const headerConfig = getHeaderConfig(location.pathname);
+
+	const videoRef = useRef<HTMLVideoElement>(null);
+	const imgRef = useRef<HTMLImageElement>(null);
+
+	useEffect(() => {
+		if (headerConfig && headerConfig.type === 'video') {
+			const qualitySource = getNetworkAwareVideoSource(headerConfig.src as VideoSrcConfig);
+			setVideoSource(qualitySource);
+			setIsLoading(true);
+		} else {
+			setIsLoading(false); // Set loading to false for non-video headers
+		}
+	}, [location.pathname, headerConfig]);
+
+	useEffect(() => {
+		if (videoRef.current && videoSource) {
+			const handleLoad = () => {
+				setIsLoading(false);
+			};
+
+			videoRef.current.addEventListener('loadeddata', handleLoad);
+
+			return () => {
+				videoRef.current?.removeEventListener('loadeddata', handleLoad);
+			};
+		}
+	}, [videoSource]);
+
 	return (
 		<>
 			<Navbar />
-			<section className="relative mt-8 h-[50vh] w-full overflow-hidden rounded-lg">
-				{getHeaderImage(location)}
-				<div className="absolute inset-0 bg-gradient-to-t from-black/100 to-transparent" />
-				<div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white md:px-6">
-					<h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">Emerald Eagles FC</h1>
-					<p className="mt-4 max-w-xl text-lg md:text-xl">Emerald, Central Queensland</p>
-					<Button className="mt-8" asChild variant="default">
-						<Link to="/play">Join the Club</Link>
-					</Button>
-				</div>
+			<section
+				className={`relative mt-8 w-full overflow-hidden ${isBreadcrumbVisible ? 'rounded-t-lg' : 'rounded-lg'}`}>
+				{headerConfig?.type === 'video' && (
+					<>
+						{isLoading && headerConfig.fallback && (
+							<img
+								ref={imgRef}
+								alt="Fallback"
+								className="absolute inset-0 z-10 w-full object-cover object-center"
+								src={headerConfig.fallback}
+								style={{ aspectRatio: headerConfig.aspectRatio, objectFit: 'cover' }}
+							/>
+						)}
+						{videoSource && (
+							<video
+								ref={videoRef}
+								autoPlay
+								loop
+								muted
+								playsInline
+								className={`w-full object-cover object-center ${isLoading ? 'invisible' : 'visible'}`}
+								style={{ aspectRatio: headerConfig.aspectRatio, objectFit: 'cover' }}>
+								<source src={videoSource} type="video/mp4" />
+							</video>
+						)}
+					</>
+				)}
+				{headerConfig?.type === 'image' && (
+					<img
+						alt="Emerald Eagles FC Players"
+						className="w-full object-cover object-center"
+						height={425}
+						src={headerConfig.src as string}
+						style={{ aspectRatio: headerConfig.aspectRatio, objectFit: 'cover' }}
+						width={1400}
+					/>
+				)}
 			</section>
 			{isBreadcrumbVisible && <Breadcrumbs />}
 		</>

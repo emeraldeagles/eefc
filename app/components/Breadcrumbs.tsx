@@ -3,7 +3,7 @@ import { useLocation } from '@remix-run/react';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from './ui/breadcrumb';
 
 // Helper function to transform path segments into readable titles
-function formatSegment(segment) {
+function formatSegment(segment: any) {
 	// Simple example: Replace dashes with spaces and capitalize
 	return segment.replace(/-/g, ' ').replace(/\w\S*/g, w => w.replace(/^\w/, c => c.toUpperCase()));
 }

@@ -4,7 +4,7 @@ import SkeletonCard from './SkeletonCard';
 import SectionTitle from './SectionTitle';
 
 export default function Tiles({ category, content, isLoading }: TileProps) {
-	console.log('Carnivals Tiles ==>', category, content, isLoading);
+	console.log('Tiles ==>', category, content, isLoading);
 
 	return (
 		<div>

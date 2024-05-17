@@ -1,8 +1,8 @@
 import { json, useLoaderData } from '@remix-run/react';
 import React from 'react';
 import { getHistory } from '~/client/club';
-import Article from '~/components/Article';
-import { CARD_CATEGORY } from '~/constants/constants';
+import Section from '~/components/Section';
+import { SECTION_CATEGORY } from '~/constants/constants';
 
 export async function loader() {
 	const history = await getHistory();
@@ -13,5 +13,5 @@ export async function loader() {
 export default function History() {
 	const { history } = useLoaderData<typeof loader>();
 
-	return <Article category={CARD_CATEGORY.HISTORY} content={history} />;
+	return <Section category={SECTION_CATEGORY.HISTORY_INFO} content={history} />;
 }

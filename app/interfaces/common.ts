@@ -39,12 +39,19 @@ export type BasicCardProps = {
 	date?: string;
 	id?: string;
 	category?: string;
+	team?: string;
 };
 
 export type InfoCardProps = {
 	title: string;
 	description: string;
 	image: string;
+	team?: string;
+	category?: string;
+	email?: string;
+	ageGroup?: string;
+	link?: string;
+	type?: string;
 };
 
 export type MerchCardProps = {

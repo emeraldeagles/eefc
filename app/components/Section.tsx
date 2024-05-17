@@ -1,41 +1,21 @@
 import { Button } from './ui/button';
 import SectionTitle from './SectionTitle';
-import type { CoachInfo, FairPlayInfo, PlayerInfo, RegoInfo, SeasonInfo } from '~/interfaces/content';
+import type { SectionCardInfo } from '~/interfaces/content';
 import { SECTION_CATEGORY } from '~/constants/constants';
 import { Link } from '@remix-run/react';
 import { Icon } from './Icon';
 import { Tick } from './IconPaths/Tick';
-
-const getCallToAction = (category: string) => {
-	switch (category) {
-		case SECTION_CATEGORY.REGO_INFO:
-			return 'Register through Squadi now';
-		case SECTION_CATEGORY.FAIRPLAY_INFO:
-			return 'Find out if your eligible';
-	}
-};
-
-const getInfoTitle = (category: string) => {
-	switch (category) {
-		case SECTION_CATEGORY.REGO_INFO:
-			return 'Steps To Register';
-		case SECTION_CATEGORY.FAIRPLAY_INFO:
-			return 'Steps To Claim';
-		case SECTION_CATEGORY.SEASON_INFO:
-			return 'Season Information';
-		case SECTION_CATEGORY.PLAYER_INFO:
-			return 'Player Information';
-	}
-};
+import { getCallToAction, getInfoTitle } from '~/utils/UIhelpers';
 
 type Props = {
 	category: string;
-	content: CoachInfo | PlayerInfo | SeasonInfo | FairPlayInfo | RegoInfo;
+	content: SectionCardInfo;
 	leftToRight?: boolean;
 };
 
 export const Section = ({ category, content, leftToRight }: Props) => {
 	const { title, description, image, info, link } = content;
+	console.log('Section category => ', category);
 
 	return (
 		<>
@@ -51,12 +31,10 @@ export const Section = ({ category, content, leftToRight }: Props) => {
 									<div className="mt-6">
 										<h4 className="text-lg font-semibold">{getInfoTitle(category)}</h4>
 										<div className="mt-4 flex grid grid-cols-1 flex-col gap-2">
-											{info.map(i => {
+											{info.map((i: string) => {
 												return (
 													<div key={i} className="flex items-start justify-start">
-														{category === SECTION_CATEGORY.REGO_INFO ? null : (
-															<Icon iconPath={<Tick />} iconClass="mr-2 mt-1 text-green-500" iconSize={20} />
-														)}
+														<Icon iconPath={<Tick />} iconClass="mr-2 mt-1 text-green-500" iconSize={20} />
 														<p>{i}</p>
 													</div>
 												);
@@ -64,10 +42,12 @@ export const Section = ({ category, content, leftToRight }: Props) => {
 										</div>
 									</div>
 								</div>
-								{category === SECTION_CATEGORY.REGO_INFO || category === SECTION_CATEGORY.FAIRPLAY_INFO ? (
+								{getCallToAction(category) ? (
 									<div className="mt-auto">
 										<Link to={link} target="_blank" rel="no_referrer">
-											<Button className="mt-6 w-full bg-primary text-white">{getCallToAction(category)}</Button>
+											<Button variant="outline" className="mt-6 w-full border-primary text-primary">
+												{getCallToAction(category)}
+											</Button>
 										</Link>
 									</div>
 								) : null}
@@ -117,22 +97,24 @@ export const Section = ({ category, content, leftToRight }: Props) => {
 									<p className="mt-4 whitespace-pre-line text-gray-600">{description}</p>
 									<div className="mt-6">
 										<h4 className="text-lg font-semibold">{getInfoTitle(category)}</h4>
-										<div className="mt-4 grid grid-cols-1 gap-2">
-											{info.map((i, index) => (
-												<div key={i} className="flex items-start justify-start">
-													{category === SECTION_CATEGORY.COACH_INFO ? null : (
+										<div className="mt-4 flex grid grid-cols-1 flex-col gap-2">
+											{info.map(i => {
+												return (
+													<div key={i} className="flex items-start justify-start">
 														<Icon iconPath={<Tick />} iconClass="mr-2 mt-1 text-green-500" iconSize={20} />
-													)}
-													<p>{i}</p>
-												</div>
-											))}
+														<p>{i}</p>
+													</div>
+												);
+											})}
 										</div>
 									</div>
 								</div>
-								{category === SECTION_CATEGORY.REGO_INFO || category === SECTION_CATEGORY.FAIRPLAY_INFO ? (
+								{getCallToAction(category) ? (
 									<div className="mt-auto">
 										<Link to={link} target="_blank" rel="no_referrer">
-											<Button className="mt-6 w-full bg-primary text-white">{getCallToAction(category)}</Button>
+											<Button variant="outline" className="mt-6 w-full border-primary text-primary">
+												{getCallToAction(category)}
+											</Button>
 										</Link>
 									</div>
 								) : null}

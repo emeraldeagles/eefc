@@ -1,8 +1,9 @@
 import { json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
+import { getCoachInfo } from '~/client/club';
 import { getRegoPrices } from '~/client/home';
 
-import { getRegoInfo, getFairPlayInfo, getSeasonInfo, getPlayerInfo, getCoachInfo } from '~/client/play';
+import { getRegoInfo, getFairPlayInfo, getSeasonInfo, getPlayerInfo } from '~/client/play';
 
 import PlayScreen from '~/screens/play';
 

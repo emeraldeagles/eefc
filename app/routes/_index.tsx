@@ -23,14 +23,14 @@ export const meta = () => [
 ];
 
 export const loader: LoaderFunction = async ({ request }) => {
-	// const url = new URL(request.url);
-	// const forceRefresh = url.searchParams.get('refresh') === 'true';
+	const url = new URL(request.url);
+	const forceRefresh = url.searchParams.get('refresh') === 'true';
 	const FBAccessToken = process.env.FACEBOOK_ACCESS_TOKEN;
 	const FBPageId = process.env.FACEBOOK_PAGE_ID;
 
 	let cachedPosts = getCachedData('cachedPosts');
-	// if (!cachedPosts || forceRefresh) {
-	if (!cachedPosts) {
+	if (!cachedPosts || forceRefresh) {
+		// if (!cachedPosts) {
 		cachedPosts = (await fetchFacebookPosts(FBPageId, FBAccessToken)) as FacebookPost[];
 		setCachedData('cachedPosts', cachedPosts);
 	}
@@ -38,7 +38,9 @@ export const loader: LoaderFunction = async ({ request }) => {
 	const regoPricesData = await getRegoPrices();
 	const merchData = await getMerch();
 	const newsPosts = cachedPosts.filter(post => post.message_tags?.some(tag => tag.name === '#news'));
-	const carnivalsPosts = cachedPosts.filter(post => post.message_tags?.some(tag => tag.name === '#Carnivals'));
+	const carnivalsPosts = cachedPosts.filter(post =>
+		post.message_tags?.some(tag => tag.name.toLowerCase() === '#carnivals'),
+	);
 
 	console.log('home loader allPosts ===>', cachedPosts);
 

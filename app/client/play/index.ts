@@ -3,44 +3,30 @@ import {
 	fairPlayInfoData,
 	seasonInfoData,
 	playerInfoData,
-	coachInfoData,
-	coachesData,
 } from '~/data/content';
 
-import type { CoachInfo, Coaches, PlayerInfo, RegoInfo, FairPlayInfo, SeasonInfo } from '~/interfaces/content';
+import type { SectionCardInfo } from '~/interfaces/content';
 
-export const getRegoInfo = (): Promise<RegoInfo> =>
+export const getRegoInfo = (): Promise<SectionCardInfo> =>
 	new Promise((resolve, reject) => {
 		resolve(regoInfoData);
 		// reject(new Error('Something went wrong'));
 	});
 
-export const getFairPlayInfo = (): Promise<FairPlayInfo> =>
+export const getFairPlayInfo = (): Promise<SectionCardInfo> =>
 	new Promise((resolve, reject) => {
 		resolve(fairPlayInfoData);
 		// reject(new Error('Something went wrong'));
 	});
 
-export const getSeasonInfo = (): Promise<SeasonInfo> =>
+export const getSeasonInfo = (): Promise<SectionCardInfo> =>
 	new Promise((resolve, reject) => {
 		resolve(seasonInfoData);
 		// reject(new Error('Something went wrong'));
 	});
 
-export const getPlayerInfo = (): Promise<PlayerInfo> =>
+export const getPlayerInfo = (): Promise<SectionCardInfo> =>
 	new Promise((resolve, reject) => {
 		resolve(playerInfoData);
-		// reject(new Error('Something went wrong'));
-	});
-
-export const getCoachInfo = (): Promise<CoachInfo> =>
-	new Promise((resolve, reject) => {
-		resolve(coachInfoData);
-		// reject(new Error('Something went wrong'));
-	});
-
-export const getCoaches = (): Promise<Coaches[]> =>
-	new Promise((resolve, reject) => {
-		resolve(coachesData);
 		// reject(new Error('Something went wrong'));
 	});
