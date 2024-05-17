@@ -8,7 +8,6 @@ export const getImportantDates = (): Promise<ImportantDates[]> =>
 		// reject(new Error('Something went wrong'));
 	});
 
-// map raw facebook event data to our app's event data using Events[] interfaces/content
 export const mapToEventsData = (data: any): Events[] => {
     return data.map((event: any) => {
         // Safeguard against missing attachments or subattachments
