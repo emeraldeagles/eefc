@@ -2,7 +2,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@r
 import React from 'react';
 import type { ImportantDates } from '~/interfaces/content';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
-import { ArrowUp, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 type Props = {
 	importantDates: ImportantDates[];

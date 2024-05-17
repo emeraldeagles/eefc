@@ -1,9 +1,4 @@
-import {
-	regoInfoData,
-	fairPlayInfoData,
-	seasonInfoData,
-	playerInfoData,
-} from '~/data/content';
+import { regoInfoData, fairPlayInfoData, seasonInfoData, playerInfoData } from '~/data/content';
 
 import type { SectionCardInfo } from '~/interfaces/content';
 
