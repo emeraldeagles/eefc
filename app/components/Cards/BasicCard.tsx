@@ -32,10 +32,18 @@ export default function BasicCard({ id, description, images, link, date, categor
 				'glow-effect': glowPosition.hasOwnProperty('--glow-x') && glowPosition.hasOwnProperty('--glow-y'),
 			})}
 			style={glowPosition}>
-			<Link to={`/${category}/${id}`}>
+			<Link to={`/${category?.toLowerCase()}/${id}`}>
 				<Card className="rounded-lg border-[#e5e7eb]">
 					<CardHeader className="p-0">
-						<img className="h-48 w-full rounded-t-lg object-cover" src={images[0]} alt={description} />
+						<img
+							className="h-48 w-full rounded-t-lg object-cover"
+							src={
+								images.length > 0
+									? images[0]
+									: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png'
+							}
+							alt={description}
+						/>
 					</CardHeader>
 					<CardContent className="p-4">
 						<div

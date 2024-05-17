@@ -33,7 +33,7 @@ export const isMerch = (content: Content): content is MerchProps => {
 };
 
 export const isEvents = (content: Content): content is Events => {
-	return 'date' in content;
+	return 'description' in content;
 };
 
 export const isRegoPrices = (content: Content): content is RegoPrices => {

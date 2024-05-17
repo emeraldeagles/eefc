@@ -8,14 +8,20 @@ export interface EventScreenProps {
 	carnivals: Carnivals[];
 	events: Events[];
 	importantDates: ImportantDates[];
+	loading: boolean;
 }
 
-const EventsScreen: FC<EventScreenProps> = ({ carnivals, events, importantDates }: EventScreenProps): ReactElement => {
+const EventsScreen: FC<EventScreenProps> = ({
+	carnivals,
+	events,
+	importantDates,
+	loading,
+}: EventScreenProps): ReactElement => {
 	return (
 		<>
 			<ImportantDatesSection importantDates={importantDates} />
-			{/* <Tiles category={CARD_CATEGORY.EVENTS} content={events} /> */}
-			{/* <Tiles category={CARD_CATEGORY.CARNIVALS} content={carnivals} /> */}
+			<Tiles category={CARD_CATEGORY.EVENTS} content={events} isLoading={loading} />
+			<Tiles category={CARD_CATEGORY.CARNIVALS} content={carnivals} isLoading={loading} />
 		</>
 	);
 };

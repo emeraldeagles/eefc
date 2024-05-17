@@ -1,35 +1,32 @@
-import { Await, defer, useFetcher, useLoaderData } from '@remix-run/react';
-import { getMerch, getRegoPrices, mapToCarnivalsData, mapToNewsData } from '~/client/home';
-import HomeScreen from '~/screens/home';
 import type { LoaderFunction } from '@remix-run/node';
-import { fetchFacebookPosts } from '~/utils/facebook';
+import { Await, defer, useFetcher, useLoaderData } from '@remix-run/react';
+import { Suspense, useCallback, useEffect, useState } from 'react';
 import type { FacebookPost } from '~/cache.server';
 import { getCachedData, setCachedData } from '~/cache.server';
-import { Suspense, useCallback, useEffect, useState } from 'react';
+import { getImportantDates, mapToEventsData } from '~/client/events';
+import { mapToCarnivalsData } from '~/client/home';
+import EventsScreen from '~/screens/events';
 import useStore from '~/store/store';
+import { fetchFacebookPosts } from '~/utils/facebook';
 
 export const meta = () => [
 	{
-		title: 'EEFC | Home',
+		title: 'EEFC | Events',
 	},
 	{
 		charset: 'utf-8',
 	},
 	{
-		name: 'viewport',
-		content: 'width=device-width, initial-scale=1.0',
+		viewport: 'width=device-width,initial-scale=1',
 	},
 ];
 
 export const loader: LoaderFunction = async ({ request }) => {
-	// const url = new URL(request.url);
-	// const forceRefresh = url.searchParams.get('refresh') === 'true';
 	const FBAccessToken = process.env.FACEBOOK_ACCESS_TOKEN;
 	const FBPageId = process.env.FACEBOOK_PAGE_ID;
 
 	const cachedPostsPromise = (async () => {
 		let cachedPosts = getCachedData('cachedPosts');
-		// if (!cachedPosts || forceRefresh) {
 		if (!cachedPosts) {
 			cachedPosts = (await fetchFacebookPosts(FBPageId, FBAccessToken)) as FacebookPost[];
 			setCachedData('cachedPosts', cachedPosts);
@@ -37,23 +34,21 @@ export const loader: LoaderFunction = async ({ request }) => {
 		return cachedPosts;
 	})();
 
-	const regoPricesData = await getRegoPrices();
-	const merchData = await getMerch();
+	const importantDates = await getImportantDates();
 
 	return defer({
-		regoPricesData,
-		merchData,
+		importantDates,
 		cachedPostsPromise,
 	});
 };
 
-const Index = () => {
-	const { merchData, regoPricesData, cachedPostsPromise } = useLoaderData<typeof loader>();
+const EventsRoute = () => {
+	const { importantDates, cachedPostsPromise } = useLoaderData<typeof loader>();
 	const fetcher = useFetcher();
-	const { setNews, setCarnivals, news, carnivals, loading, setLoading } = useStore(state => ({
-		setNews: state.setNews,
+	const { setCarnivals, carnivals, loading, setLoading, setEvents, events } = useStore(state => ({
+		setEvents: state.setEvents,
 		setCarnivals: state.setCarnivals,
-		news: state.news,
+		events: state.events,
 		carnivals: state.carnivals,
 		loading: state.loading,
 		setLoading: state.setLoading,
@@ -86,23 +81,25 @@ const Index = () => {
 
 	useEffect(() => {
 		if (cachedPosts.length > 0) {
-			const newsPosts = cachedPosts.filter(post => post.message_tags?.some(tag => tag.name.toLowerCase() === '#news'));
+			const eventsPosts = cachedPosts.filter(post =>
+				post.message_tags?.some(tag => tag.name.toLowerCase() === '#events'),
+			);
 			const carnivalsPosts = cachedPosts.filter(post =>
 				post.message_tags?.some(tag => tag.name.toLowerCase() === '#carnivals'),
 			);
 
-			const newsData = mapToNewsData(newsPosts);
+			const eventsData = mapToEventsData(eventsPosts);
 			const carnivalsData = mapToCarnivalsData(carnivalsPosts);
 
-			setNews(newsData);
+			setEvents(eventsData);
 			setCarnivals(carnivalsData);
 			setLoading(false);
 		}
-	}, [cachedPosts, setNews, setCarnivals, setLoading]);
+	}, [cachedPosts, setEvents, setCarnivals, setLoading]);
 
 	return (
 		<main>
-			<HomeScreen news={news} merch={merchData} regoPrices={regoPricesData} carnivals={carnivals} loading={loading} />
+			<EventsScreen carnivals={carnivals} events={events} importantDates={importantDates} loading={loading} />
 			<Suspense fallback={<div>Loading Facebook posts...</div>}>
 				<Await
 					resolve={cachedPostsPromise}
@@ -114,4 +111,4 @@ const Index = () => {
 	);
 };
 
-export default Index;
+export default EventsRoute;

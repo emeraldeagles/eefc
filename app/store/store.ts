@@ -21,7 +21,7 @@ const useStore = create<Store>(set => ({
     setNews: (news: News[]) => set({ news }),
     setCarnivals: (carnivals: Carnivals[]) => set({ carnivals }),
     setEvents: (events: Events[]) => set({ events }),
-    setLoading: (loading: boolean) => set({ loading }),
+    setLoading: (loading) => set({ loading }),
 }));
 
 export default useStore;
