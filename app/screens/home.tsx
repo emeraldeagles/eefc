@@ -10,21 +10,28 @@ export interface HomeScreenProps {
 	merch: MerchProps[];
 	regoPrices: RegoPrices[];
 	carnivals: Carnivals[];
+	loading: boolean;
 }
 
-const HomeScreen: FC<HomeScreenProps> = ({ news, merch, regoPrices, carnivals }: HomeScreenProps): ReactElement => {
+const HomeScreen: FC<HomeScreenProps> = ({
+	news,
+	merch,
+	regoPrices,
+	carnivals,
+	loading,
+}: HomeScreenProps): ReactElement => {
 	console.log('home screen merch ==> ', merch);
 	console.log('home screen news ==>', news);
 	console.log('home screen carnivals ==>', carnivals);
 
 	return (
 		<>
-			<Tiles category={CARD_CATEGORY.NEWS} content={news} isLoading={!news.length} />
 			<Tiles category={CARD_CATEGORY.MERCH} content={merch} isLoading={!merch.length} />
+			<Tiles category={CARD_CATEGORY.NEWS} content={news} isLoading={loading} />
 			<Ladder />
 			<Draw />
 			<Tiles category={CARD_CATEGORY.REGO} content={regoPrices} isLoading={!regoPrices.length} />
-			{/* <Tiles category={CARD_CATEGORY.CARNIVALS} content={carnivals} isLoading={!carnivals.length} /> */}
+			<Tiles category={CARD_CATEGORY.CARNIVALS} content={carnivals} isLoading={loading} />
 		</>
 	);
 };

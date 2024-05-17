@@ -41,7 +41,7 @@ export const isRegoPrices = (content: Content): content is RegoPrices => {
 };
 
 export const isCarnivals = (content: Content): content is Carnivals => {
-	return 'event' in content;
+	return 'description' in content;
 };
 
 export const isResources = (content: Content): content is Resources => {
