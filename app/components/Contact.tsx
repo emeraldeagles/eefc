@@ -27,7 +27,7 @@ export default function Contact() {
 						title="Google Maps"
 						className="absolute inset-0 h-full w-full opacity-50"
 						frameBorder="0"
-						src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCiQ6O4NP5JUFuTY3bEiz3YYQ-9xUYjPVE&q=Dundas+Street,Emerald,QLD+4720&zoom=16"
+						src="https://www.google.com/maps/embed/v1/place?key=&q=Dundas+Street,Emerald,QLD+4720&zoom=16"
 						allowFullScreen></iframe>
 				</div>
 				<div className="flex flex-col justify-center rounded-r-lg bg-white p-16 shadow-sm">

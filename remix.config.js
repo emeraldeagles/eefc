@@ -3,10 +3,11 @@
  */
 module.exports = {
 	ignoredRouteFiles: ['**/.*'],
-	// appDirectory: "app",
-	// assetsBuildDirectory: "public/build",
-	// serverBuildPath: "api/index.js",
-	// publicPath: "/build/",
+	appDirectory: 'app',
+	assetsBuildDirectory: 'public/build',
+	serverBuildPath: 'build/index.js',
+	publicPath: '/build/',
 	tailwind: true,
 	serverModuleFormat: 'cjs',
 };
+  
