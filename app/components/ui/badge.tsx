@@ -9,9 +9,9 @@ const badgeVariants = cva(
 			variant: {
 				default: 'border-transparent bg-primary text-primary-foreground hover:bg-primary/80',
 				club: 'border-primary text-primary',
-				rules: 'border-red-500 text-red-500',
-				squadi: 'border-pink-500 text-pink-500',
-				drills: 'border-blue-500 text-blue-500',
+				rules: 'border-destructive text-destructive',
+				squadi: 'border-secondary text-secondary',
+				drills: 'border-accent text-accent',
 				secondary: 'border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80',
 				destructive: 'border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80',
 				outline: 'text-foreground',

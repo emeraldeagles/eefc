@@ -14,7 +14,7 @@ const ClubSites = ({ clubSites }: Props) => {
 				<h2 className="mb-8 text-center text-2xl font-semibold">CQ CLUBS</h2>
 				<div className="grid grid-cols-6 gap-12">
 					{clubSites.map((site, index) => (
-						<Link key={index} to={site.link} target="_blank" rel="no_referrer">
+						<Link key={index} to={site.link} target="_blank" rel="noopener noreferrer">
 							<div className="flex flex-col items-center">
 								<Avatar>
 									<AvatarImage src={site.image} />

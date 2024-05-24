@@ -1,5 +1,5 @@
 import type { ReactElement, FC } from 'react';
-import Contact from '~/components/Contact';
+// import Contact from '~/components/Contact';
 import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY } from '~/constants/constants';
 import type { ClubInfo, Resources } from '~/interfaces/content';
@@ -14,8 +14,7 @@ const ClubScreen: FC<ClubScreenProps> = ({ resources, clubInfo }: ClubScreenProp
 		<div>
 			<Tiles category={CARD_CATEGORY.CLUB_INFO} content={clubInfo} />
 			<Tiles category={CARD_CATEGORY.RESOURCES} content={resources} />
-			{/* <Map />  */}
-			<Contact />
+			{/* <Contact /> */}
 		</div>
 	);
 };

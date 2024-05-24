@@ -19,6 +19,8 @@ export default function Sponsors() {
 	const goldSponsors = sponsors.filter(sponsor => sponsor.type === SPONSOR_TYPE.GOLD);
 	const silverSponsors = sponsors.filter(sponsor => sponsor.type === SPONSOR_TYPE.SILVER);
 	const bronzeSponsors = sponsors.filter(sponsor => sponsor.type === SPONSOR_TYPE.BRONZE);
+	const donationSponsors = sponsors.filter(sponsor => sponsor.type === SPONSOR_TYPE.DONATION);
+	const grantSponsors = sponsors.filter(sponsor => sponsor.type === SPONSOR_TYPE.GRANT);
 
 	return (
 		<>
@@ -27,6 +29,8 @@ export default function Sponsors() {
 			<Tiles category={CARD_CATEGORY.GOLD_SPONSORS} content={goldSponsors} />
 			<Tiles category={CARD_CATEGORY.SILVER_SPONSORS} content={silverSponsors} />
 			<Tiles category={CARD_CATEGORY.BRONZE_SPONSORS} content={bronzeSponsors} />
+			<Tiles category={CARD_CATEGORY.DONATION_SPONSORS} content={donationSponsors} />
+			<Tiles category={CARD_CATEGORY.GRANT_SPONSORS} content={grantSponsors} />
 		</>
 	);
 }

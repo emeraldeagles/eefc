@@ -1,6 +1,7 @@
 import type { LoaderFunction } from '@remix-run/node';
 import { json, useLoaderData } from '@remix-run/react';
 import Article from '~/components/Article';
+import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY } from '~/constants/constants';
 import useStore from '~/store/store';
 
@@ -21,6 +22,7 @@ export default function Carnivals() {
 	return (
 		<div>
 			<Article category={CARD_CATEGORY.CARNIVALS} content={post} />
+			<Tiles category={CARD_CATEGORY.CARNIVALS} content={carnivals} isLoading={!carnivals.length} />
 		</div>
 	);
 }

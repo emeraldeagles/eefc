@@ -2,6 +2,7 @@ import { Card, CardContent, CardFooter } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 import type { MerchProps } from '~/interfaces/content';
+import { Link } from '@remix-run/react';
 
 export default function MerchCard({ title, description, price, image, badge, badgeColour }: MerchProps) {
 	console.log('MerchCard', title, price, badgeColour);
@@ -19,6 +20,7 @@ export default function MerchCard({ title, description, price, image, badge, bad
 						objectFit: 'cover',
 					}}
 					width="200"
+					loading="lazy"
 				/>
 				<h3 className="mt-4 text-lg font-semibold">{title}</h3>
 				<p className="text-xl font-bold">{price}</p>
@@ -29,7 +31,9 @@ export default function MerchCard({ title, description, price, image, badge, bad
 				) : null}
 			</CardContent>
 			<CardFooter className="flex justify-center">
-				<Button className="w-full border-2">Buy Now</Button>
+				<Link to="https://emeraldeaglesfc.square.site/" className="w-full" target="_blank" rel="noopener noreferrer">
+					<Button className="w-full border-2">Buy Now</Button>
+				</Link>
 			</CardFooter>
 		</Card>
 	);

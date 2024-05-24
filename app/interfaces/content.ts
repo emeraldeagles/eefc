@@ -47,8 +47,8 @@ export type Resources = {
 export type SectionCardInfo = {
 	title: string;
 	description: string;
-	image: string;
-	link: string;
+	images: string[];
+	link: string | string[];
 	info: string[];
 };
 

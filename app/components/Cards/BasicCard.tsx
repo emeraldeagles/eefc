@@ -2,37 +2,13 @@ import { Link } from '@remix-run/react';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
 import type { BasicCardProps } from '~/interfaces/common';
-// import { useState, useRef } from 'react';
-// import cn from 'classnames';
+import { CARD_CATEGORY } from '~/constants/constants';
 
 export default function BasicCard({ id, description, images, link, date, category }: BasicCardProps) {
-	// const cardRef = useRef<HTMLDivElement>(null);
-	// const [glowPosition, setGlowPosition] = useState<CSSProperties & { [key: string]: string | number }>({});
-
-	// const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-	// 	const card = cardRef.current;
-	// 	if (card) {
-	// 		const { top, left } = card.getBoundingClientRect();
-	// 		// Adjust the values to account for the scroll offset
-	// 		const x = event.clientX - left + window.scrollX;
-	// 		const y = event.clientY - top + window.scrollY;
-	// 		setGlowPosition({
-	// 			'--glow-x': x + 'px',
-	// 			'--glow-y': y + 'px',
-	// 		});
-	// 	}
-	// };
+	const categoryPath = category === CARD_CATEGORY.CARNIVALS ? 'events/carnivals' : category;
 
 	return (
-		// <div
-		// 	ref={cardRef}
-		// 	onMouseMove={handleMouseMove}
-		// 	onMouseLeave={() => setGlowPosition({})}
-		// 	className={cn('relative w-full overflow-hidden rounded-lg bg-[#f9fafb]', {
-		// 		'glow-effect': glowPosition.hasOwnProperty('--glow-x') && glowPosition.hasOwnProperty('--glow-y'),
-		// 	})}
-		// 	style={glowPosition}>
-		<Link to={`/${category?.toLowerCase()}/${id}`}>
+		<Link to={`/${categoryPath?.toLowerCase()}/${id}`}>
 			<Card className="rounded-lg border-[#e5e7eb]">
 				<CardHeader className="p-0">
 					<img
@@ -43,6 +19,7 @@ export default function BasicCard({ id, description, images, link, date, categor
 								: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png'
 						}
 						alt={description}
+						loading="lazy"
 					/>
 				</CardHeader>
 				<CardContent className="p-4">
@@ -63,6 +40,5 @@ export default function BasicCard({ id, description, images, link, date, categor
 				</CardFooter>
 			</Card>
 		</Link>
-		// </div>
 	);
 }

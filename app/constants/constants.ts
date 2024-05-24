@@ -16,6 +16,8 @@ export const CARD_CATEGORY = {
 	GOLD_SPONSORS: 'Gold Sponsors',
 	SILVER_SPONSORS: 'Silver Sponsors',
 	BRONZE_SPONSORS: 'Bronze Sponsors',
+	DONATION_SPONSORS: 'Donations',
+	GRANT_SPONSORS: 'Community Grants',
 	IMPORTANT_DATES: 'Important Dates',
 	FAIR_PLAY: 'Fair Play',
 };
@@ -25,11 +27,15 @@ export const SPONSOR_TYPE = {
 	GOLD: 'gold',
 	SILVER: 'silver',
 	BRONZE: 'bronze',
+	DONATION: 'donation',
+	GRANT: 'grant',
 };
 
 export const SECTION_CATEGORY = {
 	REGO_INFO: 'Registration Info',
-	SEASON_INFO: 'Season Info',
+	MINIROOS_INFO: 'Miniroos Info',
+	JUNIORS_INFO: 'Juniors Info',
+	SENIORS_INFO: 'Seniors Info',
 	PLAYER_INFO: 'Player Info',
 	COACH_INFO: 'Coach Info',
 	FAIRPLAY_INFO: 'FairPlay Info',
@@ -39,4 +45,5 @@ export const SECTION_CATEGORY = {
 	SPONSORS_INFO: 'Sponsors Info',
 	HISTORY_INFO: 'History Info',
 	CLUB_INFO: 'Club Info',
+	BLUE_CARD_INFO: 'Blue Card Info',
 };

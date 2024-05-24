@@ -67,7 +67,7 @@ export const getCardByCategory = ({ content, category }: CardProps) => {
 	}
 	if (category === CARD_CATEGORY.CLUB_INFO && isClubInfo(content)) {
 		const { title, description, image, link } = content;
-		return <InfoCard title={title} description={description} image={image} link={link} />;
+		return <InfoCard title={title} description={description} image={image} link={link} category={category} />;
 	}
 	if (category === CARD_CATEGORY.MERCH && isMerch(content)) {
 		const { title, description, price, badge, badgeColour, image } = content;
@@ -129,7 +129,9 @@ export const getCardByCategory = ({ content, category }: CardProps) => {
 		(category === CARD_CATEGORY.PLATINUM_SPONSORS ||
 			category === CARD_CATEGORY.GOLD_SPONSORS ||
 			category === CARD_CATEGORY.SILVER_SPONSORS ||
-			category === CARD_CATEGORY.BRONZE_SPONSORS) &&
+			category === CARD_CATEGORY.BRONZE_SPONSORS ||
+			category === CARD_CATEGORY.DONATION_SPONSORS ||
+			category === CARD_CATEGORY.GRANT_SPONSORS) &&
 		isSponsors(content)
 	) {
 		const { title, description, image, link, type } = content;
@@ -153,13 +155,15 @@ export const getGridColClasses = (category: string) => {
 	if (category === CARD_CATEGORY.PLATINUM_SPONSORS) return 'grid-cols-1 md:grid-cols-2';
 	if (category === CARD_CATEGORY.GOLD_SPONSORS) return 'grid-cols-1 md:grid-cols-3';
 	if (category === CARD_CATEGORY.SILVER_SPONSORS) return 'grid-cols-1 md:grid-cols-4';
-	if (category === CARD_CATEGORY.BRONZE_SPONSORS) return 'grid-cols-1 md:grid-cols-4 lg:grid-cols-5';
+	if (category === CARD_CATEGORY.BRONZE_SPONSORS) return 'grid-cols-1 md:grid-cols-4';
+	if (category === CARD_CATEGORY.DONATION_SPONSORS) return 'grid-cols-1 md:grid-cols-4';
+	if (category === CARD_CATEGORY.GRANT_SPONSORS) return 'grid-cols-1 md:grid-cols-4';
 };
 
 export const getCallToAction = (category: string) => {
 	switch (category) {
 		case SECTION_CATEGORY.REGO_INFO:
-			return 'Register through Squadi now';
+			return ['Register through Squadi', 'Register through Gameday (Miniroos)'];
 		case SECTION_CATEGORY.FAIRPLAY_INFO:
 			return 'Find out if your eligible';
 		case SECTION_CATEGORY.COACH_INFO:
@@ -170,6 +174,14 @@ export const getCallToAction = (category: string) => {
 			return 'Enquire about joining the committee';
 		case SECTION_CATEGORY.SPONSORS_INFO:
 			return 'Become a sponsor';
+		case SECTION_CATEGORY.BLUE_CARD_INFO:
+			return ['Apply for a new card', 'Link an existing card'];
+		case SECTION_CATEGORY.MINIROOS_INFO:
+			return 'Register through Gameday';
+		case SECTION_CATEGORY.JUNIORS_INFO:
+			return 'Register through Squadi';
+		case SECTION_CATEGORY.SENIORS_INFO:
+			return 'Register through Squadi';
 	}
 };
 
@@ -179,10 +191,12 @@ export const getInfoTitle = (category: string) => {
 			return 'Steps To Register';
 		case SECTION_CATEGORY.FAIRPLAY_INFO:
 			return 'Steps To Claim';
-		case SECTION_CATEGORY.SEASON_INFO:
-			return 'Benefits of the season';
-		case SECTION_CATEGORY.PLAYER_INFO:
-			return 'Benefits/Committments';
+		case SECTION_CATEGORY.MINIROOS_INFO:
+			return 'Miniroos Benefits';
+		case SECTION_CATEGORY.JUNIORS_INFO:
+			return 'Juniors Benefits';
+		case SECTION_CATEGORY.SENIORS_INFO:
+			return 'Seniors Benefits';
 		case SECTION_CATEGORY.COACH_INFO:
 			return 'Benefits/Committments';
 		case SECTION_CATEGORY.VOLUNTEER_INFO:
@@ -194,33 +208,33 @@ export const getInfoTitle = (category: string) => {
 		case SECTION_CATEGORY.SPONSORS_INFO:
 			return 'Benefits';
 		case SECTION_CATEGORY.HISTORY_INFO:
-			return 'At a glance';
+			return 'At A Glance';
+		case SECTION_CATEGORY.BLUE_CARD_INFO:
+			return 'Steps To Register';
 	}
 };
 
-export const getImageHeight = (category: string) => {
+export const getImageClasses = (category: string) => {
+	const baseClass = 'h-60 object-cover';
+
 	switch (category) {
 		case CARD_CATEGORY.COACHES:
-			return 'h-60';
-		case CARD_CATEGORY.LIFE_MEMBERS:
-			return 'h-60';
-		case CARD_CATEGORY.PLATINUM_SPONSORS:
-			return 'h-[480px]';
-		case CARD_CATEGORY.GOLD_SPONSORS:
-			return 'h-80';
-		case CARD_CATEGORY.SILVER_SPONSORS:
-			return 'h-60';
-		case CARD_CATEGORY.BRONZE_SPONSORS:
-			return 'h-52';
 		case CARD_CATEGORY.EVENTS:
-			return 'h-60';
 		case CARD_CATEGORY.CARNIVALS:
-			return 'h-60';
 		case CARD_CATEGORY.CLUB_INFO:
-			return 'h-60';
 		case CARD_CATEGORY.RESOURCES:
-			return 'h-60';
+			return baseClass;
+		case CARD_CATEGORY.PLATINUM_SPONSORS:
+			return 'h-[480px] object-contain';
+		case CARD_CATEGORY.GOLD_SPONSORS:
+			return 'h-80 object-contain';
+		case CARD_CATEGORY.SILVER_SPONSORS:
+			return 'h-60 object-contain';
+		case CARD_CATEGORY.BRONZE_SPONSORS:
+		case CARD_CATEGORY.DONATION_SPONSORS:
+		case CARD_CATEGORY.GRANT_SPONSORS:
+			return 'h-52 object-contain';
 		default:
-			return 'h-60';
+			return baseClass;
 	}
 };

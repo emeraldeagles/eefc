@@ -12,11 +12,16 @@ const PlatinumSponsors: React.FC<PlatinumSponsors> = ({ sponsors }) => {
 	return (
 		<section className="mb-8 mt-16 rounded-lg bg-white py-12">
 			<h2 className="mb-8 text-center text-2xl font-semibold">PLATINUM SPONSORS</h2>
-			<div className="mb-8 flex items-center justify-center space-x-12">
+			<div className="mb-8 flex items-center justify-center gap-20">
 				{sponsors
 					.filter(i => i.type === 'platinum')
 					.map((sponsor, index) => (
-						<img key={index} src={sponsor.image} alt={sponsor.title} className="h-80" />
+						<img
+							key={index}
+							src={sponsor.image}
+							alt={sponsor.title}
+							loading="lazy"
+							className="h-40 w-80 rounded-full border object-contain shadow-md"></img>
 					))}
 			</div>
 			<div className="text-center">

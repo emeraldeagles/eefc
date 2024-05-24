@@ -47,7 +47,7 @@ export type InfoCardProps = {
 	description: string;
 	image: string;
 	team?: string;
-	category?: string;
+	category: string;
 	email?: string;
 	ageGroup?: string;
 	link?: string;

@@ -12,6 +12,7 @@ import {
 	historyInfoData,
 	lifeMembersInfoData,
 	sponsorsInfoData,
+	blueCardInfoData,
 } from '~/data/content';
 
 import type {
@@ -88,6 +89,12 @@ export const getClubSites = (): Promise<ClubSitesProps[]> =>
 export const getCoachInfo = (): Promise<SectionCardInfo> =>
 	new Promise((resolve, reject) => {
 		resolve(coachInfoData);
+		// reject(new Error('Something went wrong'));
+	});
+
+export const getBlueCardInfo = (): Promise<SectionCardInfo> =>
+	new Promise((resolve, reject) => {
+		resolve(blueCardInfoData);
 		// reject(new Error('Something went wrong'));
 	});
 

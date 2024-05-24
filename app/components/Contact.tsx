@@ -79,7 +79,7 @@ export default function Contact() {
 							onChange={handleChange}></textarea>
 						<button
 							type="submit"
-							className="w-full rounded-lg bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
+							className="w-full rounded-lg bg-accent/80 px-4 py-2 font-bold text-white hover:bg-accent">
 							Submit
 						</button>
 					</Form>

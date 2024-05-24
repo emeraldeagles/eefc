@@ -11,7 +11,7 @@ export default function ProductTiles() {
 					{/* <!-- Repeated Product Item --> */}
 					{/* <!-- Repeat this block for each product, changing the details accordingly --> */}
 					<div className="overflow-hidden rounded bg-white shadow-lg">
-						<img className="w-full" src="https://placehold.co/300x300" alt="A product image of teamwear" />
+						<img className="w-full" src="https://placehold.co/300x300" alt="A teamwear product" loading="lazy" />
 						<div className="px-6 py-4">
 							<div className="mb-2 text-xl font-bold">Product Name</div>
 							<p className="text-base text-gray-700">$Price</p>

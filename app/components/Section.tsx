@@ -13,118 +13,123 @@ type Props = {
 	leftToRight?: boolean;
 };
 
-export const Section = ({ category, content, leftToRight }: Props) => {
-	const { title, description, image, info, link } = content;
-	console.log('Section category => ', category);
+const InfoContent = ({
+	title,
+	description,
+	category,
+	info,
+}: {
+	title: string;
+	description: string;
+	category: string;
+	info: string[];
+}) => (
+	<>
+		<h3 className="text-xl font-semibold">{title}</h3>
+		<p className="mt-4 whitespace-pre-line text-gray-600">{description}</p>
+		<div className="mt-6">
+			<h4 className="text-lg font-semibold">{getInfoTitle(category)}</h4>
+			<div className="mt-4 flex flex-col gap-2">
+				{info.map((i: string) => (
+					<div key={i} className="flex items-start justify-start">
+						<Icon iconPath={<Tick />} iconClass="mr-2 mt-1 text-primary" iconSize={20} />
+						<p>{i}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</>
+);
+
+const CallToAction = ({ callToAction, isLinkArray, link, isSpecificCategory }: any) => (
+	<div className={`mt-auto ${isSpecificCategory ? 'flex gap-2' : ''}`}>
+		{isLinkArray ? (
+			link.map((l: string, index: number) => (
+				<Link to={l} key={index} target="_blank" rel="noopener noreferrer" className="w-full">
+					<Button variant="outline" className="mt-6 w-full border-primary text-primary">
+						{callToAction[index]}
+					</Button>
+				</Link>
+			))
+		) : (
+			<Link to={link} target="_blank" rel="noopener noreferrer" className="w-full">
+				<Button variant="outline" className="mt-6 w-full border-primary text-primary">
+					{callToAction}
+				</Button>
+			</Link>
+		)}
+	</div>
+);
+
+const ImageSection = ({ images }: { images: string[] }) => (
+	<div className="flex flex-col items-center gap-2 rounded-lg">
+		{images.map((image, index) => (
+			<img key={index} src={image} loading="lazy" alt={`Image ${index + 1}`} className="h-full w-full rounded-lg p-0" />
+		))}
+	</div>
+);
+
+const SectionContent = ({ category, content, leftToRight }: Props) => {
+	const { title, description, info, link, images } = content;
+	const isLinkArray = Array.isArray(link);
+	const specificCategories = [
+		SECTION_CATEGORY.REGO_INFO,
+		SECTION_CATEGORY.BLUE_CARD_INFO,
+		SECTION_CATEGORY.MINIROOS_INFO,
+		SECTION_CATEGORY.JUNIORS_INFO,
+		SECTION_CATEGORY.SENIORS_INFO,
+	];
+	const isSpecificCategory = specificCategories.includes(category);
+	const callToAction = getCallToAction(category);
 
 	return (
-		<>
-			<SectionTitle category={category} />
-			<div className="mx-auto w-full rounded-lg bg-white p-6 shadow-md">
-				<div className="grid grid-cols-1 gap-6 lg:grid-cols-2 ">
-					{leftToRight ? (
-						<>
-							<div className="flex h-full flex-col md:col-span-1">
-								<div className="flex-grow">
-									<h3 className="flex text-xl font-semibold">{title}</h3>
-									<p className="mt-4 whitespace-pre-line text-gray-600">{description}</p>
-									<div className="mt-6">
-										<h4 className="text-lg font-semibold">{getInfoTitle(category)}</h4>
-										<div className="mt-4 flex grid grid-cols-1 flex-col gap-2">
-											{info.map((i: string) => {
-												return (
-													<div key={i} className="flex items-start justify-start">
-														<Icon iconPath={<Tick />} iconClass="mr-2 mt-1 text-green-500" iconSize={20} />
-														<p>{i}</p>
-													</div>
-												);
-											})}
-										</div>
-									</div>
-								</div>
-								{getCallToAction(category) ? (
-									<div className="mt-auto">
-										<Link to={link} target="_blank" rel="no_referrer">
-											<Button variant="outline" className="mt-6 w-full border-primary text-primary">
-												{getCallToAction(category)}
-											</Button>
-										</Link>
-									</div>
-								) : null}
-							</div>
-							{category === SECTION_CATEGORY.REGO_INFO ? (
-								<div className="flex flex-col items-center gap-2 rounded-lg">
-									<img
-										src="https://eefc.syd1.cdn.digitaloceanspaces.com/Squadi-Setup.jpeg"
-										alt={category}
-										className="h-full w-full rounded-lg p-0"
-									/>
-									<img
-										src="https://eefc.syd1.cdn.digitaloceanspaces.com/Squadi-Benefits.jpeg"
-										alt={category}
-										className="h-full w-full rounded-lg p-0"
-									/>
-								</div>
-							) : (
-								<div className="flex flex-col items-center rounded-lg">
-									<img src={image} alt={category} className="h-full w-full rounded-lg p-0" />
-								</div>
-							)}
-						</>
-					) : (
-						<>
-							{category === SECTION_CATEGORY.REGO_INFO ? (
-								<div className="flex flex-col items-center gap-2 rounded-lg">
-									<img
-										src="https://eefc.syd1.cdn.digitaloceanspaces.com/Squadi-Setup.jpeg"
-										alt={category}
-										className="h-full w-full rounded-lg p-0"
-									/>
-									<img
-										src="https://eefc.syd1.cdn.digitaloceanspaces.com/Squadi-Benefits.jpeg"
-										alt={category}
-										className="h-full w-full rounded-lg p-0"
-									/>
-								</div>
-							) : (
-								<div className="flex flex-col items-center rounded-lg">
-									<img src={image} alt={category} className="h-full w-full rounded-lg p-0" />
-								</div>
-							)}
-							<div className="flex h-full flex-col md:col-span-1">
-								<div className="flex-grow">
-									<h3 className="flex text-xl font-semibold">{title}</h3>
-									<p className="mt-4 whitespace-pre-line text-gray-600">{description}</p>
-									<div className="mt-6">
-										<h4 className="text-lg font-semibold">{getInfoTitle(category)}</h4>
-										<div className="mt-4 flex grid grid-cols-1 flex-col gap-2">
-											{info.map(i => {
-												return (
-													<div key={i} className="flex items-start justify-start">
-														<Icon iconPath={<Tick />} iconClass="mr-2 mt-1 text-green-500" iconSize={20} />
-														<p>{i}</p>
-													</div>
-												);
-											})}
-										</div>
-									</div>
-								</div>
-								{getCallToAction(category) ? (
-									<div className="mt-auto">
-										<Link to={link} target="_blank" rel="no_referrer">
-											<Button variant="outline" className="mt-6 w-full border-primary text-primary">
-												{getCallToAction(category)}
-											</Button>
-										</Link>
-									</div>
-								) : null}
-							</div>
-						</>
-					)}
-				</div>
-			</div>
-		</>
+		<div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+			{leftToRight ? (
+				<>
+					<div className="flex h-full flex-col md:col-span-1">
+						<div className="flex-grow">
+							<InfoContent title={title} description={description} category={category} info={info} />
+						</div>
+						{callToAction && (
+							<CallToAction
+								callToAction={callToAction}
+								isLinkArray={isLinkArray}
+								link={link}
+								isSpecificCategory={isSpecificCategory}
+							/>
+						)}
+					</div>
+					<ImageSection images={images} />
+				</>
+			) : (
+				<>
+					<ImageSection images={images} />
+					<div className="flex h-full flex-col md:col-span-1">
+						<div className="flex-grow">
+							<InfoContent title={title} description={description} category={category} info={info} />
+						</div>
+						{callToAction && (
+							<CallToAction
+								callToAction={callToAction}
+								isLinkArray={isLinkArray}
+								link={link}
+								isSpecificCategory={isSpecificCategory}
+							/>
+						)}
+					</div>
+				</>
+			)}
+		</div>
 	);
 };
+
+export const Section = ({ category, content, leftToRight }: Props) => (
+	<>
+		<SectionTitle category={category} />
+		<div className="mx-auto w-full rounded-lg bg-white p-6 shadow-md">
+			<SectionContent category={category} content={content} leftToRight={leftToRight} />
+		</div>
+	</>
+);
 
 export default Section;

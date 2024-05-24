@@ -1,4 +1,4 @@
-import { regoInfoData, fairPlayInfoData, seasonInfoData, playerInfoData } from '~/data/content';
+import { regoInfoData, fairPlayInfoData, miniroosInfoData, juniorsInfoData, seniorsInfoData } from '~/data/content';
 
 import type { SectionCardInfo } from '~/interfaces/content';
 
@@ -14,14 +14,20 @@ export const getFairPlayInfo = (): Promise<SectionCardInfo> =>
 		// reject(new Error('Something went wrong'));
 	});
 
-export const getSeasonInfo = (): Promise<SectionCardInfo> =>
+export const getMiniroosInfo = (): Promise<SectionCardInfo> =>
 	new Promise((resolve, reject) => {
-		resolve(seasonInfoData);
+		resolve(miniroosInfoData);
 		// reject(new Error('Something went wrong'));
 	});
 
-export const getPlayerInfo = (): Promise<SectionCardInfo> =>
+export const getJuniorsInfo = (): Promise<SectionCardInfo> =>
 	new Promise((resolve, reject) => {
-		resolve(playerInfoData);
+		resolve(juniorsInfoData);
+		// reject(new Error('Something went wrong'));
+	});
+
+export const getSeniorsInfo = (): Promise<SectionCardInfo> =>
+	new Promise((resolve, reject) => {
+		resolve(seniorsInfoData);
 		// reject(new Error('Something went wrong'));
 	});

@@ -18,7 +18,7 @@ export const Icon: React.FC<IconProps> = ({
 	return (
 		<div className={isButton ? `btn ${buttonSize} ${buttonShape} ${buttonClass}` : 'flex'}>
 			{isLink ? (
-				<a href={href} rel="noreferrer" target="_blank">
+				<a href={href} rel="noopener noreferrer" target="_blank">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width={iconSize}

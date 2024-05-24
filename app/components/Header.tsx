@@ -54,6 +54,7 @@ const Header = () => {
 								alt="Fallback"
 								className="absolute inset-0 z-10 w-full object-cover object-center"
 								src={headerConfig.fallback}
+								loading="lazy"
 								style={{ aspectRatio: headerConfig.aspectRatio, objectFit: 'cover' }}
 							/>
 						)}
@@ -77,6 +78,7 @@ const Header = () => {
 						className="w-full object-cover object-center"
 						height={425}
 						src={headerConfig.src as string}
+						loading="lazy"
 						style={{ aspectRatio: headerConfig.aspectRatio, objectFit: 'cover' }}
 						width={1400}
 					/>

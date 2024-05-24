@@ -13,26 +13,26 @@ const routeConfig: { [key: string]: RouteConfig } = {
 	'/': {
 		type: 'video',
 		src: {
-			'4k': 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website-Banners/EEFC-Home-4k.mp4',
-			'1080p': 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website-Banners/EEFC-Home-1080p.mp4',
-			'720p': 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website-Banners/EEFC-Home-720p.mp4',
+			'4k': 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Website-Banners/EEFC-Home-4k.mp4',
+			'1080p': 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Website-Banners/EEFC-Home-1080p.mp4',
+			'720p': 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Website-Banners/EEFC-Home-720p.mp4',
 		},
 		aspectRatio: '3840/2176',
-		fallback: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website-Banners/EEFC-Home.png',
+		fallback: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Website-Banners/EEFC-Home.png',
 	},
 	'/events': {
 		type: 'image',
-		src: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website-Banners/EEFC-Events.png',
+		src: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Website-Banners/EEFC-Events.png',
 		aspectRatio: '1400/425',
 	},
 	'/club': {
 		type: 'image',
-		src: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website-Banners/EEFC-Club.png',
+		src: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Website-Banners/EEFC-Club.png',
 		aspectRatio: '1400/425',
 	},
 	'/play': {
 		type: 'image',
-		src: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website-Banners/EEFC-Play.png',
+		src: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Website-Banners/EEFC-Play.png',
 		aspectRatio: '1400/425',
 	},
 };

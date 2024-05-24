@@ -41,10 +41,7 @@ export default function Article({ category, content }: Props): JSX.Element {
 						<CardDescription>{content.date}</CardDescription>
 						<CardDescription>
 							<Badge variant="outline">
-								<Link
-									to={content.link}
-									rel="no-referrer"
-									className="flex items-center gap-1 text-sm hover:text-green-500">
+								<Link to={content.link} rel="no-referrer" className="flex items-center gap-1 text-sm hover:text-accent">
 									View original post
 									<span className="inline-block">
 										<Icon iconPath={<ArrowUpRight />} iconSize={16} iconColor="" />
@@ -78,6 +75,7 @@ export default function Article({ category, content }: Props): JSX.Element {
 											className="h-full content-center rounded-lg object-contain"
 											src={image}
 											alt={content.description}
+											loading="lazy"
 										/>
 									</CarouselItem>
 								);

@@ -24,7 +24,7 @@ export default function PricingCard({ title, description, open, price, image, in
 					<span className="text-lg">/season</span>
 				</div>
 				<Button className={`mt-6 w-full ${!open ? 'bg-muted' : ''}`} disabled={!open}>
-					<Link to={link} target="_blank" rel="no_referrer">
+					<Link to={link} target="_blank" rel="noopener noreferrer">
 						Register Now
 					</Link>
 				</Button>

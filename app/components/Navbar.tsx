@@ -10,6 +10,10 @@ export const navigationLinks = [
 		link: '/',
 	},
 	{
+		name: 'Shop',
+		link: 'https://emeraldeaglesfc.square.site/',
+	},
+	{
 		name: 'Club',
 		link: '/club',
 	},
@@ -32,7 +36,7 @@ export default function Navbar() {
 				<div className="flex lg:flex-1">
 					<Link to="/" className="-my-4 p-1.5">
 						<span className="sr-only">Emerald Eagles Football Club</span>
-						<img className="h-16 w-auto" src="/images/EEFCLogoWeb.png" alt="" />
+						<img className="h-16 w-auto" src="/images/EEFCLogoWeb.png" alt="" loading="lazy" />
 					</Link>
 				</div>
 				<div className="flex lg:hidden">
@@ -66,7 +70,7 @@ export default function Navbar() {
 					<div className="flex items-center justify-between">
 						<Link to="/" className="-m-1.5 p-1.5">
 							<span className="sr-only">Your Company</span>
-							<img className="h-8 w-auto" src="/images/EEFCLogoWeb.png" alt="EEFC Logo" />
+							<img className="h-8 w-auto" src="/images/EEFCLogoWeb.png" alt="EEFC Logo" loading="lazy" />
 						</Link>
 						<button
 							type="button"

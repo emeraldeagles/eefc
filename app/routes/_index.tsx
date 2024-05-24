@@ -106,7 +106,7 @@ const Index = () => {
 			<Suspense fallback={<div>Loading Facebook posts...</div>}>
 				<Await
 					resolve={cachedPostsPromise}
-					errorElement={<div>Error loading Facebook posts</div>}
+					errorElement={<div>Error loading Facebook posts, please refresh the page</div>}
 					children={() => null}
 				/>
 			</Suspense>

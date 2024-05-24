@@ -19,8 +19,8 @@ export default function ImportantDatesList({ importantDates, handleDateChange, s
 				onValueChange={newDate => handleDateChange(newDate)}
 				collapsible
 				className="min-w-full">
-				{importantDates.map(event => (
-					<AccordionItem key={event.title} value={event.date} className="mb-4 rounded-lg bg-white shadow">
+				{importantDates.map((event, index) => (
+					<AccordionItem key={index} value={event.date} className="mb-4 rounded-lg bg-white shadow">
 						<AccordionTrigger className="flex w-full cursor-pointer items-start gap-2 p-4 hover:bg-gray-100">
 							<Avatar>
 								<AvatarImage src={event.clubLogo} />
@@ -42,18 +42,13 @@ export default function ImportantDatesList({ importantDates, handleDateChange, s
 											<br></br>
 										</>
 									))}
-									<a
-										href={event.mapLink}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="text-accent hover:underline">
+									<a href={event.mapLink} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
 										<span>
 											Get directions{' '}
-											<ArrowUpRight size={16} style={{ display: 'inline-block', verticalAlign: 'middle' }} />
+											<ArrowUpRight size={20} style={{ display: 'inline-block', verticalAlign: 'middle' }} />
 										</span>
 									</a>
 								</div>
-								{event.image ? <img src={event.image} alt={event.title} className="ml-4 w-44 rounded-lg" /> : null}
 							</div>
 						</AccordionContent>
 					</AccordionItem>
