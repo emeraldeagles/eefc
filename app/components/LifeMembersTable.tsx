@@ -1,7 +1,7 @@
 import React from 'react';
 import type { LifeMembers } from '~/interfaces/content';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
-import { Card, CardHeader, CardContent } from './ui/card';
+import { Card, CardContent } from './ui/card';
 
 // Helper function to group life members by year
 const groupByYear = (lifeMembers: LifeMembers[]): Record<string, string[]> => {
