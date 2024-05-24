@@ -1247,7 +1247,7 @@ export const coachInfoData: SectionCardInfo = {
 	description:
 		'All our coaches are volunteers with current blue cards and graciously donate their time to ensure our kids have a great experience at the soccer club. While they may not have Premier League level coaching skills, they are dedicated parents who do their best for all the kids. \n\n As a token of appreciation, coaches receive discounted registrations, end-of-season gifts, and tickets to our exclusive end-of-season function at The Mayfair Emerald. \n\n If you are interested in volunteering as a coach, please click the link below to send us a message on Facebook or email our coaching coordinator, at coaching@emeraldeagles.com.au.',
 	images: [
-		'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Coaches_Info.jpeg',
+		'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Coaches_Info_1.jpeg',
 		'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Coaches_Info_2.jpeg',
 	],
 	link: 'https://www.m.me/emeraldeagles',
@@ -1330,7 +1330,7 @@ export const historyInfoData: SectionCardInfo = {
 	title: 'Emerald Eagles Football Club History',
 	description:
 		'The Emerald Eagles formed on 28 February 1977 and was formally known as the Emerald Junior Soccer Association but we’ve always called Morton Park home. The Club provides opportunities for kids (and adults) to be active, fit and healthy and teaches sportsmanship, teamwork and accountability, whilst building character,	discipline and a love of the sport. \n\n In 2010/11, the Emerald Junior Soccer Association merged with the Senior side of the club, forming the Emerald Eagles Football Club. \n\n The Emerald Eagles Football Club has grown to over 340 players across our junior and senior bases with players coming from Emerald and the surrounding areas. \n\n If you would like to find out more about the history of the club, please don’t hesitate to click the link below and send us a message on Facebook or send us an email at admin@emeraldeagle.com.au',
-	images: ['https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/History_Info.jpeg'],
+	images: ['https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/History_Info_1.jpeg'],
 	link: 'https://www.m.me/emeraldeagles',
 	info: [
 		'The club was formed on 28 February 1977',
@@ -1344,7 +1344,7 @@ export const sponsorsInfoData: SectionCardInfo = {
 	title: 'Community Sponsors',
 	description:
 		'The Emerald Eagles Football Club would like to thank all our sponsors for their continued support. Without their support, we would not be able to provide the facilities and opportunities that we do for our players. \n\n As a non-for profit Club we rely on the support of local organisations such as yourself, to ensure we are able to operate each season and provide sporting opportunities for our local youth. Your	support will not only make a significant difference in our Clubs success but also showcase your	businesses commitment to our local community. \n\n If you would like to find out more about becoming one of our sponsors, please don’t hesitate to click the link below and send us a message on Facebook or send us an email at sponsorships@emeraldeagles.com.au',
-	images: ['https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Sponsors_Info.jpeg'],
+	images: ['https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Sponsors_Info_1.jpeg'],
 	link: 'https://www.m.me/emeraldeagles',
 	info: [
 		'Our sponsors play a vital role in supporting our club and community',
@@ -1361,7 +1361,7 @@ export const lifeMembersInfoData: SectionCardInfo = {
 	title: 'Emerald Eagles Football Club Life Members',
 	description:
 		'Over the years, the Emerald Eagles Football Club has had many dedicated members who have gone above and beyond for the club. These members have been awarded Life Membership for their dedication and service to the club. Life Members are recognized for their significant contributions and are highly respected within the club community.',
-	images: ['https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Life_Members_Info.jpeg'],
+	images: ['https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Life_Members_Info_1.jpeg'],
 	link: 'https://www.m.me/emeraldeagles',
 	info: [
 		'Life Members have made a lasting impact on the club through their leadership and commitment.',
@@ -1378,31 +1378,31 @@ export const clubInfoData: ClubInfo[] = [
 	{
 		title: 'History',
 		description: 'Information about the club',
-		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/History_Info.jpeg',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/History_Info_1.jpeg',
 		link: '/club/history',
 	},
 	{
 		title: 'Committee',
 		description: 'Meet the 2024 Committee',
-		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Committee_Info.jpeg',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Committee_Info_1.jpg',
 		link: '/club/committee',
 	},
 	{
 		title: 'Life Members',
 		description: 'The honour board',
-		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Life_Members_Info.jpeg',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Life_Members_Info_1.jpeg',
 		link: '/club/life-members',
 	},
 	{
 		title: 'Sponsors',
 		description: 'Meet the 2024 Sponosors',
-		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Sponsors_Jerseys.jpeg',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Sponsors_Info_2.jpeg',
 		link: '/club/sponsors',
 	},
 	{
 		title: 'Coaches',
 		description: 'Get to know our coaches',
-		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Coaches_Info.jpeg',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Coaches_Info_1.jpeg',
 		link: '/club/coaches',
 	},
 	{

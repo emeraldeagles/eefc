@@ -24,10 +24,6 @@ export default function LifeMembersTable({ lifeMembers }: LifeMembersTableProps)
 	return (
 		<div>
 			<Card>
-				<CardHeader className="py-2">
-					{/* <CardTitle>Orders</CardTitle> */}
-					{/* <CardDescription>Recent orders from your store.</CardDescription> */}
-				</CardHeader>
 				<CardContent>
 					<Table>
 						<TableHeader>

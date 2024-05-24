@@ -75,9 +75,9 @@ export default function InfoCard({ title, description, image, team, ageGroup, ca
 			className="hover:shadow-lg"
 			target={isSponsorCategory(category) ? '_blank' : undefined}
 			rel={isSponsorCategory(category) ? 'noopener noreferrer' : undefined}>
-			<Card className="w-full overflow-hidden border-gray-300 bg-gray-100 p-0">{CardContentStructure()}</Card>
+			<Card className="w-full overflow-hidden p-0">{CardContentStructure()}</Card>
 		</Link>
 	) : (
-		<Card className="w-full overflow-hidden border-gray-300 bg-gray-100 p-0">{CardContentStructure()}</Card>
+		<Card className="w-full overflow-hidden p-0">{CardContentStructure()}</Card>
 	);
 }

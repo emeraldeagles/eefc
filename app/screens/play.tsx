@@ -36,11 +36,11 @@ const ClubScreen: FC<PlayScreenProps> = ({
 			<Card className="p-0 shadow-lg">
 				<CardContent className="m-0 w-full p-0">
 					<Link
-						to="https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC%20Field%20Locations.png"
+						to="https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/EEFC_Field_Locations.png"
 						target="_blank"
 						rel="noopener noreferrer">
 						<img
-							src="https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC%20Field%20Locations.png"
+							src="https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/EEFC_Field_Locations.png"
 							alt="EEFC Field Locations"
 							className="h-full w-full rounded-lg object-cover"
 							loading="lazy"
