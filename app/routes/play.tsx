@@ -10,7 +10,7 @@ import PlayScreen from '~/screens/play';
 
 export const meta = () => [
 	{
-		title: 'EEFC | Club',
+		title: 'EEFC | Play',
 	},
 	{
 		charset: 'utf-8',

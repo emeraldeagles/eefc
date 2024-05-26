@@ -4,7 +4,7 @@ import { Button } from '../ui/button';
 import type { MerchProps } from '~/interfaces/content';
 import { Link } from '@remix-run/react';
 
-export default function MerchCard({ title, description, price, image, badge, badgeColour }: MerchProps) {
+export default function MerchCard({ title, description, price, image, badge, link, badgeColour }: MerchProps) {
 	console.log('MerchCard', title, price, badgeColour);
 
 	return (
@@ -31,8 +31,8 @@ export default function MerchCard({ title, description, price, image, badge, bad
 				) : null}
 			</CardContent>
 			<CardFooter className="flex justify-center">
-				<Link to="https://emeraldeaglesfc.square.site/" className="w-full" target="_blank" rel="noopener noreferrer">
-					<Button className="w-full border-2">Buy Now</Button>
+				<Link to={link} className="w-full" target="_blank" rel="noopener noreferrer">
+					<Button className="w-full border-2 hover:border">Buy Now</Button>
 				</Link>
 			</CardFooter>
 		</Card>

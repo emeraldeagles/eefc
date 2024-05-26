@@ -70,7 +70,7 @@ export const getCardByCategory = ({ content, category }: CardProps) => {
 		return <InfoCard title={title} description={description} image={image} link={link} category={category} />;
 	}
 	if (category === CARD_CATEGORY.MERCH && isMerch(content)) {
-		const { title, description, price, badge, badgeColour, image } = content;
+		const { title, description, price, badge, badgeColour, link, image } = content;
 		return (
 			<MerchCard
 				title={title}
@@ -78,6 +78,7 @@ export const getCardByCategory = ({ content, category }: CardProps) => {
 				price={price}
 				badge={badge}
 				badgeColour={badgeColour}
+				link={link}
 				image={image}
 			/>
 		);

@@ -8,9 +8,9 @@ export default function BasicCard({ id, description, images, link, date, categor
 	const categoryPath = category === CARD_CATEGORY.CARNIVALS ? 'events/carnivals' : category;
 
 	return (
-		<Link to={`/${categoryPath?.toLowerCase()}/${id}`}>
+		<Link to={`/${categoryPath?.toLowerCase()}/${id}`} className="hover:shadow-lg">
 			<Card className="border-[#e5e7eb] sm:rounded-lg">
-				<CardHeader className="p-0">
+				<CardHeader className="rounded-lg p-0">
 					<img
 						className="h-full w-full rounded-lg object-center p-6 sm:h-48 sm:rounded-t-lg sm:object-cover sm:p-0"
 						src={
@@ -22,7 +22,7 @@ export default function BasicCard({ id, description, images, link, date, categor
 						loading="lazy"
 					/>
 				</CardHeader>
-				<CardContent className="p-4">
+				<CardContent className="p-6">
 					<div
 						className="overflow-hidden text-ellipsis text-sm leading-tight"
 						style={{

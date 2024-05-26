@@ -5,6 +5,18 @@ import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY } from '~/constants/constants';
 import useStore from '~/store/store';
 
+export const meta = () => [
+	{
+		title: 'EEFC | Carnival',
+	},
+	{
+		charset: 'utf-8',
+	},
+	{
+		viewport: 'width=device-width,initial-scale=1',
+	},
+];
+
 export const loader: LoaderFunction = async ({ params }) => {
 	const { id } = params;
 	return json({ id });

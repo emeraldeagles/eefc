@@ -11,7 +11,7 @@ export const navigationLinks = [
 	},
 	{
 		name: 'Shop',
-		link: 'https://emeraldeaglesfc.square.site/',
+		link: 'https://emeraldeagles-shop.square.site/',
 	},
 	{
 		name: 'Club',
@@ -59,7 +59,7 @@ export default function Navbar() {
 					))}
 				</div>
 				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-					<Button asChild variant="outline">
+					<Button asChild variant="outline" className="hover:text-primary">
 						<Link to="/play">Join the Club</Link>
 					</Button>
 				</div>
@@ -74,7 +74,7 @@ export default function Navbar() {
 						</Link>
 						<button
 							type="button"
-							className="-m-2.5 rounded-md p-2.5 text-gray-700"
+							className="-m-2.5 rounded-md p-2.5 text-gray-700 hover:text-primary hover:underline"
 							onClick={() => setMobileMenuOpen(false)}>
 							<span className="sr-only">Close menu</span>
 							<XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -87,7 +87,8 @@ export default function Navbar() {
 									<Link
 										key={item.name}
 										to={item.link}
-										className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+										onClick={() => setMobileMenuOpen(false)}
+										className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-primary/10">
 										{item.name}
 									</Link>
 								))}
@@ -95,7 +96,7 @@ export default function Navbar() {
 							<div className="py-6">
 								<Link
 									to="/play"
-									className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+									className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-primary/10 text-">
 									Join the club
 								</Link>
 							</div>

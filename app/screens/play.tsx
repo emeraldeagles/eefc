@@ -26,12 +26,6 @@ const ClubScreen: FC<PlayScreenProps> = ({
 }: PlayScreenProps): ReactElement => {
 	return (
 		<div className="flex flex-col gap-4">
-			<Tiles category={CARD_CATEGORY.REGO} content={regoPrices} />
-			<Section category={SECTION_CATEGORY.REGO_INFO} content={regoInfo} />
-			<Section category={SECTION_CATEGORY.FAIRPLAY_INFO} content={fairPlayInfo} leftToRight />
-			<Section category={SECTION_CATEGORY.MINIROOS_INFO} content={miniroosInfo} />
-			<Section category={SECTION_CATEGORY.JUNIORS_INFO} content={juniorsInfo} leftToRight />
-			<Section category={SECTION_CATEGORY.SENIORS_INFO} content={seniorsInfo} />
 			<SectionTitle category="Field Map" />
 			<Card className="p-0 shadow-lg">
 				<CardContent className="m-0 w-full p-0">
@@ -42,12 +36,18 @@ const ClubScreen: FC<PlayScreenProps> = ({
 						<img
 							src="https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/EEFC_Field_Locations.png"
 							alt="EEFC Field Locations"
-							className="h-full w-full rounded-lg object-cover"
+							className="h-full w-full object-cover sm:rounded-lg"
 							loading="lazy"
 						/>
 					</Link>
 				</CardContent>
 			</Card>
+			<Tiles category={CARD_CATEGORY.REGO} content={regoPrices} />
+			<Section category={SECTION_CATEGORY.REGO_INFO} content={regoInfo} />
+			<Section category={SECTION_CATEGORY.FAIRPLAY_INFO} content={fairPlayInfo} leftToRight />
+			<Section category={SECTION_CATEGORY.MINIROOS_INFO} content={miniroosInfo} />
+			<Section category={SECTION_CATEGORY.JUNIORS_INFO} content={juniorsInfo} leftToRight />
+			<Section category={SECTION_CATEGORY.SENIORS_INFO} content={seniorsInfo} />
 		</div>
 	);
 };

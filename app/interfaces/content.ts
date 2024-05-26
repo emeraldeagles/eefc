@@ -120,6 +120,7 @@ export type MerchProps = {
 	description: string;
 	image: string;
 	price: string;
+	link: string;
 	badge: string;
 	badgeColour: 'primary' | 'accent' | 'secondary' | 'destructive';
 };

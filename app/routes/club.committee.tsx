@@ -5,6 +5,18 @@ import Section from '~/components/Section';
 import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY, SECTION_CATEGORY } from '~/constants/constants';
 
+export const meta = () => [
+	{
+		title: 'EEFC | Committee',
+	},
+	{
+		charset: 'utf-8',
+	},
+	{
+		viewport: 'width=device-width,initial-scale=1',
+	},
+];
+
 export async function loader() {
 	const committee = await getCommittee();
 	const committeeInfo = await getCommitteeInfo();

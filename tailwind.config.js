@@ -16,7 +16,7 @@ module.exports = {
 				full: '9999px',
 			},
 			backgroundImage: {
-				'footer-bg': "url('https://eefc.syd1.cdn.digitaloceanspaces.com/Website-Banners/EEFC-Footer.png')",
+				'footer-bg': "url('https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Website-Banners/EEFC-Footer.png')",
 			},
 			fontFamily: {
 				heading: ['Merriweather', 'Georgia', 'serif'],

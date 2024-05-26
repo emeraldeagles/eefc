@@ -6,6 +6,18 @@ import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY, SECTION_CATEGORY } from '~/constants/constants';
 import type { Coaches } from '~/interfaces/content';
 
+export const meta = () => [
+	{
+		title: 'EEFC | Coaches',
+	},
+	{
+		charset: 'utf-8',
+	},
+	{
+		viewport: 'width=device-width,initial-scale=1',
+	},
+];
+
 export async function loader() {
 	const coachesInfo = await getCoachInfo();
 	const resources = await getResources();

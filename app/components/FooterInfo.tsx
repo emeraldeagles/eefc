@@ -23,7 +23,7 @@ export default function FooterInfo() {
 								<Link
 									key={item.name}
 									to={item.link}
-									className="text-base font-medium text-gray-500 hover:text-gray-900">
+									className="text-base font-medium hover:text-primary hover:underline">
 									{item.name}
 								</Link>
 							))}
@@ -35,28 +35,28 @@ export default function FooterInfo() {
 					<div className="flex space-x-6">
 						<Link
 							to="https://www.facebook.com/emeraldeagles"
-							className=" hover:text-accent hover:underline"
+							className=" hover:text-primary hover:underline"
 							target="_blank"
 							rel="noopener noreferrer">
 							<FaFacebookF />
 						</Link>
 						<Link
 							to="https://www.instagram.com/explore/locations/161771333974512/emerald-eagles-football-club/"
-							className=" hover:text-accent hover:underline"
+							className=" hover:text-primary hover:underline"
 							target="_blank"
 							rel="noopener noreferrer">
 							<FaInstagram />
 						</Link>
 						<Link
 							to="https://emeraldeaglesfc.square.site/"
-							className=" hover:text-accent hover:underline"
+							className=" hover:text-primary hover:underline"
 							target="_blank"
 							rel="noopener noreferrer">
 							<FaCcVisa />
 						</Link>
 						<Link
 							to="https://emeraldeaglesfc.square.site/"
-							className=" hover:text-accent hover:underline"
+							className=" hover:text-primary hover:underline"
 							target="_blank"
 							rel="noopener noreferrer">
 							<FaCcMastercard />
@@ -66,7 +66,7 @@ export default function FooterInfo() {
 					<div className="sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:transform">
 						<Link
 							to="https://jasonsandeman.netlify.app/"
-							className=" hover:text-accent"
+							className="hover:text-primary hover:underline"
 							target="_blank"
 							rel="noopener noreferrer">
 							Created by JW Sandeman

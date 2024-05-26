@@ -5,6 +5,18 @@ import Section from '~/components/Section';
 import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY, SECTION_CATEGORY, SPONSOR_TYPE } from '~/constants/constants';
 
+export const meta = () => [
+	{
+		title: 'EEFC | Club Sponsors',
+	},
+	{
+		charset: 'utf-8',
+	},
+	{
+		viewport: 'width=device-width,initial-scale=1',
+	},
+];
+
 export async function loader() {
 	const sponsors = await getSponsors();
 	const sponsorsInfo = await getSponsorsInfo();

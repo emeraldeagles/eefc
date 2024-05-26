@@ -672,7 +672,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -684,7 +684,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -696,7 +696,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-1.fna.fbcdn.net/v/t39.30808-6/429809320_1136566891074560_3840948839392771427_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=aYkhjnHfIlkQ7kNvgEarec9&_nc_ht=scontent.fbne9-1.fna&oh=00_AYDcDNzDnf2_JTdADCCvVoKs6VWNhg_xFiILtnPLeneicg&oe=664B44EA',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -708,7 +708,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-1.fna.fbcdn.net/v/t39.30808-6/432764695_1146267070104542_5657867713861784061_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cpdy-M9Q8EIQ7kNvgFtchEw&_nc_ht=scontent.fbne9-1.fna&oh=00_AYDssWMhDzGwJiDE0ZpZnPDPiKUH8-46CVhzfzmdxKAQ-A&oe=664B43E5',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -720,7 +720,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/438197162_1165613624836553_4472878705879451442_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-A6YHRVIJ1UQ7kNvgHJsoga&_nc_ht=scontent.fbne9-2.fna&oh=00_AYA3Xvt-xFiop6kZaC25ggYHqBtoA_ATp_GhuaCyZKqfZw&oe=664B5B89',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -731,7 +731,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/439734601_1168324194565496_1237587325096654240_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=_QYOdbmAC5QQ7kNvgE9BZh0&_nc_ht=scontent.fbne9-2.fna&oh=00_AYBLExH_ectJjDetSxpHGy-aJ4GqRp6WNLhu-3US-zvkRw&oe=664B6581',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -766,7 +766,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -777,7 +777,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -789,7 +789,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -812,7 +812,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -824,7 +824,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -848,7 +848,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -896,7 +896,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -908,7 +908,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -920,7 +920,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -944,7 +944,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -955,7 +955,7 @@ export const importantDatesData: ImportantDates[] = [
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Logos/eefclogo.png',
+		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
 		location: 'Emerald',
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
@@ -1057,6 +1057,7 @@ export const merchData: MerchProps[] = [
 		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Merch/Training-Shirt.PNG',
 		price: '$40',
 		badge: 'POPULAR',
+		link: "https://emeraldeagles-shop.square.site/product/2024-eefc-training-shirt/7?cp=true&sa=true&sbp=false&q=false",
 		badgeColour: 'secondary',
 	},
 	{
@@ -1065,6 +1066,7 @@ export const merchData: MerchProps[] = [
 		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Merch/Backpack.PNG',
 		price: '$25',
 		badge: 'LOW STOCK',
+		link: "https://emeraldeagles-shop.square.site/product/backpack/30?cp=true&sa=true&sbp=false&q=false",
 		badgeColour: 'destructive',
 	},
 	{
@@ -1073,6 +1075,7 @@ export const merchData: MerchProps[] = [
 		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Merch/Bucket-Hat.PNG',
 		price: '$12',
 		badge: 'LIMITED EDITION',
+		link:"https://emeraldeagles-shop.square.site/product/bucket-hat/9?cp=true&sa=true&sbp=false&q=false",
 		badgeColour: 'accent',
 	},
 ];
@@ -1538,6 +1541,11 @@ export const clubSitesData: ClubSitesProps[] = [
 		link: 'https://bluebirdsufc.com.au/',
 	},
 	{
+		title: 'Boyne Tannum FC',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/BITS.webp',
+		link: 'https://www.boynetannumfc.com/',
+	},
+	{
 		title: 'Capricorn Coast FC',
 		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/capcoast.webp',
 		link: 'https://www.capricorncoastfc.com.au/',
@@ -1546,6 +1554,16 @@ export const clubSitesData: ClubSitesProps[] = [
 		title: 'Clermont Tigers',
 		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/clermonttigers.jpeg',
 		link: 'https://clermont-tigers-junior-soccer-association.square.site/',
+	},
+	{
+		title: 'Clinton FC',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/ClintonFC.jpeg',
+		link: 'https://www.facebook.com/ClintonFootballClub/',
+	},
+	{
+		title: "Dysart Devil's FC",
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/Dysart_Devils.jpeg',
+		link: 'https://www.facebook.com/p/Dysart-Devils-FC-100057481516607/',
 	},
 	{
 		title: 'Frenchville Roos SC',
@@ -1558,7 +1576,7 @@ export const clubSitesData: ClubSitesProps[] = [
 		link: 'https://gracemereredbacks.com.au/index.php',
 	},
 	{
-		title: 'Longreach Soccer',
+		title: 'Longreach FC',
 		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/longreachfc.png',
 		link: 'https://www.facebook.com/longreachsoccer/',
 	},

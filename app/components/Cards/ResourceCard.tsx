@@ -14,7 +14,7 @@ export default function ResourceCard({ title, description, image, link, category
 				</div>
 			</CardHeader>
 			<CardContent className="flex-grow">
-				<CardDescription className="text-md h-12 font-semibold">{description}</CardDescription>
+				<CardDescription className="text-md font-semibold">{description}</CardDescription>
 				<Badge
 					variant={
 						category as

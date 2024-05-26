@@ -5,6 +5,18 @@ import Section from '~/components/Section';
 import { SECTION_CATEGORY } from '~/constants/constants';
 import type { Coaches } from '~/interfaces/content';
 
+export const meta = () => [
+	{
+		title: 'EEFC | Volunteers',
+	},
+	{
+		charset: 'utf-8',
+	},
+	{
+		viewport: 'width=device-width,initial-scale=1',
+	},
+];
+
 export async function loader() {
 	const volunteerInfo = await getVolunteerInfo();
 

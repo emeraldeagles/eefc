@@ -11,7 +11,7 @@ export default function Ladder() {
 					<iframe
 						src="https://registration.squadi.com/liveScorePublicLadder?organisationKey=ccd8d990-5714-489b-b3af-9e8ffcf3c1bf&competitionUniqueKey=7f3ce9b1-d44a-41c3-9615-9d8e889dbe74&yearId=6"
 						title="Seniors Ladder"
-						className="h-screen w-full rounded-lg"
+						className="h-[80vh] w-full rounded-lg sm:h-screen"
 						allowFullScreen
 					/>
 				</CardContent>

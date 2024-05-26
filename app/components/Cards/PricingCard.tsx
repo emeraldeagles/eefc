@@ -19,15 +19,15 @@ export default function PricingCard({ title, description, open, price, image, in
 				<CardDescription>{description}</CardDescription>
 			</CardHeader>
 			<CardContent>
-				<div className="text-4xl font-bold">
+				<div className="text-2xl font-bold sm:text-4xl">
 					{price}
 					<span className="text-lg">/season</span>
 				</div>
-				<Button className={`mt-6 w-full ${!open ? 'bg-muted' : ''}`} disabled={!open}>
-					<Link to={link} target="_blank" rel="noopener noreferrer">
+				<Link to={link} target="_blank" rel="noopener noreferrer">
+					<Button className={`mt-6 w-full hover:border ${!open ? 'bg-muted' : ''}`} disabled={!open}>
 						Register Now
-					</Link>
-				</Button>
+					</Button>
+				</Link>
 				<ul className="mt-6 space-y-2">
 					{info.map(i => {
 						return <li key={i}>✓ {i}</li>;

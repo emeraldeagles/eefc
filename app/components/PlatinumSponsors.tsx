@@ -16,16 +16,18 @@ const PlatinumSponsors: React.FC<PlatinumSponsors> = ({ sponsors }) => {
 				{sponsors
 					.filter(i => i.type === 'platinum')
 					.map((sponsor, index) => (
-						<img
-							key={index}
-							src={sponsor.image}
-							alt={sponsor.title}
-							loading="lazy"
-							className="h-40 w-80 rounded-full border object-contain shadow-md"></img>
+						<Link key={index} to={sponsor.link} target="_blank" rel="noopener noreferrer">
+							<img
+								key={index}
+								src={sponsor.image}
+								alt={sponsor.title}
+								loading="lazy"
+								className="h-40 w-80 rounded-full border object-contain shadow-md"></img>
+						</Link>
 					))}
 			</div>
 			<div className="text-center">
-				<Link to="/club/sponsors">
+				<Link to="/club/sponsors" className="hover:text-primary hover:underline">
 					<Button variant="outline">View All Sponsors</Button>
 				</Link>
 			</div>

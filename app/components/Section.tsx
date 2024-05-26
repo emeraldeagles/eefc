@@ -42,24 +42,30 @@ const InfoContent = ({
 );
 
 const CallToAction = ({ callToAction, isLinkArray, link, isSpecificCategory }: any) => (
-	<div className={`mt-auto ${isSpecificCategory ? 'flex gap-2' : ''}`}>
+	<div className={`${isSpecificCategory ? 'flex flex-col sm:flex-row sm:gap-2' : 'mt-6'}`}>
 		{isLinkArray ? (
 			link.map((l: string, index: number) => (
-				<Link to={l} key={index} target="_blank" rel="noopener noreferrer" className="w-full">
-					<Button variant="outline" className="mt-6 w-full border-primary text-primary">
+				<Link
+					to={l}
+					key={index}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="mt-6 flex w-full flex-col sm:flex-row">
+					<Button variant="outline" className="w-full hover:text-primary sm:ml-2 sm:mt-0">
 						{callToAction[index]}
 					</Button>
 				</Link>
 			))
 		) : (
-			<Link to={link} target="_blank" rel="noopener noreferrer" className="w-full">
-				<Button variant="outline" className="mt-6 w-full border-primary text-primary">
+			<Link to={link} target="_blank" rel="noopener noreferrer" className="mt-6 w-full">
+				<Button variant="outline" className="w-full hover:text-primary sm:ml-2 sm:mt-0">
 					{callToAction}
 				</Button>
 			</Link>
 		)}
 	</div>
 );
+
 
 const ImageSection = ({ images }: { images: string[] }) => (
 	<div className="flex flex-col items-center gap-2 rounded-lg">

@@ -10,11 +10,11 @@ export default function CalendarDownload() {
 			<Link
 				to="https://calendar.google.com/calendar/u/1?cid=YWRtaW5AZW1lcmFsZGVhZ2xlcy5jb20uYXU"
 				target="_blank"
-				rel="no-referrer">
-				<Card className="border border-[#e5e7eb] hover:border hover:bg-gray-100">
+				rel="noopener noreferrer">
+				<Card className="">
 					<CardHeader>
-						<CardTitle className="flex items-center justify-center align-middle">
-							<h2 className="flex items-center text-xl tracking-wide">
+						<CardTitle className="mobile-text flex items-center justify-center align-middle hover:text-primary hover:underline">
+							<h2 className="flex items-center">
 								Download our 2024 season calender here
 								<span>
 									<Icon iconPath={<ArrowUpRight />} />
