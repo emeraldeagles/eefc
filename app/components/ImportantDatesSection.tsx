@@ -40,20 +40,18 @@ export default function ImportantDatesSection({ importantDates }: Props) {
 		}
 	};
 
-	// const selectedEvent = importantDates.find(event => formatDate(new Date(event.date)) === selectedDate);
-
 	return (
 		<div className="flex flex-col">
 			<SectionTitle category="Important Dates" />
-			<div className="flex gap-4">
-				<div className="max-h-[518px] w-1/2 overflow-y-auto rounded-b-2xl	">
+			<div className="flex flex-col gap-4 sm:flex-row">
+				<div className="overflow-y-auto sm:max-h-[518px] sm:w-1/2 sm:rounded-b-2xl	">
 					<ImportantDatesList
 						importantDates={importantDates}
 						handleDateChange={handleDateChange}
 						selectedDate={selectedDate}
 					/>
 				</div>
-				<div className="w-1/2">
+				<div className="sm:w-1/2">
 					<EventCalendar
 						importantDates={importantDates}
 						handleDateChange={handleDateChange}

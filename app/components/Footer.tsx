@@ -15,13 +15,11 @@ const Footer = ({ sponsors, clubSites }: FooterProps) => {
 	console.log('isClubSponsorsRoute', isClubSponsorsRoute);
 
 	return (
-		<>
+		<div className="mt-16">
 			{!isClubSponsorsRoute ? <PlatinumSponsors sponsors={sponsors} /> : null}
-			<div className={isClubSponsorsRoute ? 'pt-16' : ''}>
-				<ClubSites clubSites={clubSites} />
-			</div>
+			<ClubSites clubSites={clubSites} />
 			<FooterInfo />
-		</>
+		</div>
 	);
 };
 

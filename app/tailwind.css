@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 94%; /* Slightly darker gray background */
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -82,5 +82,10 @@
   .small-text {
     @apply font-body font-light text-sm sm:text-base md:text-lg tracking-normal leading-relaxed my-1;
   }
+  .mobile-text {
+    @apply font-body font-light text-sm sm:text-base md:text-lg tracking-normal leading-relaxed my-1;
+  }
+  .responsive-padding {
+    @apply px-0 sm:px-4;
+  }
 }
-

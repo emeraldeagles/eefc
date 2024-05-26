@@ -126,7 +126,7 @@ const SectionContent = ({ category, content, leftToRight }: Props) => {
 export const Section = ({ category, content, leftToRight }: Props) => (
 	<>
 		<SectionTitle category={category} />
-		<div className="mx-auto w-full rounded-lg bg-white p-6 shadow-md">
+		<div className="mx-auto w-full bg-white p-6 shadow-md sm:rounded-lg">
 			<SectionContent category={category} content={content} leftToRight={leftToRight} />
 		</div>
 	</>

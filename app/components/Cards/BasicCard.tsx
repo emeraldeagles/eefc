@@ -9,10 +9,10 @@ export default function BasicCard({ id, description, images, link, date, categor
 
 	return (
 		<Link to={`/${categoryPath?.toLowerCase()}/${id}`}>
-			<Card className="rounded-lg border-[#e5e7eb]">
+			<Card className="border-[#e5e7eb] sm:rounded-lg">
 				<CardHeader className="p-0">
 					<img
-						className="h-48 w-full rounded-t-lg object-cover"
+						className="h-full w-full rounded-lg object-center p-6 sm:h-48 sm:rounded-t-lg sm:object-cover sm:p-0"
 						src={
 							images.length > 0
 								? images[0]

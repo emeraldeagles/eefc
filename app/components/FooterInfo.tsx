@@ -4,9 +4,9 @@ import { Link } from '@remix-run/react';
 
 export default function FooterInfo() {
 	return (
-		<footer className="mt-8 rounded-t-lg bg-white bg-footer-bg bg-cover bg-center bg-no-repeat">
-			<div className="mx-auto grid max-w-7xl gap-4 px-4 py-8 sm:px-6 lg:px-8">
-				<div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
+		<footer className="m-0 bg-white bg-footer-bg bg-cover bg-center bg-no-repeat sm:mt-8 sm:rounded-t-lg">
+			<div className="grid max-w-7xl flex-col gap-4 px-4 py-8 sm:mx-auto sm:flex-row sm:px-6 lg:px-8">
+				<div className="flex flex-col items-center justify-between gap-8 py-6 sm:flex-row md:justify-start md:space-x-10">
 					<div className="lg:w-0 lg:flex-1">
 						<Link to="/" className="flex">
 							<img
@@ -18,7 +18,7 @@ export default function FooterInfo() {
 						</Link>
 					</div>
 					<div className="flex items-center md:ml-12">
-						<nav className="space-x-10 md:flex">
+						<nav className="space-x-4 sm:space-x-10 md:flex">
 							{navigationLinks.map(item => (
 								<Link
 									key={item.name}
@@ -31,7 +31,7 @@ export default function FooterInfo() {
 					</div>
 				</div>
 				<div className="border-t border-gray-300" />
-				<div className="relative flex items-center justify-between py-6">
+				<div className="flex flex-col items-center justify-between gap-6 py-6 sm:relative sm:flex-row">
 					<div className="flex space-x-6">
 						<Link
 							to="https://www.facebook.com/emeraldeagles"
@@ -63,7 +63,7 @@ export default function FooterInfo() {
 						</Link>
 						{/* Social media icons */}
 					</div>
-					<div className="absolute left-1/2 -translate-x-1/2 transform">
+					<div className="sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:transform">
 						<Link
 							to="https://jasonsandeman.netlify.app/"
 							className=" hover:text-accent"

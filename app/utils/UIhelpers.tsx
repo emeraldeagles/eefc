@@ -143,21 +143,28 @@ export const getCardByCategory = ({ content, category }: CardProps) => {
 
 // return different tailwind classes based on category
 export const getGridColClasses = (category: string) => {
-	if (category === CARD_CATEGORY.NEWS) return 'grid-cols-1 md:grid-cols-4';
-	if (category === CARD_CATEGORY.CLUB_INFO) return 'grid-cols-1 md:grid-cols-3';
-	if (category === CARD_CATEGORY.MERCH) return 'grid-cols-1 md:grid-cols-3';
-	if (category === CARD_CATEGORY.EVENTS) return 'grid-cols-1 md:grid-cols-4';
-	if (category === CARD_CATEGORY.REGO) return 'grid-cols-1 md:grid-cols-3';
-	if (category === CARD_CATEGORY.CARNIVALS) return 'grid-cols-1 md:grid-cols-4';
-	if (category === CARD_CATEGORY.RESOURCES) return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
-	if (category === CARD_CATEGORY.COACHES) return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
-	if (category === CARD_CATEGORY.COMMITTEE) return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
-	if (category === CARD_CATEGORY.PLATINUM_SPONSORS) return 'grid-cols-1 md:grid-cols-2';
-	if (category === CARD_CATEGORY.GOLD_SPONSORS) return 'grid-cols-1 md:grid-cols-3';
-	if (category === CARD_CATEGORY.SILVER_SPONSORS) return 'grid-cols-1 md:grid-cols-4';
-	if (category === CARD_CATEGORY.BRONZE_SPONSORS) return 'grid-cols-1 md:grid-cols-4';
-	if (category === CARD_CATEGORY.DONATION_SPONSORS) return 'grid-cols-1 md:grid-cols-4';
-	if (category === CARD_CATEGORY.GRANT_SPONSORS) return 'grid-cols-1 md:grid-cols-4';
+	switch (category) {
+		case CARD_CATEGORY.NEWS:
+		case CARD_CATEGORY.EVENTS:
+		case CARD_CATEGORY.CARNIVALS:
+			return 'grid-cols-1 md:grid-cols-4';
+		case CARD_CATEGORY.SILVER_SPONSORS:
+		case CARD_CATEGORY.BRONZE_SPONSORS:
+		case CARD_CATEGORY.DONATION_SPONSORS:
+		case CARD_CATEGORY.GRANT_SPONSORS:
+			return 'grid-cols-1 md:grid-cols-4';
+		case CARD_CATEGORY.CLUB_INFO:
+		case CARD_CATEGORY.MERCH:
+		case CARD_CATEGORY.REGO:
+		case CARD_CATEGORY.GOLD_SPONSORS:
+			return 'grid-cols-1 md:grid-cols-3';
+		case CARD_CATEGORY.RESOURCES:
+		case CARD_CATEGORY.COACHES:
+		case CARD_CATEGORY.COMMITTEE:
+			return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
+		case CARD_CATEGORY.PLATINUM_SPONSORS:
+			return 'grid-cols-1 md:grid-cols-2';
+	}
 };
 
 export const getCallToAction = (category: string) => {
@@ -225,15 +232,15 @@ export const getImageClasses = (category: string) => {
 		case CARD_CATEGORY.RESOURCES:
 			return baseClass;
 		case CARD_CATEGORY.PLATINUM_SPONSORS:
-			return 'h-[480px] object-contain';
+			return 'sm:h-[480px] h-60 object-contain';
 		case CARD_CATEGORY.GOLD_SPONSORS:
-			return 'h-80 object-contain';
+			return 'sm:h-80 h-44 object-contain';
 		case CARD_CATEGORY.SILVER_SPONSORS:
-			return 'h-60 object-contain';
+			return 'sm:h-60 h-36 object-contain';
 		case CARD_CATEGORY.BRONZE_SPONSORS:
 		case CARD_CATEGORY.DONATION_SPONSORS:
 		case CARD_CATEGORY.GRANT_SPONSORS:
-			return 'h-52 object-contain';
+			return 'sm:h-52 h-28 object-contain';
 		default:
 			return baseClass;
 	}

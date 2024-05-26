@@ -30,7 +30,7 @@ export default function Article({ category, content }: Props): JSX.Element {
 	return (
 		<div>
 			<SectionTitle category={'Post'} />
-			<Card className="rounded-lg">
+			<Card className="sm:rounded-lg">
 				<CardHeader className="flex flex-row items-center gap-4 border-b">
 					<Avatar className="h-20 w-20 border p-1 shadow-md">
 						<AvatarImage src="/images/eefclogo.png" />

@@ -5,8 +5,6 @@ import SectionTitle from './SectionTitle';
 import { CARD_CATEGORY } from '~/constants/constants';
 
 export default function Tiles({ category, content, isLoading }: TileProps) {
-	console.log('Tiles ==>', category, content, isLoading);
-
 	const isSpecificCategory =
 		category === CARD_CATEGORY.NEWS || category === CARD_CATEGORY.EVENTS || category === CARD_CATEGORY.CARNIVALS;
 

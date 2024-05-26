@@ -31,12 +31,12 @@ export default function Navbar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<header className="sticky inset-x-0 top-0 z-50 rounded-b-lg bg-white">
-			<nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+		<header className="sticky inset-x-0 top-0 z-50 bg-white sm:rounded-b-lg">
+			<nav className="mx-auto flex max-w-7xl items-center justify-between px-2 py-6 sm:p-6 lg:px-8" aria-label="Global">
 				<div className="flex lg:flex-1">
 					<Link to="/" className="-my-4 p-1.5">
 						<span className="sr-only">Emerald Eagles Football Club</span>
-						<img className="h-16 w-auto" src="/images/EEFCLogoWeb.png" alt="" loading="lazy" />
+						<img className="h-8 w-auto sm:h-16" src="/images/EEFCLogoWeb.png" alt="" loading="lazy" />
 					</Link>
 				</div>
 				<div className="flex lg:hidden">

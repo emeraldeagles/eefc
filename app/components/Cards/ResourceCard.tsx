@@ -6,7 +6,7 @@ import { Badge } from '../ui/badge';
 
 export default function ResourceCard({ title, description, image, link, category }: ResourceCardProps) {
 	return (
-		<Card className="rounded-lg border-[#e5e7eb]">
+		<Card className="border-[#e5e7eb] sm:rounded-lg">
 			<CardHeader>
 				<div className="flex h-48 w-full items-center justify-center rounded-lg bg-gray-200 object-cover p-0">
 					{/* <Icon strokeWidth={1} iconPath={<FileText />} iconSize={140} iconColor="" /> */}

@@ -45,7 +45,7 @@ const Header = () => {
 		<>
 			<Navbar />
 			<section
-				className={`relative mt-8 w-full overflow-hidden ${isBreadcrumbVisible ? 'rounded-t-lg' : 'rounded-lg'}`}>
+				className={`relative m-0 w-full overflow-hidden sm:mt-8 ${isBreadcrumbVisible ? 'sm:rounded-t-lg' : 'sm:rounded-lg'}`}>
 				{headerConfig?.type === 'video' && (
 					<>
 						{isLoading && headerConfig.fallback && (

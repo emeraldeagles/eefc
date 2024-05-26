@@ -20,7 +20,7 @@ export default function ImportantDatesList({ importantDates, handleDateChange, s
 				collapsible
 				className="min-w-full">
 				{importantDates.map((event, index) => (
-					<AccordionItem key={index} value={event.date} className="mb-4 rounded-lg bg-white shadow">
+					<AccordionItem key={index} value={event.date} className="mb-4 bg-white shadow sm:rounded-lg">
 						<AccordionTrigger className="flex w-full cursor-pointer items-start gap-2 p-4 hover:bg-gray-100">
 							<Avatar>
 								<AvatarImage src={event.clubLogo} />

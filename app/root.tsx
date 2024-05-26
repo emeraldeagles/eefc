@@ -16,7 +16,6 @@ export const links: LinksFunction = () => [
 
 export const loader = async () => {
 	const sponsors = await getSponsors();
-	console.log('sponsors loader => ', sponsors);
 	const clubSites = await getClubSites();
 
 	return json({ sponsors, clubSites });
@@ -24,8 +23,6 @@ export const loader = async () => {
 
 export default function App() {
 	const { sponsors, clubSites } = useLoaderData<typeof loader>();
-	console.log('sponsors => ', sponsors);
-	console.log('clubSites => ', clubSites);
 
 	return (
 		<html lang="en">
@@ -33,8 +30,7 @@ export default function App() {
 				<Meta />
 				<Links />
 			</head>
-			{/* <body className="mx-auto w-full max-w-7xl bg-gray-100 px-12"> */}
-			<body className="mx-auto w-full max-w-7xl bg-gray-100 px-4 sm:px-6 lg:px-0">
+			<body className="responsive-padding mx-auto w-full max-w-7xl bg-background text-foreground">
 				<Header />
 				<Outlet />
 				<ScrollRestoration />

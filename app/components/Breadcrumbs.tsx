@@ -13,7 +13,7 @@ export default function Breadcrumbs() {
 	const pathnames = location.pathname.split('/').filter(Boolean);
 
 	return (
-		<nav className="mx-auto w-full max-w-screen-xl rounded-b-lg border bg-white px-4 py-2 shadow-sm md:px-8 md:py-4">
+		<nav className="mx-auto w-full max-w-screen-xl border bg-white px-4 py-2 shadow-sm sm:rounded-b-lg md:px-8 md:py-4">
 			<Breadcrumb className="flex flex-wrap">
 				<BreadcrumbList className="flex items-center">
 					<BreadcrumbItem>
