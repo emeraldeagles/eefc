@@ -1057,7 +1057,7 @@ export const merchData: MerchProps[] = [
 		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Merch/Training-Shirt.PNG',
 		price: '$40',
 		badge: 'POPULAR',
-		link: "https://emeraldeagles-shop.square.site/product/2024-eefc-training-shirt/7?cp=true&sa=true&sbp=false&q=false",
+		link: 'https://emeraldeagles-shop.square.site/product/2024-eefc-training-shirt/7?cp=true&sa=true&sbp=false&q=false',
 		badgeColour: 'secondary',
 	},
 	{
@@ -1066,7 +1066,7 @@ export const merchData: MerchProps[] = [
 		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Merch/Backpack.PNG',
 		price: '$25',
 		badge: 'LOW STOCK',
-		link: "https://emeraldeagles-shop.square.site/product/backpack/30?cp=true&sa=true&sbp=false&q=false",
+		link: 'https://emeraldeagles-shop.square.site/product/backpack/30?cp=true&sa=true&sbp=false&q=false',
 		badgeColour: 'destructive',
 	},
 	{
@@ -1075,7 +1075,7 @@ export const merchData: MerchProps[] = [
 		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Merch/Bucket-Hat.PNG',
 		price: '$12',
 		badge: 'LIMITED EDITION',
-		link:"https://emeraldeagles-shop.square.site/product/bucket-hat/9?cp=true&sa=true&sbp=false&q=false",
+		link: 'https://emeraldeagles-shop.square.site/product/bucket-hat/9?cp=true&sa=true&sbp=false&q=false',
 		badgeColour: 'accent',
 	},
 ];

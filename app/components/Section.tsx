@@ -66,7 +66,6 @@ const CallToAction = ({ callToAction, isLinkArray, link, isSpecificCategory }: a
 	</div>
 );
 
-
 const ImageSection = ({ images }: { images: string[] }) => (
 	<div className="flex flex-col items-center gap-2 rounded-lg">
 		{images.map((image, index) => (
