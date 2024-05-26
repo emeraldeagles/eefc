@@ -472,6 +472,14 @@ export const lifeMembersData: LifeMembers[] = [
 		title: 'D.MATHESON',
 		year: '2017',
 	},
+	{
+		title: 'B. ANDERSON',
+		year: '2021',
+	},
+	{
+		title: 'P. RYAN',
+		year: '2021',
+	},
 ];
 
 export const sponsorsData: Sponsors[] = [
