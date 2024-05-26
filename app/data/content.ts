@@ -18,7 +18,7 @@ export const coachesData: Coaches[] = [
 	{
 		title: 'Noah Silberg',
 		description: 'Coaching Co-ordinator',
-		image: '',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Committee/Noah.jpg',
 		team: '',
 		ageGroup: '',
 	},
