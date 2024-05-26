@@ -298,7 +298,7 @@ export const committeeData: Committee[] = [
 	{
 		title: 'Eleasha Ramiah',
 		description: 'Secretary',
-		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Committee/Eleasha.jpg',
+		image: '',
 		email: 'secretary@emeraldeagles.com',
 	},
 	{
