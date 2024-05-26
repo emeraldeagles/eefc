@@ -32,7 +32,7 @@ export default function MerchCard({ title, description, price, image, badge, lin
 			</CardContent>
 			<CardFooter className="flex justify-center">
 				<Link to={link} className="w-full" target="_blank" rel="noopener noreferrer">
-					<Button className="w-full border-2 hover:border">Buy Now</Button>
+					<Button className="w-full hover:border">Buy Now</Button>
 				</Link>
 			</CardFooter>
 		</Card>

@@ -51,14 +51,14 @@ const CallToAction = ({ callToAction, isLinkArray, link, isSpecificCategory }: a
 					target="_blank"
 					rel="noopener noreferrer"
 					className="mt-6 flex w-full flex-col sm:flex-row">
-					<Button variant="outline" className="w-full hover:text-primary sm:ml-2 sm:mt-0">
+					<Button variant="outline" className="w-full border-2 font-semibold hover:text-primary sm:ml-2 sm:mt-0">
 						{callToAction[index]}
 					</Button>
 				</Link>
 			))
 		) : (
 			<Link to={link} target="_blank" rel="noopener noreferrer" className="mt-6 w-full">
-				<Button variant="outline" className="w-full hover:text-primary sm:ml-2 sm:mt-0">
+				<Button variant="outline" className="w-full border-2 font-semibold hover:text-primary sm:ml-2 sm:mt-0">
 					{callToAction}
 				</Button>
 			</Link>

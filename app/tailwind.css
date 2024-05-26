@@ -80,7 +80,7 @@
     @apply font-body font-normal text-sm sm:text-base md:text-lg tracking-normal leading-relaxed my-2;
   }
   .small-text {
-    @apply font-body font-light text-xs sm:text-sm md:text-base tracking-normal leading-relaxed my-1;
+    @apply font-body font-light text-sm md:text-base tracking-normal leading-relaxed my-1;
   }
   .mobile-section-heading {
     @apply font-body font-medium text-2xl sm:text-3xl md:text-4xl tracking-tight leading-snug;

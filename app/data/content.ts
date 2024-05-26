@@ -280,7 +280,7 @@ export const committeeData: Committee[] = [
 	{
 		title: 'Darrin Milner',
 		description: 'President & Academy Co-ordinator',
-		image: '',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Committee/Darrin.jpg',
 		email: 'president@emeraldeagles.com',
 	},
 	{
@@ -298,19 +298,19 @@ export const committeeData: Committee[] = [
 	{
 		title: 'Eleasha Ramiah',
 		description: 'Secretary',
-		image: '',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Committee/Eleasha.jpg',
 		email: 'secretary@emeraldeagles.com',
 	},
 	{
 		title: 'Jessica Chay',
 		description: 'Sponsorships & Grants',
-		image: '',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Committee/Jess.jpg',
 		email: 'sponsors@emeraldeagles.com',
 	},
 	{
 		title: 'Jason Sandeman',
 		description: 'Registrar',
-		image: '',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Coaches/Jason.jpg',
 		email: 'registrations@emeraldeagles.com',
 	},
 	{
@@ -322,17 +322,17 @@ export const committeeData: Committee[] = [
 	{
 		title: 'Noah Silberg',
 		description: 'Coaching Co-ordinator',
-		image: '',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/2024-Committee/Noah.jpg',
 		email: 'coaching@emeraldeagles.com',
 	},
 	{
 		title: 'Chrissy Curran',
 		description: 'Social Media Co-ordinator',
-		image: '',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Coaches/Chrissy.jpg',
 		email: 'socials@emeraldeagles.com',
 	},
 	{
-		title: 'Vacant',
+		title: 'Cheryl Dell',
 		description: 'Canteen Co-ordinator',
 		image: '',
 		email: 'canteen@emeraldeagles.com',
@@ -1291,12 +1291,12 @@ export const blueCardInfoData: SectionCardInfo = {
 export const volunteerInfoData: SectionCardInfo = {
 	title: '2024 Volunteer Information',
 	description:
-		'Like any other sporting club, it is the dedicated volunteers that ensure soccer in Emerald continues to grow and thrive for generations to come. \n\n We are currently seeking help in the following areas: \n - Canteen (food preparation, sales, clean-up) \n - Carnivals/Fun Days (Set-up/Pack-up, Canteen, BBQ, Food donations, Match Officials) \n - Working Bees \n - AGM Committee members \n\n Each time you volunteer for the club, you will be entered into a draw to win 2 x tickets to our exclusive end-of-season function at The Mayfair Emerald. \n\n If you would like to get involved, please don’t hesitate to click the link below and send us a message on Facebook or send us an email at admin@emeraldeagles.com.au.',
+		'Like any other sporting club, it is the dedicated volunteers that ensure soccer in Emerald continues to grow and thrive for generations to come. \n\n We are currently seeking help in the following areas: \n - Canteen (food preparation, sales, clean-up) \n - Carnivals/Fun Days (Set-up/Pack-up, Canteen, BBQ, Food donations, Match Officials) \n - Working Bees \n - AGM Committee members \n\n Each time you volunteer for the club, you will be entered into a draw to win 2 x tickets to our exclusive end-of-season function at The Mayfair Emerald. \n\n If you would like to get involved, please don’t hesitate to click the link below and add yourself to a timeslot for one of our game days, your help means the world to us! Alternatively you can also send us an email at admin@emeraldeagles.com.au to find out more info.',
 	images: [
 		'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Volunteer_Info_1.jpeg',
 		'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Volunteer_Info_3.jpeg',
 	],
-	link: 'https://www.m.me/emeraldeagles',
+	link: 'https://signup.zone/eDMZ8LDXbNQfambvm',
 	info: [
 		'Help steer the club towards a bigger and better future',
 		'Be an active part of the EEFC community',

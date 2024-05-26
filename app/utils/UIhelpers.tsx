@@ -148,23 +148,50 @@ export const getGridColClasses = (category: string) => {
 		case CARD_CATEGORY.NEWS:
 		case CARD_CATEGORY.EVENTS:
 		case CARD_CATEGORY.CARNIVALS:
-			return 'grid-cols-1 md:grid-cols-4';
+			return 'grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4';
 		case CARD_CATEGORY.SILVER_SPONSORS:
 		case CARD_CATEGORY.BRONZE_SPONSORS:
 		case CARD_CATEGORY.DONATION_SPONSORS:
 		case CARD_CATEGORY.GRANT_SPONSORS:
-			return 'grid-cols-1 md:grid-cols-4';
+			return 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
 		case CARD_CATEGORY.CLUB_INFO:
 		case CARD_CATEGORY.MERCH:
 		case CARD_CATEGORY.REGO:
 		case CARD_CATEGORY.GOLD_SPONSORS:
-			return 'grid-cols-1 md:grid-cols-3';
+			return 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3';
 		case CARD_CATEGORY.RESOURCES:
 		case CARD_CATEGORY.COACHES:
 		case CARD_CATEGORY.COMMITTEE:
-			return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
+			return 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
 		case CARD_CATEGORY.PLATINUM_SPONSORS:
-			return 'grid-cols-1 md:grid-cols-2';
+			return 'grid-cols-1 sm:grid-cols-2';
+	}
+};
+
+export const getImageClasses = (category: string) => {
+	const baseClass = 'h-60 object-cover';
+
+	switch (category) {
+		case CARD_CATEGORY.COACHES:
+		case CARD_CATEGORY.EVENTS:
+		case CARD_CATEGORY.CARNIVALS:
+		case CARD_CATEGORY.CLUB_INFO:
+		case CARD_CATEGORY.RESOURCES:
+			return baseClass;
+		case CARD_CATEGORY.COMMITTEE:
+			return 'h-96 object-cover';
+		case CARD_CATEGORY.PLATINUM_SPONSORS:
+			return 'sm:h-80 md:[480px] h-60 object-contain';
+		case CARD_CATEGORY.GOLD_SPONSORS:
+			return 'sm:h-60 h-44 object-contain';
+		case CARD_CATEGORY.SILVER_SPONSORS:
+			return 'sm:h-52 h-36 object-contain';
+		case CARD_CATEGORY.BRONZE_SPONSORS:
+		case CARD_CATEGORY.DONATION_SPONSORS:
+		case CARD_CATEGORY.GRANT_SPONSORS:
+			return 'sm:h-44 h-28 object-contain';
+		default:
+			return baseClass;
 	}
 };
 
@@ -219,30 +246,5 @@ export const getInfoTitle = (category: string) => {
 			return 'At A Glance';
 		case SECTION_CATEGORY.BLUE_CARD_INFO:
 			return 'Steps To Register';
-	}
-};
-
-export const getImageClasses = (category: string) => {
-	const baseClass = 'h-60 object-cover';
-
-	switch (category) {
-		case CARD_CATEGORY.COACHES:
-		case CARD_CATEGORY.EVENTS:
-		case CARD_CATEGORY.CARNIVALS:
-		case CARD_CATEGORY.CLUB_INFO:
-		case CARD_CATEGORY.RESOURCES:
-			return baseClass;
-		case CARD_CATEGORY.PLATINUM_SPONSORS:
-			return 'sm:h-[480px] h-60 object-contain';
-		case CARD_CATEGORY.GOLD_SPONSORS:
-			return 'sm:h-80 h-44 object-contain';
-		case CARD_CATEGORY.SILVER_SPONSORS:
-			return 'sm:h-60 h-36 object-contain';
-		case CARD_CATEGORY.BRONZE_SPONSORS:
-		case CARD_CATEGORY.DONATION_SPONSORS:
-		case CARD_CATEGORY.GRANT_SPONSORS:
-			return 'sm:h-52 h-28 object-contain';
-		default:
-			return baseClass;
 	}
 };
