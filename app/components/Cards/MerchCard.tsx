@@ -12,7 +12,8 @@ export default function MerchCard({ title, description, price, image, badge, lin
 			<CardContent className="pt-6">
 				<img
 					alt="2024 Infant Home Jersey"
-					className={`w-full rounded-lg bg-${badgeColour}`}
+					// className={`w-full rounded-lg bg-${badgeColour}`}
+					className={`w-full rounded-lg bg-muted/10`}
 					height="200"
 					src={image}
 					style={{
