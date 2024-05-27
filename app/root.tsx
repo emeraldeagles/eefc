@@ -29,6 +29,17 @@ export default function App() {
 			<head>
 				<Meta />
 				<Links />
+				{/* Google tag (gtag.js) */}
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-QQBRFSFJLS');
+            `,
+					}}
+				/>
 			</head>
 			<body className="responsive-padding mx-auto w-full max-w-7xl bg-background text-foreground">
 				<Header />
