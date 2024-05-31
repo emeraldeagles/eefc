@@ -223,7 +223,7 @@ export const getCallToAction = (category: string) => {
 export const getInfoTitle = (category: string) => {
 	switch (category) {
 		case SECTION_CATEGORY.REGO_INFO:
-			return 'Steps To Register';
+			return 'Steps To Register on Squadi';
 		case SECTION_CATEGORY.FAIRPLAY_INFO:
 			return 'Steps To Claim';
 		case SECTION_CATEGORY.MINIROOS_INFO:

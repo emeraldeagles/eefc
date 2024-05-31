@@ -1,6 +1,7 @@
 import { FaFacebookF, FaInstagram, FaCcVisa, FaCcMastercard } from 'react-icons/fa';
 import { navigationLinks } from './Navbar';
 import { Link } from '@remix-run/react';
+import { MapPinned } from 'lucide-react';
 
 export default function FooterInfo() {
 	return (
@@ -38,30 +39,28 @@ export default function FooterInfo() {
 							className=" hover:text-primary hover:underline"
 							target="_blank"
 							rel="noopener noreferrer">
-							<FaFacebookF />
+							<FaFacebookF size={16} />
 						</Link>
 						<Link
 							to="https://www.instagram.com/explore/locations/161771333974512/emerald-eagles-football-club/"
 							className=" hover:text-primary hover:underline"
 							target="_blank"
 							rel="noopener noreferrer">
-							<FaInstagram />
+							<FaInstagram size={16} />
 						</Link>
 						<Link
-							to="https://emeraldeaglesfc.square.site/"
+							to="https://maps.app.goo.gl/HR64xtxVx91NHVeE6"
 							className=" hover:text-primary hover:underline"
 							target="_blank"
 							rel="noopener noreferrer">
-							<FaCcVisa />
+							<MapPinned size={16} />
 						</Link>
-						<Link
-							to="https://emeraldeaglesfc.square.site/"
-							className=" hover:text-primary hover:underline"
-							target="_blank"
-							rel="noopener noreferrer">
-							<FaCcMastercard />
+						<Link to="https://emeraldeagles-shop.square.site/" className=" hover:text-primary hover:underline">
+							<FaCcVisa size={16} />
 						</Link>
-						{/* Social media icons */}
+						<Link to="https://emeraldeagles-shop.square.site/" className=" hover:text-primary hover:underline">
+							<FaCcMastercard size={16} />
+						</Link>
 					</div>
 					<div className="xl:absolute xl:left-1/2 xl:-translate-x-1/2 xl:transform">
 						<Link
