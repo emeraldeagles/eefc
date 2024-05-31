@@ -8,17 +8,19 @@ import { Badge } from './ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Icon } from './Icon';
 import { ArrowUpRight } from './IconPaths/ArrowUpRight';
+import SkeletonCard from './SkeletonCard';
 
 type Props = {
 	category: string;
 	content: News | Carnivals | Events;
+	isLoading: boolean;
 };
 
-export default function Article({ category, content }: Props): JSX.Element {
+export default function Article({ category, content, isLoading }: Props): JSX.Element {
 	console.log('Article news content => ', content);
 
 	// check if content is empty and return loading div to alert user
-	if (!content) {
+	if (!content || !content.description) {
 		return <div>Loading...</div>;
 	}
 
@@ -30,66 +32,70 @@ export default function Article({ category, content }: Props): JSX.Element {
 	return (
 		<div>
 			<SectionTitle category={'Post'} />
-			<Card className="sm:rounded-lg">
-				<CardHeader className="flex flex-row items-center gap-4 border-b">
-					<Avatar className="h-20 w-20 border p-1 shadow-md">
-						<AvatarImage src="/images/eefclogo.png" />
-						<AvatarFallback>CN</AvatarFallback>
-					</Avatar>
-					<div className="flex flex-col justify-center gap-1.5">
-						<CardTitle>{cardTitle}</CardTitle>
-						<CardDescription>{content.date}</CardDescription>
-						<CardDescription>
-							<Badge variant="outline">
-								<Link
-									to={content.link}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="flex items-center gap-1 text-sm hover:text-primary hover:underline">
-									View original post
-									<span className="inline-block">
-										<Icon iconPath={<ArrowUpRight />} iconSize={16} iconColor="" />
-									</span>
-								</Link>
-							</Badge>
-						</CardDescription>
-					</div>
-				</CardHeader>
-				<CardContent className="pt-0">
-					{cardContent.map(i => {
-						return (
-							<p key={i} className="overflow-hidden">
-								{i}
-								<br />
-							</p>
-						);
-					})}
-				</CardContent>
-				<CardFooter className="flex flex-col p-0">
-					<Carousel
-						opts={{
-							align: 'start',
-							loop: true,
-						}}>
-						<CarouselContent>
-							{content.images.map((image, index) => {
-								return (
-									<CarouselItem key={index} className="m-6 flex justify-center">
-										<img
-											className="h-full content-center rounded-lg object-contain"
-											src={image}
-											alt={content.description}
-											loading="lazy"
-										/>
-									</CarouselItem>
-								);
-							})}
-						</CarouselContent>
-						<CarouselPrevious />
-						<CarouselNext />
-					</Carousel>
-				</CardFooter>
-			</Card>
+			{isLoading ? (
+				<SkeletonCard />
+			) : (
+				<Card className="sm:rounded-lg">
+					<CardHeader className="flex flex-row items-center gap-4 border-b">
+						<Avatar className="h-20 w-20 border p-1 shadow-md">
+							<AvatarImage src="/images/eefclogo.png" />
+							<AvatarFallback>CN</AvatarFallback>
+						</Avatar>
+						<div className="flex flex-col justify-center gap-1.5">
+							<CardTitle>{cardTitle}</CardTitle>
+							<CardDescription>{content.date}</CardDescription>
+							<CardDescription>
+								<Badge variant="outline">
+									<Link
+										to={content.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="flex items-center gap-1 text-sm hover:text-primary hover:underline">
+										View original post
+										<span className="inline-block">
+											<Icon iconPath={<ArrowUpRight />} iconSize={16} iconColor="" />
+										</span>
+									</Link>
+								</Badge>
+							</CardDescription>
+						</div>
+					</CardHeader>
+					<CardContent className="pt-0">
+						{cardContent.map(i => {
+							return (
+								<p key={i} className="overflow-hidden">
+									{i}
+									<br />
+								</p>
+							);
+						})}
+					</CardContent>
+					<CardFooter className="flex flex-col p-0">
+						<Carousel
+							opts={{
+								align: 'start',
+								loop: true,
+							}}>
+							<CarouselContent>
+								{content.images.map((image, index) => {
+									return (
+										<CarouselItem key={index} className="m-6 flex justify-center">
+											<img
+												className="h-full content-center rounded-lg object-contain"
+												src={image}
+												alt={content.description}
+												loading="lazy"
+											/>
+										</CarouselItem>
+									);
+								})}
+							</CarouselContent>
+							<CarouselPrevious />
+							<CarouselNext />
+						</Carousel>
+					</CardFooter>
+				</Card>
+			)}
 		</div>
 	);
 }
