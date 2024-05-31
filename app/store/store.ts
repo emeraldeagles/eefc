@@ -1,4 +1,3 @@
-// store.js
 import { create } from 'zustand';
 import type { Carnivals, Events, News } from '~/interfaces/content';
 

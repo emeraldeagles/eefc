@@ -17,8 +17,6 @@ type Props = {
 };
 
 export default function Article({ category, content, isLoading }: Props): JSX.Element {
-	console.log('Article news content => ', content);
-
 	// check if content is empty and return loading div to alert user
 	if (!content || !content.description) {
 		return <div>Loading...</div>;

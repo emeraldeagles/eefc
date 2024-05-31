@@ -23,14 +23,12 @@ export async function loader() {
 	const resources = await getResources();
 	const coaches = await getCoaches();
 	const blueCardInfo = await getBlueCardInfo();
-	console.log('debug coaches =>', coaches);
 
 	return json({ coachesInfo, coaches, blueCardInfo, resources });
 }
 
 export default function Coaches() {
 	const { coachesInfo, coaches, blueCardInfo, resources } = useLoaderData<typeof loader>();
-	console.log('coaches =>', coaches);
 
 	return (
 		<>

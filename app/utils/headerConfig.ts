@@ -52,12 +52,9 @@ export const getRoute = (pathname: string): string => {
 export const getNetworkAwareVideoSource = (srcConfig: VideoSrcConfig): string => {
 	const connection =
 		(navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
-	console.log('header debug Connection:', connection);
-
 	let qualityKey: QualityKey = '4k'; // Default to highest quality
 
 	if (connection) {
-		console.log('header debug Effective Type:', connection.effectiveType);
 		switch (connection.effectiveType) {
 			case 'slow-2g':
 			case '2g':
@@ -73,7 +70,6 @@ export const getNetworkAwareVideoSource = (srcConfig: VideoSrcConfig): string =>
 		}
 	} else {
 		// Enhanced fallback logic if connection is undefined
-		console.log('header debug Connection is undefined, applying enhanced fallback logic');
 		const userAgent = navigator.userAgent.toLowerCase();
 		if (
 			/mobile|android|iphone|ipad|ipod|opera mini|blackberry|palm|bada|windows phone|iemobile|mobile.+firefox|meego/.test(
@@ -86,7 +82,6 @@ export const getNetworkAwareVideoSource = (srcConfig: VideoSrcConfig): string =>
 		}
 	}
 
-	console.log('header debug Selected Quality Key:', qualityKey);
 	return srcConfig[qualityKey];
 };
 

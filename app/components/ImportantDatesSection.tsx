@@ -15,13 +15,10 @@ type Props = {
 
 export default function ImportantDatesSection({ importantDates }: Props) {
 	const initialDate = new Date(importantDates[0].date);
-	console.log('debug Initial date set to:', formatDate(initialDate));
 	const [selectedDate, setSelectedDate] = useState<string>(formatDate(initialDate));
 
 	const handleDateChange = (date: string) => {
-		console.log('debug Date received for change:', date);
 		if (!date) {
-			console.log('Received empty date, reverting to a default valid date.');
 			date = formatDate(new Date()); // Set to current date or another appropriate default
 		}
 
@@ -29,13 +26,11 @@ export default function ImportantDatesSection({ importantDates }: Props) {
 		if (dateObj.toString() !== 'Invalid Date') {
 			const formattedDate = formatDate(dateObj);
 			if (selectedDate === formattedDate) {
-				console.log('Same date clicked, clearing date.');
 				setSelectedDate(''); // Clear selected date to close the accordion
 			} else {
 				setSelectedDate(formattedDate); // Update with the new valid date
 			}
 		} else {
-			console.log('Invalid date format received, setting to default.');
 			setSelectedDate(formatDate(new Date())); // Set to a default valid date
 		}
 	};

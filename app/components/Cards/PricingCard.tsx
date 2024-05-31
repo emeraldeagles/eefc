@@ -23,11 +23,12 @@ export default function PricingCard({ title, description, open, price, image, in
 					{price}
 					<span className="text-lg">/season</span>
 				</div>
-				<Link to={link} target="_blank" rel="noopener noreferrer">
-					<Button className={`mt-6 w-full hover:border ${!open ? 'bg-muted' : ''}`} disabled={!open}>
+
+				<Button className={`mt-6 w-full hover:border ${!open ? 'bg-muted' : ''}`} disabled={!open}>
+					<Link to={link} target="_blank" rel="noopener noreferrer">
 						Register Now
-					</Button>
-				</Link>
+					</Link>
+				</Button>
 				<ul className="mt-6 space-y-2">
 					{info.map(i => {
 						return <li key={i}>✓ {i}</li>;

@@ -1,5 +1,4 @@
 import type { ReactElement, FC } from 'react';
-// import Contact from '~/components/Contact';
 import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY } from '~/constants/constants';
 import type { ClubInfo, Resources } from '~/interfaces/content';

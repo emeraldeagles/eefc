@@ -8,9 +8,6 @@ import { useEffect, useState } from 'react';
 export default function Tiles({ category, content, isLoading }: TileProps) {
 	const isSpecificCategory =
 		category === CARD_CATEGORY.NEWS || category === CARD_CATEGORY.EVENTS || category === CARD_CATEGORY.CARNIVALS;
-
-	// const updatedContent = isSpecificCategory ? content.slice(0, 8) : content;
-
 	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {

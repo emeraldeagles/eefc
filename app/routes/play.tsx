@@ -6,8 +6,6 @@ import { getRegoInfo, getFairPlayInfo, getSeniorsInfo, getJuniorsInfo, getMiniro
 
 import PlayScreen from '~/screens/play';
 
-// nodejs route
-
 export const meta = () => [
 	{
 		title: 'EEFC | Play',

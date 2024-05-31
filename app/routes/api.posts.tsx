@@ -1,4 +1,3 @@
-// File: app/routes/api/posts.tsx
 import type { LoaderFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { fetchFacebookPosts } from '~/utils/facebook';

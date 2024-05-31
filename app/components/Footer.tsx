@@ -12,7 +12,6 @@ export type FooterProps = {
 const Footer = ({ sponsors, clubSites }: FooterProps) => {
 	const location = useLocation();
 	const isClubSponsorsRoute = location.pathname === '/club/sponsors';
-	console.log('isClubSponsorsRoute', isClubSponsorsRoute);
 
 	return (
 		<div className="mt-16">

@@ -1,4 +1,3 @@
-// components/SkeletonCard.jsx
 import React from 'react';
 
 const SkeletonCard = () => {

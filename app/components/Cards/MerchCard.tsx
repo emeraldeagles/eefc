@@ -5,14 +5,11 @@ import type { MerchProps } from '~/interfaces/content';
 import { Link } from '@remix-run/react';
 
 export default function MerchCard({ title, description, price, image, badge, link, badgeColour }: MerchProps) {
-	console.log('MerchCard', title, price, badgeColour);
-
 	return (
 		<Card className="mx-auto max-w-lg">
 			<CardContent className="pt-6">
 				<img
 					alt="2024 Infant Home Jersey"
-					// className={`w-full rounded-lg bg-${badgeColour}`}
 					className={`w-full rounded-lg bg-muted/10`}
 					height="200"
 					src={image}
@@ -32,7 +29,7 @@ export default function MerchCard({ title, description, price, image, badge, lin
 				) : null}
 			</CardContent>
 			<CardFooter className="flex justify-center">
-				<Link to={link} className="w-full" target="_blank" rel="noopener noreferrer">
+				<Link to={link} className="w-full">
 					<Button className="w-full hover:border">Buy Now</Button>
 				</Link>
 			</CardFooter>

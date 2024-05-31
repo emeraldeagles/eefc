@@ -23,25 +23,22 @@ export default function Breadcrumbs() {
 					{pathnames.map((value, index) => {
 						const to = `/${pathnames.slice(0, index + 1).join('/')}`;
 						const isLast = index === pathnames.length - 1;
-						console.log('debug to & isLast => ', to, isLast);
 						const formattedText = formatSegment(value);
-						console.log('debug formattedText => ', formattedText, isLast);
-
 						if (!isLast && formattedText !== 'News' && formattedText !== 'Carnivals') {
 							return (
-								<>
+								<div key={index}>
 									<BreadcrumbItem key={to}>
 										<BreadcrumbLink href={to}>{formattedText}</BreadcrumbLink>
 									</BreadcrumbItem>
 									<BreadcrumbSeparator />
-								</>
+								</div>
 							);
 						} else {
 							return (
-								<>
+								<div key={index}>
 									<BreadcrumbItem key={to}>{formattedText}</BreadcrumbItem>
 									{!isLast ? <BreadcrumbSeparator /> : null}
-								</>
+								</div>
 							);
 						}
 					})}
