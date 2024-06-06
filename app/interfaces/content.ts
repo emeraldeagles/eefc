@@ -130,3 +130,9 @@ export type ClubSitesProps = {
 	image: string;
 	link: string;
 };
+
+export type ProtectOurGameProps = {
+	title: string;
+	image: string;
+	link: string;
+};

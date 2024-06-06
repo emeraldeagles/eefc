@@ -13,6 +13,7 @@ import {
 	lifeMembersInfoData,
 	sponsorsInfoData,
 	blueCardInfoData,
+	protectOurGameData,
 } from '~/data/content';
 
 import type {
@@ -24,6 +25,7 @@ import type {
 	ClubSitesProps,
 	Coaches,
 	SectionCardInfo,
+	ProtectOurGameProps,
 } from '~/interfaces/content';
 
 export const getResources = (): Promise<Resources[]> =>
@@ -107,5 +109,11 @@ export const getCoaches = (): Promise<Coaches[]> =>
 export const getVolunteerInfo = (): Promise<SectionCardInfo> =>
 	new Promise((resolve, reject) => {
 		resolve(volunteerInfoData);
+		// reject(new Error('Something went wrong'));
+	});
+
+export const getProtectOurGame = (): Promise<ProtectOurGameProps[]> =>
+	new Promise((resolve, reject) => {
+		resolve(protectOurGameData);
 		// reject(new Error('Something went wrong'));
 	});

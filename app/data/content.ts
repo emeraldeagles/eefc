@@ -10,6 +10,7 @@ import type {
 	ClubSitesProps,
 	Coaches,
 	SectionCardInfo,
+	ProtectOurGameProps,
 } from '~/interfaces/content';
 
 export const currentYear = new Date().getFullYear();
@@ -1344,6 +1345,13 @@ export const resourcesData: Resources[] = [
 		category: 'club',
 	},
 	{
+		title: 'EEFC Codes of Conduct',
+		description: 'EEFC Codes of Conduct',
+		image: '',
+		link: 'https://docs.google.com/document/d/11A2l7f08gTQ6_wZpp_AYg_y5OnTEd8Eww_tZAYNEIHg/edit?usp=sharing',
+		category: 'club',
+	},
+	{
 		title: 'Football Australia Code of Conduct',
 		description: 'Football Australia Code of Conduct',
 		image: '',
@@ -1567,5 +1575,38 @@ export const clubSitesData: ClubSitesProps[] = [
 		title: 'Southside United SC',
 		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/southsideunited.png',
 		link: 'https://www.facebook.com/suscfootball/',
+	},
+];
+
+export const protectOurGameData: ProtectOurGameProps[] = [
+	{
+		title: 'Protect Our Game',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Protect_Our_Game_Posters.png',
+		link: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Protect_Our_Game_Posters.png',
+	},
+	{
+		title: 'Coaches',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Coaches_Managers_ClubOfficials.jpg',
+		link: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Coaches_Managers_ClubOfficials.jpg',
+	},
+	{
+		title: 'Spectators',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Spectators.jpg',
+		link: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Spectators.jpg',
+	},
+	{
+		title: 'Players',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Players.jpg',
+		link: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Players.jpg',
+	},
+	{
+		title: 'Young Players',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Young_Players.jpg',
+		link: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Young_Players.jpg',
+	},
+	{
+		title: 'Three Strike Policy',
+		image: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Three_Strike_Policy_Poster.png',
+		link: 'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Protect-Our-Game/Three_Strike_Policy_Poster.png',
 	},
 ];
