@@ -39,7 +39,7 @@ export default function ImportantDatesSection({ importantDates }: Props) {
 		<div className="flex flex-col">
 			<SectionTitle category="Important Dates" />
 			<div className="flex flex-col gap-4 sm:flex-row">
-				<div className="overflow-y-auto sm:max-h-[518px] sm:w-1/2 sm:rounded-b-2xl	">
+				<div className="overflow-y-auto sm:max-h-[518px] sm:w-1/2 sm:rounded-lg	">
 					<ImportantDatesList
 						importantDates={importantDates}
 						handleDateChange={handleDateChange}

@@ -26,7 +26,7 @@ export default function Breadcrumbs() {
 						const formattedText = formatSegment(value);
 						if (!isLast && formattedText !== 'News' && formattedText !== 'Carnivals') {
 							return (
-								<div key={index}>
+								<div key={index} className="flex items-center">
 									<BreadcrumbItem key={to}>
 										<BreadcrumbLink href={to}>{formattedText}</BreadcrumbLink>
 									</BreadcrumbItem>
@@ -35,7 +35,7 @@ export default function Breadcrumbs() {
 							);
 						} else {
 							return (
-								<div key={index}>
+								<div key={index} className="flex items-center">
 									<BreadcrumbItem key={to}>{formattedText}</BreadcrumbItem>
 									{!isLast ? <BreadcrumbSeparator /> : null}
 								</div>

@@ -853,7 +853,7 @@ export const importantDatesData: ImportantDates[] = [
 		date: '2024-07-27',
 		title: '⚽️ EEFC Inter-City Club Night ⚽️',
 		description:
-			'Join us for our first ever Inter-City Club night hoested right here in Emerald as we go head to head against another Club. \n There will be 3 x Exhibition matches played with food, drinks and entertainment in what will surely be a night to remember. More details to come soon!',
+			'Join us for our first ever Inter-City Club night hosted right here in Emerald as we go head to head against another Club. \n There will be 3 x Exhibition matches played with food, drinks and entertainment in what will surely be a night to remember. More details to come soon!',
 		eventInfo: '',
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
