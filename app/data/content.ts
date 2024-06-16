@@ -1006,7 +1006,7 @@ export const regoPricesData: RegoPrices[] = [
 		description: 'Register in the 2024 miniroos comp',
 		image: 'rego.jpg',
 		price: '$65',
-		open: true,
+		open: false,
 		link: 'https://membership.mygameday.app/regoform.cgi?formID=88700&programID=68127',
 		info: [
 			'Ages 4-5 years old',
