@@ -753,7 +753,7 @@ export const importantDatesData: ImportantDates[] = [
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
 		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/clermonttigers.jpeg',
-		location: 'Emerald',
+		location: 'Clermont',
 		mapLink: 'https://maps.app.goo.gl/CajpEpYxREDZwjPH9',
 	},
 	{
@@ -765,7 +765,7 @@ export const importantDatesData: ImportantDates[] = [
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
 		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/blackwaterbandits.jpeg',
-		location: 'Emerald',
+		location: 'Blackwater',
 		mapLink: 'https://maps.app.goo.gl/N54TPKhLVTRomNaA7',
 	},
 	{
@@ -811,7 +811,7 @@ export const importantDatesData: ImportantDates[] = [
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
 		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/bluebirdsunited.jpeg',
-		location: 'Emerald',
+		location: 'Rockhampton',
 		mapLink: 'https://maps.app.goo.gl/FvYTAPQaXqPrf4YT8',
 	},
 	{
@@ -846,7 +846,7 @@ export const importantDatesData: ImportantDates[] = [
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
 		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/moranbahhawks.jpeg',
-		location: 'Emerald',
+		location: 'Moranbah',
 		mapLink: 'https://maps.app.goo.gl/hSHM4rbm7pAyQXCc8',
 	},
 	{
@@ -870,7 +870,7 @@ export const importantDatesData: ImportantDates[] = [
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
 		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/clermonttigers.jpeg',
-		location: 'Emerald',
+		location: 'Clermont',
 		mapLink: 'https://maps.app.goo.gl/CajpEpYxREDZwjPH9',
 	},
 	{
@@ -882,7 +882,7 @@ export const importantDatesData: ImportantDates[] = [
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
 		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/ClintonFC.jpeg',
-		location: 'Emerald',
+		location: 'Gladstone',
 		mapLink: 'https://maps.app.goo.gl/k319uSSbgNgJDjtR8',
 	},
 	{
@@ -894,7 +894,7 @@ export const importantDatesData: ImportantDates[] = [
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
 		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/Dysart_Devils.jpeg',
-		location: 'Emerald',
+		location: 'Dysart',
 		mapLink: 'https://maps.app.goo.gl/XBSv54wNNzD2DkAq9',
 	},
 	{
@@ -942,7 +942,7 @@ export const importantDatesData: ImportantDates[] = [
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
 		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/blackwaterbandits.jpeg',
-		location: 'Emerald',
+		location: 'BLackwater',
 		mapLink: 'https://maps.app.goo.gl/N54TPKhLVTRomNaA7',
 	},
 	{
