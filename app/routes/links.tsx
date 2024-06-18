@@ -17,10 +17,9 @@ export const meta = () => [
 const LinksRoute = () => {
 	return (
 		<main className="mb-16 mt-8 flex flex-col items-center justify-center">
-			<div className="w-full max-w-2xl rounded-lg bg-white p-6 text-center shadow-lg">
-				{/* <div className="w-full max-w-2xl rounded-lg p-6 text-center"> */}
+			<div className="w-full max-w-7xl rounded-lg bg-white p-6 text-center shadow-lg">
 				<h1 className="heading-3 mb-4">Stay In The Loop!</h1>
-				<div className="body-text mx-auto flex max-w-2xl flex-col gap-1">
+				<div className="body-text mx-auto flex max-w-xl flex-col gap-1">
 					<p className="body-text">
 						Don't miss out on our exciting events; keep an eye on our official communication channels. EEFC utilises the
 						following channels to reach as many people as possible
