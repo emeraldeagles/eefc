@@ -46,6 +46,7 @@ export const getRoute = (pathname: string): string => {
 	if (lowerPathname.includes('/events')) return '/events';
 	if (lowerPathname.includes('/carnivals')) return '/events';
 	if (lowerPathname.includes('/play')) return '/play';
+	if (lowerPathname.includes('/links')) return '';
 	return '/'; // Default route if no match is found
 };
 

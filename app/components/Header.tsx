@@ -7,7 +7,7 @@ import { getHeaderConfig, getNetworkAwareVideoSource } from '~/utils/headerConfi
 
 const Header = () => {
 	const location = useLocation();
-	const mainRoutes = ['/', '/events', '/club', '/play'];
+	const mainRoutes = ['/', '/events', '/club', '/play', '/links'];
 	const isBreadcrumbVisible = !mainRoutes.includes(location.pathname);
 
 	const [videoSource, setVideoSource] = useState<string | null>(null);

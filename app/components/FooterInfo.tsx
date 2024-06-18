@@ -28,6 +28,9 @@ export default function FooterInfo() {
 									{item.name}
 								</Link>
 							))}
+							<Link key="Club-Links" to="/links" className="text-base font-medium hover:text-primary hover:underline">
+								Club Links
+							</Link>
 						</nav>
 					</div>
 				</div>

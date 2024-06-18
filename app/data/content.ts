@@ -942,7 +942,7 @@ export const importantDatesData: ImportantDates[] = [
 		image:
 			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
 		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/CQ-Club-Logos/blackwaterbandits.jpeg',
-		location: 'BLackwater',
+		location: 'Blackwater',
 		mapLink: 'https://maps.app.goo.gl/N54TPKhLVTRomNaA7',
 	},
 	{
