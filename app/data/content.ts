@@ -815,7 +815,7 @@ export const importantDatesData: ImportantDates[] = [
 		mapLink: 'https://maps.app.goo.gl/FvYTAPQaXqPrf4YT8',
 	},
 	{
-		date: '2024-07-09',
+		date: '2024-07-23',
 		title: '⚽️ EEFC Seniors First Round (Season 2) ⚽️',
 		description: 'Come down and watch our seniors kick off the first round of season 2',
 		eventInfo: '',
@@ -1045,7 +1045,7 @@ export const regoPricesData: RegoPrices[] = [
 		description: 'Register in the 2024 senior comp',
 		image: 'rego.jpg',
 		price: '$100',
-		open: false,
+		open: true,
 		link: 'https://registration.squadi.com/finder?organisationKey=74f39f3a-6e73-48a8-b837-705aba4c4512&yearId=6&competitionUniqueKey=bcfbdf76-c792-4ae5-ab46-c622a0db692c&teamId=-1&divisionId=2752&membershipType=%5B-1%5D&postCode=4720',
 		info: [
 			'Ages 15 years and older',
