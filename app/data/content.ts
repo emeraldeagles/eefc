@@ -826,7 +826,7 @@ export const importantDatesData: ImportantDates[] = [
 		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
 	},
 	{
-		date: '2024-07-13',
+		date: '2024-07-23',
 		title: '⚽️ EEFC Miniroos First Round (Season 2) ⚽️',
 		description:
 			'Join us for the first round of season 2 as our miniroos return to the field for another season of fun!',
@@ -849,18 +849,18 @@ export const importantDatesData: ImportantDates[] = [
 		location: 'Moranbah',
 		mapLink: 'https://maps.app.goo.gl/hSHM4rbm7pAyQXCc8',
 	},
-	{
-		date: '2024-07-27',
-		title: '⚽️ EEFC Inter-City Club Night ⚽️',
-		description:
-			'Join us for our first ever Inter-City Club night hosted right here in Emerald as we go head to head against another Club. \n There will be 3 x Exhibition matches played with food, drinks and entertainment in what will surely be a night to remember. More details to come soon!',
-		eventInfo: '',
-		image:
-			'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
-		clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
-		location: 'Emerald',
-		mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
-	},
+	// {
+	// 	date: '2024-07-27',
+	// 	title: '⚽️ EEFC Inter-City Club Night ⚽️',
+	// 	description:
+	// 		'Join us for our first ever Inter-City Club night hosted right here in Emerald as we go head to head against another Club. \n There will be 3 x Exhibition matches played with food, drinks and entertainment in what will surely be a night to remember. More details to come soon!',
+	// 	eventInfo: '',
+	// 	image:
+	// 		'https://scontent.fbne9-2.fna.fbcdn.net/v/t39.30808-6/442420529_901367161794065_16498248918379145_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VazCSVFNZqYQ7kNvgHyep4g&_nc_ht=scontent.fbne9-2.fna&oh=00_AYCohEXyy478gQQ5DoAvOARidYeY0qpGaFHizCU33dYTyg&oe=664B5067',
+	// 	clubLogo: 'https://eefc.syd1.cdn.digitaloceanspaces.com/EEFC-Logos/EEFCLogoSquareWhite.png',
+	// 	location: 'Emerald',
+	// 	mapLink: 'https://maps.app.goo.gl/MfuxQJP67uceYqMr5',
+	// },
 	{
 		date: '2024-07-28',
 		title: '⚽️ Clermont Tigers Fun Day ⚽️',
