@@ -67,7 +67,7 @@ export default function FooterInfo() {
 					</div>
 					<div className="xl:absolute xl:left-1/2 xl:-translate-x-1/2 xl:transform">
 						<Link
-							to="https://jasonsandeman.netlify.app/"
+							to="https://jwsandeman.com/"
 							className="hover:text-primary hover:underline"
 							target="_blank"
 							rel="noopener noreferrer">
