@@ -1023,7 +1023,7 @@ export const regoPricesData: RegoPrices[] = [
 		description: 'Register in the 2024 junior comp',
 		image: 'rego.jpg',
 		price: '$200',
-		open: true,
+		open: false,
 		link: 'https://registration.squadi.com/finder?organisationKey=74f39f3a-6e73-48a8-b837-705aba4c4512&yearId=6&competitionUniqueKey=bcfbdf76-c792-4ae5-ab46-c622a0db692c&teamId=-1&divisionId=2752&membershipType=%5B-1%5D&postCode=4720',
 		info: [
 			'Ages 6-16 years old',
