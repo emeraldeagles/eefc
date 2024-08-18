@@ -67,11 +67,11 @@ export default function FooterInfo() {
 					</div>
 					<div className="xl:absolute xl:left-1/2 xl:-translate-x-1/2 xl:transform">
 						<Link
-							to="https://jwsandeman.com/"
+							to="https://rendrweb.solutions/"
 							className="hover:text-primary hover:underline"
 							target="_blank"
 							rel="noopener noreferrer">
-							Created by JW Sandeman
+							Built by Rendr Web Solutions
 						</Link>
 					</div>
 					<div className="flex space-x-6">
