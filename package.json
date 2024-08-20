@@ -51,8 +51,8 @@
 		"@radix-ui/react-tabs": "^1.0.4",
 		"@radix-ui/react-toast": "^1.1.5",
 		"@radix-ui/react-tooltip": "^1.0.7",
-		"@remix-run/node": "^2.11.1",
-		"@remix-run/react": "^2.11.1",
+		"@remix-run/node": "^2.11.2",
+		"@remix-run/react": "^2.11.2",
 		"@vercel/remix": "2.5.1",
 		"class-variance-authority": "^0.7.0",
 		"classnames": "^2.5.1",
@@ -77,9 +77,9 @@
 		"zustand": "^4.5.2"
 	},
 	"devDependencies": {
-		"@remix-run/dev": "^2.11.1",
-		"@remix-run/eslint-config": "^2.11.1",
-		"@remix-run/serve": "^2.11.1",
+		"@remix-run/dev": "^2.11.2",
+		"@remix-run/eslint-config": "^2.11.2",
+		"@remix-run/serve": "^2.11.2",
 		"@testing-library/cypress": "^10.0.1",
 		"@testing-library/dom": "^9.0.1",
 		"@testing-library/jest-dom": "^5.16.4",
