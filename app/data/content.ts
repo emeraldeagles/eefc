@@ -1216,7 +1216,7 @@ export const volunteerInfoData: SectionCardInfo = {
 		'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Volunteer_Info_1.jpeg',
 		'https://eefc.syd1.cdn.digitaloceanspaces.com/Website/Info-Sections/Volunteer_Info_3.jpeg',
 	],
-	link: 'https://signup.zone/eDMZ8LDXbNQfambvm',
+	link: 'https://signup.zone/Fo4tzZ7kBoCq24dKy',
 	info: [
 		'Help steer the club towards a bigger and better future',
 		'Be an active part of the EEFC community',
