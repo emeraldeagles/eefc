@@ -8,7 +8,6 @@ import {
 	Scripts,
 	ScrollRestoration,
 	json,
-	redirect,
 	useLoaderData,
 	useLocation,
 } from '@remix-run/react';
