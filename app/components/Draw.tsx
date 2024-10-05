@@ -11,8 +11,12 @@ export default function Draw() {
 					<iframe
 						src="https://registration.squadi.com/livescoreSeasonFixture?organisationKey=ccd8d990-5714-489b-b3af-9e8ffcf3c1bf&competitionUniqueKey=7f3ce9b1-d44a-41c3-9615-9d8e889dbe74&yearId=6"
 						title="Seniors Draw"
-						className="h-[80vh] w-full sm:h-[60vh] sm:rounded-lg"
+						className="h-[60vh] w-full sm:rounded-lg"
 						allowFullScreen
+						allow="autoplay; fullscreen"
+						style={{ minHeight: '60vh' }}
+						loading="lazy"
+						tabIndex={-1}
 					/>
 				</CardContent>
 			</Card>

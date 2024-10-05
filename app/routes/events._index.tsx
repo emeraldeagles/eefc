@@ -1,25 +1,31 @@
 import type { LoaderFunction } from '@remix-run/node';
+import type { MetaFunction } from '@remix-run/react';
 import { Await, defer, useFetcher, useLoaderData } from '@remix-run/react';
 import { Suspense, useCallback, useEffect, useState } from 'react';
 import type { FacebookPost } from '~/cache.server';
 import { getCachedData, setCachedData } from '~/cache.server';
-import { getImportantDates, mapToEventsData } from '~/client/events';
+import { mapToEventsData } from '~/client/events';
 import { mapToCarnivalsData } from '~/client/home';
+import { importantDatesData } from '~/data/content';
 import EventsScreen from '~/screens/events';
 import useStore from '~/store/store';
 import { fetchFacebookPosts } from '~/utils/facebook';
 
-export const meta = () => [
-	{
-		title: 'EEFC | Events',
-	},
-	{
-		charset: 'utf-8',
-	},
-	{
-		viewport: 'width=device-width,initial-scale=1',
-	},
-];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+	const canonicalUrl = data?.canonicalUrl ? data.canonicalUrl : 'https://emeraldeagles.com.au/events';
+	return [
+		{ title: 'EEFC | Events' },
+		{ name: 'description', content: 'Catch up on the latest Emerald Eagles FC events' },
+		{ property: 'og:type', content: 'website' },
+		{ property: 'og:site_name', content: 'EEFC | Events' },
+		{ charset: 'utf-8' },
+		{ name: 'viewport', content: 'width=device-width,initial-scale=1' },
+		{ property: 'og:title', content: 'EEFC | Events' },
+		{ property: 'og:description', content: 'Catch up on the latest Emerald Eagles FC events' },
+		{ property: 'og:url', content: canonicalUrl },
+		{ rel: 'canonical', href: canonicalUrl },
+	];
+};
 
 export const loader: LoaderFunction = async ({ request }) => {
 	const FBAccessToken = process.env.FACEBOOK_ACCESS_TOKEN;
@@ -34,7 +40,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 		return cachedPosts;
 	})();
 
-	const importantDates = await getImportantDates();
+	const importantDates = importantDatesData;
 
 	return defer({
 		importantDates,

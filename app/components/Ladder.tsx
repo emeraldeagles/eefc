@@ -13,6 +13,10 @@ export default function Ladder() {
 						title="Seniors Ladder"
 						className="h-[80vh] w-full rounded-lg sm:h-screen"
 						allowFullScreen
+						allow="autoplay; fullscreen"
+						style={{ minHeight: '80vh' }}
+						loading="lazy"
+						tabIndex={-1}
 					/>
 				</CardContent>
 			</Card>

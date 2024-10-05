@@ -34,7 +34,7 @@ export default function Tiles({ category, content, isLoading }: TileProps) {
 	} else {
 		updatedContent = content;
 	}
-
+	
 	return (
 		<div>
 			<SectionTitle category={category} />

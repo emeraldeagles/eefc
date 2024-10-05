@@ -1,28 +1,36 @@
+import type { LoaderFunction } from '@remix-run/node';
+import type { MetaFunction } from '@remix-run/react';
 import { json, useLoaderData } from '@remix-run/react';
 import React from 'react';
-import { getCommittee, getCommitteeInfo } from '~/client/club';
 import Section from '~/components/Section';
 import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY, SECTION_CATEGORY } from '~/constants/constants';
+import { committeeData, committeeInfoData } from '~/data/content';
 
-export const meta = () => [
-	{
-		title: 'EEFC | Committee',
-	},
-	{
-		charset: 'utf-8',
-	},
-	{
-		viewport: 'width=device-width,initial-scale=1',
-	},
-];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+	const year = new Date().getFullYear();
+	const canonicalUrl = data?.canonicalUrl ? data.canonicalUrl : 'https://emeraldeagles.com.au/club/committee';
+	return [
+		{ title: 'EEFC | Club Committee' },
+		{ name: 'description', content: `Meet the ${year} committee of Emerald Eagles FC` },
+		{ property: 'og:type', content: 'website' },
+		{ property: 'og:site_name', content: 'EEFC | Club Committee' },
+		{ charset: 'utf-8' },
+		{ name: 'viewport', content: 'width=device-width,initial-scale=1' },
+		{ property: 'og:title', content: 'EEFC | Club Committee' },
+		{ property: 'og:description', content: `Meet the ${year} committee of Emerald Eagles FC` },
+		{ property: 'og:url', content: canonicalUrl },
+		{ rel: 'canonical', href: canonicalUrl },
+	];
+};
 
-export async function loader() {
-	const committee = await getCommittee();
-	const committeeInfo = await getCommitteeInfo();
+export const loader: LoaderFunction = async ({ request }) => {
+	const url = new URL(request.url);
+	const committee = committeeData;
+	const committeeInfo = committeeInfoData;
 
-	return json({ committee, committeeInfo });
-}
+	return json({ committee, committeeInfo, canonicalUrl: `${url.origin}${url.pathname}` });
+};
 
 export default function Committee() {
 	const { committee, committeeInfo } = useLoaderData<typeof loader>();

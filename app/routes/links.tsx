@@ -1,18 +1,30 @@
-import { Link } from '@remix-run/react';
+import type { LoaderFunction } from '@remix-run/node';
+import type { MetaFunction } from '@remix-run/react';
+import { json, Link } from '@remix-run/react';
 import React from 'react';
 import { Button } from '~/components/ui/button';
 
-export const meta = () => [
-	{
-		title: 'EEFC | Links',
-	},
-	{
-		charset: 'utf-8',
-	},
-	{
-		viewport: 'width=device-width,initial-scale=1',
-	},
-];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+	const canonicalUrl = data?.canonicalUrl ? data.canonicalUrl : 'https://emeraldeagles.com.au/club';
+	return [
+		{ title: 'EEFC | Important Site Links' },
+		{ name: 'description', content: 'View a list of important links for Emerald Eagles FC Club' },
+		{ property: 'og:type', content: 'website' },
+		{ property: 'og:site_name', content: 'EEFC | Important Site Links' },
+		{ charset: 'utf-8' },
+		{ name: 'viewport', content: 'width=device-width,initial-scale=1' },
+		{ property: 'og:title', content: 'EEFC | Important Site Links' },
+		{ property: 'og:description', content: 'View a list of important links for Emerald Eagles FC Club' },
+		{ property: 'og:url', content: canonicalUrl },
+		{ rel: 'canonical', href: canonicalUrl },
+	];
+};
+
+export const loader: LoaderFunction = async ({ request }) => {
+	const url = new URL(request.url);
+
+	return json({ canonicalUrl: `${url.origin}${url.pathname}` });
+};
 
 const LinksRoute = () => {
 	return (

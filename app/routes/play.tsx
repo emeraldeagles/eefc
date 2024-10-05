@@ -1,32 +1,51 @@
+import type { LoaderFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
+import type { MetaFunction } from '@remix-run/react';
 import { useLoaderData } from '@remix-run/react';
-import { getRegoPrices } from '~/client/home';
-
-import { getRegoInfo, getFairPlayInfo, getSeniorsInfo, getJuniorsInfo, getMiniroosInfo } from '~/client/play';
-
+import {
+	fairPlayInfoData,
+	juniorsInfoData,
+	miniroosInfoData,
+	regoInfoData,
+	regoPricesData,
+	seniorsInfoData,
+} from '~/data/content';
 import PlayScreen from '~/screens/play';
 
-export const meta = () => [
-	{
-		title: 'EEFC | Play',
-	},
-	{
-		charset: 'utf-8',
-	},
-	{
-		viewport: 'width=device-width,initial-scale=1',
-	},
-];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+	const canonicalUrl = data?.canonicalUrl ? data.canonicalUrl : 'https://emeraldeagles.com.au/play';
+	return [
+		{ title: 'EEFC | Play' },
+		{ name: 'description', content: 'Find out how to start playing for the Emerald Eagles FC' },
+		{ property: 'og:type', content: 'website' },
+		{ property: 'og:site_name', content: 'EEFC | Play' },
+		{ charset: 'utf-8' },
+		{ name: 'viewport', content: 'width=device-width,initial-scale=1' },
+		{ property: 'og:title', content: 'EEFC | Play' },
+		{ property: 'og:description', content: 'Find out how to start playing for the Emerald Eagles FC' },
+		{ property: 'og:url', content: canonicalUrl },
+		{ rel: 'canonical', href: canonicalUrl },
+	];
+};
 
-export const loader = async () => {
-	const rego = await getRegoInfo();
-	const regoPrices = await getRegoPrices();
-	const fairPlay = await getFairPlayInfo();
-	const miniroosInfo = await getMiniroosInfo();
-	const juniorsInfo = await getJuniorsInfo();
-	const seniorsInfo = await getSeniorsInfo();
+export const loader: LoaderFunction = async ({ request }) => {
+	const url = new URL(request.url);
+	const rego = regoInfoData;
+	const regoPrices = regoPricesData;
+	const fairPlay = fairPlayInfoData;
+	const miniroosInfo = miniroosInfoData;
+	const juniorsInfo = juniorsInfoData;
+	const seniorsInfo = seniorsInfoData;
 
-	return json({ rego, regoPrices, fairPlay, miniroosInfo, juniorsInfo, seniorsInfo });
+	return json({
+		rego,
+		regoPrices,
+		fairPlay,
+		miniroosInfo,
+		juniorsInfo,
+		seniorsInfo,
+		canonicalUrl: `${url.origin}${url.pathname}`,
+	});
 };
 
 const PlayRoute = () => {

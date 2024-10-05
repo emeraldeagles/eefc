@@ -1,5 +1,6 @@
+import type { MetaFunction } from '@remix-run/react';
 import { Await, defer, useFetcher, useLoaderData } from '@remix-run/react';
-import { getMerch, getRegoPrices, mapToCarnivalsData, mapToNewsData } from '~/client/home';
+import { mapToCarnivalsData, mapToNewsData } from '~/client/home';
 import HomeScreen from '~/screens/home';
 import type { LoaderFunction } from '@remix-run/node';
 import { fetchFacebookPosts } from '~/utils/facebook';
@@ -7,22 +8,26 @@ import type { FacebookPost } from '~/cache.server';
 import { getCachedData, setCachedData } from '~/cache.server';
 import { Suspense, useCallback, useEffect, useState } from 'react';
 import useStore from '~/store/store';
+import { merchData, regoPricesData } from '~/data/content';
 
-export const meta = () => [
-	{
-		title: 'EEFC | Home',
-	},
-	{
-		charset: 'utf-8',
-	},
-	{
-		name: 'viewport',
-		content: 'width=device-width, initial-scale=1.0',
-	},
-];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+	const canonicalUrl = data?.canonicalUrl ? data.canonicalUrl : 'https://emeraldeagles.com.au/home';
+	return [
+		{ title: 'EEFC | Home' },
+		{ name: 'description', content: 'See the latest news and update from the club' },
+		{ property: 'og:type', content: 'website' },
+		{ property: 'og:site_name', content: 'EEFC | Home' },
+		{ charset: 'utf-8' },
+		{ name: 'viewport', content: 'width=device-width,initial-scale=1' },
+		{ property: 'og:title', content: 'EEFC | Home' },
+		{ property: 'og:description', content: 'See the latest news and updates from the club' },
+		{ property: 'og:url', content: canonicalUrl },
+		{ rel: 'canonical', href: canonicalUrl },
+	];
+};
 
 export const loader: LoaderFunction = async ({ request }) => {
-	// const url = new URL(request.url);
+	const url = new URL(request.url);
 	// const forceRefresh = url.searchParams.get('refresh') === 'true';
 	const FBAccessToken = process.env.FACEBOOK_ACCESS_TOKEN;
 	const FBPageId = process.env.FACEBOOK_PAGE_ID;
@@ -37,18 +42,56 @@ export const loader: LoaderFunction = async ({ request }) => {
 		return cachedPosts;
 	})();
 
-	const regoPricesData = await getRegoPrices();
-	const merchData = await getMerch();
+	const regoPrices = regoPricesData;
+	const merch = merchData;
 
 	return defer({
-		regoPricesData,
-		merchData,
+		regoPrices,
+		merch,
 		cachedPostsPromise,
+		canonicalUrl: `${url.origin}${url.pathname}`,
 	});
 };
 
+// export const loader: LoaderFunction = async (args: LoaderFunctionArgs) => {
+// 	const url = new URL(args.request.url);
+
+// 	// Fetch critical data (use await)
+// 	const regoPricesData = await getRegoPrices();
+// 	const merchData = await getMerch();
+
+// 	// Do NOT await deferred data, just call the function and return its promise
+// 	const deferredData = loadDeferredData(args);
+
+// 	return defer({
+// 		regoPricesData,
+// 		merchData,
+// 		...deferredData, // Deferred data is returned as a promise
+// 		canonicalUrl: `${url.origin}${url.pathname}`,
+// 	});
+// };
+
+// const loadDeferredData = async ({ context, request }: LoaderFunctionArgs) => {
+// 	const FBAccessToken = process.env.FACEBOOK_ACCESS_TOKEN;
+// 	const FBPageId = process.env.FACEBOOK_PAGE_ID;
+
+// 	const cachedPosts = getCachedData('cachedPosts');
+
+// 	if (!cachedPosts) {
+// 		const cachedPostsPromise = fetchFacebookPosts(FBPageId, FBAccessToken);
+
+// 		cachedPostsPromise.then(posts => {
+// 			setCachedData('cachedPosts', posts);
+// 		});
+
+// 		return { cachedPostsPromise };
+// 	} else {
+// 		return { cachedPostsPromise: Promise.resolve(cachedPosts) };
+// 	}
+// };
+
 const Index = () => {
-	const { merchData, regoPricesData, cachedPostsPromise } = useLoaderData<typeof loader>();
+	const { merch, regoPrices, cachedPostsPromise } = useLoaderData<typeof loader>();
 	const fetcher = useFetcher();
 	const { setNews, setCarnivals, news, carnivals, loading, setLoading } = useStore(state => ({
 		setNews: state.setNews,
@@ -85,7 +128,7 @@ const Index = () => {
 	}, [loadFacebookPosts]);
 
 	useEffect(() => {
-		if (cachedPosts.length > 0) {
+		if (cachedPosts && cachedPosts.length > 0) {
 			const newsPosts = cachedPosts.filter(post => post.message_tags?.some(tag => tag.name.toLowerCase() === '#news'));
 			const carnivalsPosts = cachedPosts.filter(post =>
 				post.message_tags?.some(tag => tag.name.toLowerCase() === '#carnivals'),
@@ -102,7 +145,7 @@ const Index = () => {
 
 	return (
 		<main>
-			<HomeScreen news={news} merch={merchData} regoPrices={regoPricesData} carnivals={carnivals} loading={loading} />
+			<HomeScreen news={news} merch={merch} regoPrices={regoPrices} carnivals={carnivals} loading={loading} />
 			<Suspense fallback={<div>Loading Facebook posts...</div>}>
 				<Await
 					resolve={cachedPostsPromise}

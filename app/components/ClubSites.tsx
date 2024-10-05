@@ -1,5 +1,4 @@
 import { Link } from '@remix-run/react';
-import React from 'react';
 import type { ClubSitesProps } from '~/interfaces/content';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 

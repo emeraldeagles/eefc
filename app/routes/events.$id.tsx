@@ -1,4 +1,5 @@
 import type { LoaderFunction } from '@remix-run/node';
+import type { MetaFunction } from '@remix-run/react';
 import { Await, defer, useFetcher, useLoaderData } from '@remix-run/react';
 import { Suspense, useCallback, useEffect, useState } from 'react';
 import type { FacebookPost } from '~/cache.server';
@@ -10,17 +11,21 @@ import { CARD_CATEGORY } from '~/constants/constants';
 import useStore from '~/store/store';
 import { fetchFacebookPosts } from '~/utils/facebook';
 
-export const meta = () => [
-	{
-		title: 'EEFC | Event',
-	},
-	{
-		charset: 'utf-8',
-	},
-	{
-		viewport: 'width=device-width,initial-scale=1',
-	},
-];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+	const canonicalUrl = data?.canonicalUrl ? data.canonicalUrl : 'https://emeraldeagles.com.au/events';
+	return [
+		{ title: 'EEFC | Events' },
+		{ name: 'description', content: 'Local events happening around Central Queensland' },
+		{ property: 'og:type', content: 'website' },
+		{ property: 'og:site_name', content: 'EEFC | Events' },
+		{ charset: 'utf-8' },
+		{ name: 'viewport', content: 'width=device-width,initial-scale=1' },
+		{ property: 'og:title', content: 'EEFC | Events' },
+		{ property: 'og:description', content: 'Local events happening around Central Queensland' },
+		{ property: 'og:url', content: canonicalUrl },
+		{ rel: 'canonical', href: canonicalUrl },
+	];
+};
 
 export const loader: LoaderFunction = async ({ params }) => {
 	const { id } = params;
@@ -28,11 +33,11 @@ export const loader: LoaderFunction = async ({ params }) => {
 	const FBPageId = process.env.FACEBOOK_PAGE_ID;
 
 	const cachedPostsPromise = (async () => {
-		let cachedPosts = getCachedData('cachedPosts');
-		if (!cachedPosts) {
-			cachedPosts = (await fetchFacebookPosts(FBPageId, FBAccessToken)) as FacebookPost[];
-			setCachedData('cachedPosts', cachedPosts);
-		}
+	let cachedPosts = getCachedData('cachedPosts');
+	if (!cachedPosts) {
+		cachedPosts = (await fetchFacebookPosts(FBPageId, FBAccessToken)) as FacebookPost[];
+		setCachedData('cachedPosts', cachedPosts);
+	}
 		return cachedPosts;
 	})();
 

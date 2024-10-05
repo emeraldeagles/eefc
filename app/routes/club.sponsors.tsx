@@ -1,28 +1,42 @@
+import type { LoaderFunction } from '@remix-run/node';
+import type { MetaFunction } from '@remix-run/react';
 import { json, useLoaderData } from '@remix-run/react';
 import React from 'react';
-import { getSponsors, getSponsorsInfo } from '~/client/club';
 import Section from '~/components/Section';
 import Tiles from '~/components/Tiles';
 import { CARD_CATEGORY, SECTION_CATEGORY, SPONSOR_TYPE } from '~/constants/constants';
+import { sponsorsData, sponsorsInfoData } from '~/data/content';
 
-export const meta = () => [
-	{
-		title: 'EEFC | Club Sponsors',
-	},
-	{
-		charset: 'utf-8',
-	},
-	{
-		viewport: 'width=device-width,initial-scale=1',
-	},
-];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+	const year = new Date().getFullYear();
+	const canonicalUrl = data?.canonicalUrl ? data.canonicalUrl : 'https://emeraldeagles.com.au/club/sponsors';
+	return [
+		{ title: 'EEFC | Club Sponsors' },
+		{
+			name: 'description',
+			content: `Without the help of our ${year} sponsors, Emerald Eagles FC would not be able to exist`,
+		},
+		{ property: 'og:type', content: 'website' },
+		{ property: 'og:site_name', content: 'EEFC | Club Sponsors' },
+		{ charset: 'utf-8' },
+		{ name: 'viewport', content: 'width=device-width,initial-scale=1' },
+		{ property: 'og:title', content: 'EEFC | Club Sponsors' },
+		{
+			property: 'og:description',
+			content: `Without the help of our ${year} sponsors, Emerald Eagles FC would not be able to exist`,
+		},
+		{ property: 'og:url', content: canonicalUrl },
+		{ rel: 'canonical', href: canonicalUrl },
+	];
+};
 
-export async function loader() {
-	const sponsors = await getSponsors();
-	const sponsorsInfo = await getSponsorsInfo();
+export const loader: LoaderFunction = async ({ request }) => {
+	const url = new URL(request.url);
+	const sponsors = sponsorsData;
+	const sponsorsInfo = sponsorsInfoData;
 
-	return json({ sponsors, sponsorsInfo });
-}
+	return json({ sponsors, sponsorsInfo, canonicalUrl: `${url.origin}${url.pathname}` });
+};
 
 export default function Sponsors() {
 	const { sponsors, sponsorsInfo } = useLoaderData<typeof loader>();
