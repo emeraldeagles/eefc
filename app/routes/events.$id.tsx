@@ -33,11 +33,11 @@ export const loader: LoaderFunction = async ({ params }) => {
 	const FBPageId = process.env.FACEBOOK_PAGE_ID;
 
 	const cachedPostsPromise = (async () => {
-	let cachedPosts = getCachedData('cachedPosts');
-	if (!cachedPosts) {
-		cachedPosts = (await fetchFacebookPosts(FBPageId, FBAccessToken)) as FacebookPost[];
-		setCachedData('cachedPosts', cachedPosts);
-	}
+		let cachedPosts = getCachedData('cachedPosts');
+		if (!cachedPosts) {
+			cachedPosts = (await fetchFacebookPosts(FBPageId, FBAccessToken)) as FacebookPost[];
+			setCachedData('cachedPosts', cachedPosts);
+		}
 		return cachedPosts;
 	})();
 

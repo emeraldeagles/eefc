@@ -19,7 +19,7 @@ const HomeScreen: FC<HomeScreenProps> = ({
 	regoPrices,
 	carnivals,
 	loading,
-}: HomeScreenProps): ReactElement => {	
+}: HomeScreenProps): ReactElement => {
 	return (
 		<div className="space-y-6">
 			<Tiles category={CARD_CATEGORY.REGO} content={regoPrices} isLoading={!regoPrices.length} />

@@ -1,19 +1,16 @@
 import type { LinksFunction, HeadersFunction } from '@remix-run/node';
 import type { MetaFunction } from '@remix-run/react';
 import {
-	Link,
 	Links,
 	LiveReload,
 	Meta,
 	Outlet,
 	Scripts,
 	ScrollRestoration,
-	isRouteErrorResponse,
 	json,
 	redirect,
 	useLoaderData,
 	useLocation,
-	useRouteError,
 } from '@remix-run/react';
 
 import styles from './tailwind.css';
@@ -66,18 +63,6 @@ export const links: LinksFunction = () => [
 export const loader = async ({ request }: { request: Request }) => {
 	const url = new URL(request.url);
 	// const nonce = generateNonce(); // Generate nonce here
-
-	// Redirect HTTP to HTTPS
-	if (url.protocol === 'http:' && process.env.NODE_ENV === 'production') {
-		url.protocol = 'https:';
-		return redirect(url.toString());
-	}
-
-	// Redirect non-WWW to WWW
-	if (!url.hostname.startsWith('www') && process.env.NODE_ENV === 'production') {
-		url.hostname = `www.${url.hostname}`;
-		return redirect(url.toString());
-	}
 
 	const sponsors = sponsorsData;
 	const clubSites = clubSitesData;

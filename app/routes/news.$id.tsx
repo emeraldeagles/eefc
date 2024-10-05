@@ -1,4 +1,4 @@
-import type { LoaderFunction, LoaderFunctionArgs } from '@remix-run/node';
+import type { LoaderFunction } from '@remix-run/node';
 import type { MetaFunction } from '@remix-run/react';
 import { Await, defer, useFetcher, useLoaderData } from '@remix-run/react';
 import { Suspense, useCallback, useEffect, useState } from 'react';
@@ -33,11 +33,11 @@ export const loader: LoaderFunction = async ({ params }) => {
 	const FBPageId = process.env.FACEBOOK_PAGE_ID;
 
 	const cachedPostsPromise = (async () => {
-	let cachedPosts = getCachedData('cachedPosts');
-	if (!cachedPosts) {
-		cachedPosts = (await fetchFacebookPosts(FBPageId, FBAccessToken)) as FacebookPost[];
-		setCachedData('cachedPosts', cachedPosts);
-	}
+		let cachedPosts = getCachedData('cachedPosts');
+		if (!cachedPosts) {
+			cachedPosts = (await fetchFacebookPosts(FBPageId, FBAccessToken)) as FacebookPost[];
+			setCachedData('cachedPosts', cachedPosts);
+		}
 		return cachedPosts;
 	})();
 
